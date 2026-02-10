@@ -12,9 +12,10 @@ https://extremestats.github.io/Handbook/
 
 <ul style="font-size: 35%; margin-top: 0;">
   <li>
-    Davison, A. and Miralles, O. (2026). Modeling univariate extremes—why and how.
-    In <em>Handbook on Statistics of Extremes</em>, Chapter 2, pp. 11–35.
-    Chapman &amp; Hall/CRC, Boca Raton, FL.
+    Allouche, M., Girard, S., and Gobet, E. (2026).
+    On the simulation of extreme events with neural networks.
+    In <em>Handbook on Statistics of Extremes</em>, Chapter 20, pp. 447–468.
+    Chapman & Hall/CRC, Boca Raton, FL.
   </li>
   <li>
     de Carvalho, M., Huser, R., Naveau, P., and Reich, B. J. (2026).
