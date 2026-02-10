@@ -1,0 +1,2620 @@
+EUROPEAN CLIMATE ASSESSMENT & DATASET (ECA&D), file created on 18-11-2023
+THESE DATA CAN BE USED FREELY PROVIDED THAT THE FOLLOWING SOURCE IS ACKNOWLEDGED:
+
+Klein Tank, A.M.G. and Coauthors, 2002. Daily dataset of 20th-century surface
+air temperature and precipitation series for the European Climate Assessment.
+Int. J. of Climatol., 22, 1441-1453.
+Data and metadata available at http://www.ecad.eu
+
+
+----------------------------------------------------------------
+229,BADAJOZ/TALAVERA LA REAL,SPAIN,+38:53:00,-006:49:45,185 m 
+----------------------------------------------------------------
+* Land use:
+The observatory is located in a rural area, on a clear and flat valley with natural vegetation. It's quite clear of obstacles at N and E. There are some buildings and paved surfaces to about 60m S and W.
+* Soil type:
+
+* Surface coverage:
+Natural vegetation
+* History:
+
+
+----------------------------------------------------------------
+230,MADRID - RETIRO,SPAIN,+40:24:43,-003:40:41,667 m 
+----------------------------------------------------------------
+* Land use:
+The station is located in Retiro Park (surface area around 300 hecateres) in the centre of Madrid on flat and horizontal ground. The environment has changed in the course of time due to urban development of the capital. Now the sensors are rather blocked 
+* Soil type:
+loamy
+* Surface coverage:
+grass
+* History:
+Since June 2007 does not have sunshine data <br> Terrain roughness: to N:8, to E:6, to S:6, to W:6, Average: 6
+
+----------------------------------------------------------------
+231,MALAGA AEROPUERTO,SPAIN,+36:40:00,-004:29:17,7 m 
+----------------------------------------------------------------
+* Land use:
+The station is located in the Guadalorce river valley lowland, near the mouth. The meteorological sensors are in an open place, the main obstacles being the observatory building of 6m height at 20m to S, and some tree rows of 3m height at 25m SSE.
+* Soil type:
+Sandy loam
+* Surface coverage:
+Grass
+* History:
+On February 1, 2009 a tornado occurs in the city of Malaga.
+
+----------------------------------------------------------------
+232,NAVACERRADA,SPAIN,+40:46:50,-004:00:37,1894 m 
+----------------------------------------------------------------
+* Land use:
+The observatory is located on a mountain pass between the Duero and Tagus river basins on a small hill surrounded by trees, which project the greatest angles to ENE.
+* Soil type:
+Loam
+* Surface coverage:
+Grass
+* History:
+
+
+----------------------------------------------------------------
+233,SALAMANCA AEROPUERTO,SPAIN,+40:57:34,-005:29:54,790 m 
+----------------------------------------------------------------
+* Land use:
+The observatory is located in a rural area at 80m W from the airport runway.
+* Soil type:
+
+* Surface coverage:
+Natural grass
+* History:
+Confirmed the minimum temperature value of -20.0&#176;C day 05/02/1963.<br> From 1/01/2007 the temperature series is not longer homogeneous (change of sensors and location). Detected a significant difference in temperature extremes (especially the lowest). <br>
+
+----------------------------------------------------------------
+234,SAN SEBASTIAN - IGUELDO,SPAIN,+43:18:27,-002:02:22,251 m 
+----------------------------------------------------------------
+* Land use:
+the observatory is in a rural area on a ridge with flat terrain and growing vegetation.
+* Soil type:
+
+* Surface coverage:
+Growing vegetation
+* History:
+The natural surroundings of the observatory are almost unchanged since 1905. <br> Situated atop a small mountain completely open to the air masses arriving at the observatory. Observation has not been automated and the climates series are homogeneous since 1928.
+Pressure from January 1937 to December 1938 is the corrected pressure at sea level, it is not the pressure at the station level.
+
+----------------------------------------------------------------
+235,TORREVIEJA,SPAIN,+37:58:38,-000:42:39,1 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+236,TORTOSA - OBSERVATORIO DEL EBRO,SPAIN,+40:49:14,+000:29:29,44 m 
+----------------------------------------------------------------
+* Land use:
+On slight terrace bordered on S and W by Ebro valley. Ebro River is ~2km away. Station sits on field in front of small building (49m away). WNW: a hill of 3ft height. Wind sensors are placed on metal tower over building to 10m above ground level.
+* Soil type:
+
+* Surface coverage:
+Grass
+* History:
+The Observatory was established in 1905 by the Jesuit congregation. It is placed on a little hill, at 50 m above the sea level. No great location changes has been detected since then. <br> Until 1982 this observatory used a different method than the current for calculating the precipitation intensity, so there are very large rainfall intensities. Previously calculated with the tangent to the curve and is now calculated with the secant. <br> For most of the period, cloud cover was expressed originaly as tenths of covered sky. <br> Wind speed obtained as average total run of wind, from 07h to 07h through a mechanical counter (Robinson cup anemometer).
+
+----------------------------------------------------------------
+237,VALENCIA,SPAIN,+39:28:50,-000:21:59,11 m 
+----------------------------------------------------------------
+* Land use:
+In October 1937 the observatory was moved to the  Valencia Municipal Nurseries, in a gardened and flat area. Until the 1960s the observatory was in a garden practically on the outskirts of the city. Gradually the city grew and now the observatory is close
+* Soil type:
+
+* Surface coverage:
+
+* History:
+After the 1960s a 12-story building 30 meters east of the observatory is build. From the 1970s the Nurseries  were extended on the west side of Observatory, with large trees that influence wind gusts from the west, which often leads to lower maximum wind gusts measurements. <br> From 1942 and until the late 1980s (exact date not determined), the meteorological shelter was placed on grass. In the late 1980s grass was removed and the shelter was on natural terrain. On 17/01/2006, because of the redesigning of the Centre the grass was re-setting.<br>
+Between 1942 and April 30, 1975 a full anemocinemógrafo Fuess was working at the observatory, it was on a metal tower on the terrace, to 19.7 m from the ground. <br>
+It was changed by a FUESS anemometer on April, 30, 1975. <br>
+On January, 1, 1983 a SEAC automatic station replaces the Fuess, it was installed on a new tower located in the same place, to 26.6 m above the ground. <br>
+
+----------------------------------------------------------------
+238,ZARAGOZA AEROPUERTO,SPAIN,+41:39:43,-001:00:29,247 m 
+----------------------------------------------------------------
+* Land use:
+The meteorological sensors are situated in an area free of obstacles. The closest buildings lie at a distance of around 100m.
+* Soil type:
+Silty Loam
+* Surface coverage:
+Grass
+* History:
+
+
+----------------------------------------------------------------
+309,ALICANTE EL ALTET,SPAIN,+38:16:58,-000:34:15,43 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+Loamy
+* Surface coverage:
+Grass
+* History:
+
+
+----------------------------------------------------------------
+335,BARCELONA -FABRA OBSERVATORY,SPAIN,+41:25:06,+002:07:26,412 m 
+----------------------------------------------------------------
+* Land use:
+located in a hill dominating Barcelona covered by sparse Mediterranean forest (pinus pinea and quercus ilex)
+* Soil type:
+
+* Surface coverage:
+
+* History:
+The Observatory was established in 1904, and several meteorological instruments were setteled at the roof. In 1913, the meteorological station was located on the ground and no changes have been reported since then. <br> In 1992, due to a restoration of the building, sunshine observations were interrupted during several months.<br> For the period 01/02/1982 up to 31/05/1985 the average wind speed is obtained of measurements at 07, 13 and 18 UTC.
+
+----------------------------------------------------------------
+336,ALBACETE LOS LLANOS,SPAIN,+38:57:08,-001:51:47,704 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+Confirmed the minimum temperature of -24.0&#176;C day 03/01/1971
+
+----------------------------------------------------------------
+337,CORDOBA AEROPUERTO,SPAIN,+37:50:39,-004:50:46,90 m 
+----------------------------------------------------------------
+* Land use:
+urban area, in a clear flat valley with little natural vegetation.
+* Soil type:
+
+* Surface coverage:
+
+* History:
+Confirmed the minimum temperature of -8.2&#176;C day 28/01/2005.
+
+----------------------------------------------------------------
+412,ALICANTE,SPAIN,+38:22:21,-000:29:39,81 m 
+----------------------------------------------------------------
+* Land use:
+The observatory lies on an urban development area surrounded by detached houses of around 5m height with ample gardens, at distance of around 15m. There is a pine tree of 9m height at 10m to W
+* Soil type:
+Loamy
+* Surface coverage:
+Grass
+* History:
+Until February 1970 a RICHARD anemograph was operational. Then a FUESS anemocinemograph was installed which remained operational for a few years after which it was changed by a similar instrument in better conditions and it worked until September, 8, 2007.
+
+----------------------------------------------------------------
+414,BURGOS-VILLAFRIA,SPAIN,+42:21:22,-003:37:57,890 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+415,CADIZ,SPAIN,+36:30:04,-006:15:24,1 m 
+----------------------------------------------------------------
+* Land use:
+urban area, in a clear and flat valley without vegetation.
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+416,CIUDAD REAL,SPAIN,+38:59:22,-003:55:11,628 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+417,GRANADA,SPAIN,+37:08:13,-003:37:53,687 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+418,HUELVA (RONDA DEL ESTE),SPAIN,+37:16:48,-006:54:35,19 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+419,HUESCA,SPAIN,+42:05:00,-000:19:35,541 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+420,A CORUNA,SPAIN,+43:22:02,-008:25:10,58 m 
+----------------------------------------------------------------
+* Land use:
+Located on a hilltop in a rural, flat and clear area, with little natural vegetation.
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+421,MURCIA,SPAIN,+38:00:10,-001:10:10,61 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+On September 1, 2009 the dry thermometer of psychrometer from the meteorological shelter is replaced because it had a bias of one degree
+
+----------------------------------------------------------------
+422,PAMPLONA,SPAIN,+42:46:37,-001:39:00,459 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+423,SEVILLA/SAN PABLO,SPAIN,+37:25:00,-005:52:45,34 m 
+----------------------------------------------------------------
+* Land use:
+urban area, in a clear flat valley with little natural vegetation.
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+424,SORIA,SPAIN,+41:46:30,-002:28:59,1082 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+425,VALLADOLID,SPAIN,+41:39:00,-004:46:00,735 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+455,TENERIFE/LOS RODEOS,SPAIN,+28:28:39,-016:19:46,632 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+Between 1944 (?) and 1970 sensors were installed in the old tower of the airport technical block.<br> In 1971 sensors are placed into a hut next to the runway, near where the aeronautical equipment is at the 30 runway header. <br> In 1975, sensors were moved to the current observatory at the 30 runway header. <br> Because of a sensor calibration error, temperature between January 2006 and July 2008 had a negative bias between 1.5 and 2.0&#176;C. <br> On September 16, 2010 the thermometer has been moved from the cage at the wind tower, and it is placed within an anti-radiation cage. <br> Around May 1971, the barometer and the rest of the instrumentation are uninstalled from a tower (20-30m?) and placed at  the runway walk.
+
+----------------------------------------------------------------
+1388,IZANA,SPAIN,+28:18:32,-016:29:58,2371 m 
+----------------------------------------------------------------
+* Land use:
+mountain top, rural
+* Soil type:
+
+* Surface coverage:
+rock
+* History:
+BSRN station 61, BSRN station scientist: Emilio Cuevas-Agullo (ecuevasa@aemet.es)
+
+----------------------------------------------------------------
+1389,MELILLA,SPAIN,+35:16:40,-002:57:19,47 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+1390,VILLAMECA,SPAIN,+42:37:48,-006:04:12,978 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+1391,ALCUESCAR,SPAIN,+39:10:12,-006:13:12,488 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+1392,SANTANDER CENTRO,SPAIN,+43:27:53,-003:49:08,64 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+1393,BILBAO AEROPUERTO,SPAIN,+43:17:53,-002:54:21,42 m 
+----------------------------------------------------------------
+* Land use:
+rural environment, in a clear and flat valley with natural vegetation in normal quantity.
+* Soil type:
+
+* Surface coverage:
+
+* History:
+Confirmed the minimum temperature of  -8.6&#176;C day 03/02/1963
+
+----------------------------------------------------------------
+1394,SANTIAGO DE COMPOSTELA/LABACOLLA,SPAIN,+42:53:16,-008:24:39,370 m 
+----------------------------------------------------------------
+* Land use:
+Located in a rural, flat and clear area with natural vegetation in normal quantity.
+* Soil type:
+
+* Surface coverage:
+
+* History:
+Confirmed the minimum temperature of -9.0&#176;C day 22/02/1948.
+
+----------------------------------------------------------------
+1395,VIGO PEINADOR,SPAIN,+42:14:22,-008:37:26,261 m 
+----------------------------------------------------------------
+* Land use:
+Located in a rural, flat and clear area with natural vegetation in normal quantity.
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+1396,PONFERRADA,SPAIN,+42:33:50,-006:36:00,534 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+1397,LEON VIRGEN DEL CAMINO,SPAIN,+42:35:20,-005:38:58,916 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+1398,LOGRONO-AGONCILLO,SPAIN,+42:27:08,-002:19:52,353 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+1399,ZAMORA,SPAIN,+41:31:00,-005:44:01,656 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+Wind data shielded by high-rise buildings across the SW quadrant
+
+----------------------------------------------------------------
+1401,REUS/AEROPUERTO,SPAIN,+41:08:59,+001:10:44,71 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+Confirmed the minimum temperature of -8.0&#176;C day 11/Feb/1983.<br> Change of location and change of measuring devices in May 2005.
+
+----------------------------------------------------------------
+1403,MONTSENY TURO DE L,SPAIN,+41:46:12,+002:25:48,1706 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+1404,MURCIA/SAN JAVIER,SPAIN,+37:47:20,-000:48:12,4 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+1405,JEREZ DE LA FRONTERA,SPAIN,+36:45:02,-006:03:21,27 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+Confirmed the minimum temperature of -5.4&#176;C del day 22/12/1979.
+
+----------------------------------------------------------------
+1406,TARIFA,SPAIN,+36:00:55,-005:35:51,32 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+Prior to 1898: Rainfall station located in the Guzman El Bueno Castle (Lat 36-00-47 N. Long 05-36-05 W. Alt 15-20 m.) <br>
+1913- 1945/04: Rainfall station located in Punta Camorro.  Semáforo de la Armada building (Lat 36-00-49 N. Long 05-35-54 W. Alt 46 m.) <br>
+1945/05-1972/04/06: Main observatory located in Camorro hill. Semáforo de la Armada building (Lat 36-00 N. Long 05-36 W. Alt 46 m.) <br> Anemometer and wind vane height 53 m. <br> Barometer bulb height 47 m. <br>
+1972/04/07-1999/12: Observatory located in  Santa Catalina Castle (Lat 36-00-38 N. Long 05-36-21 W. Observatory alt 18 m.) <br> Shelter altitude 24 m. Located in roof at the lower part of the building. <br> Height of barometer bulb 25 m. <br> Height of wind sensors about 7 meters from the shelter on a higher tower and with a mast of about 2 or 3 m. <br>
+From 2000/02/14: Observatory located at the Army Surveillance Station of Strait (Lat 36-00-55 N. Long 05-35-51 W. Alt 32 m.) <br> Wind sensor height10 m.     <br>
+Height of Barometer bulb  47 m. <br>
+At this location there is a noticeable decrease in wind speed. It is further inland, the anemometer is placed lower and there is a small hill to the east. <br>
+Confirmed the minimum temperature of -3.3&#176;C day 28/01/2005. <br>
+
+----------------------------------------------------------------
+1407,SABINANIGO,SPAIN,+42:31:12,-000:21:00,790 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+1408,CALZADA CALATRAVA,SPAIN,+38:42:00,-003:46:12,645 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+2969,BARCELONA/AEROPUERTO,SPAIN,+41:17:34,+002:04:12,4 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+2970,LANZAROTE/AEROPUERTO,SPAIN,+28:57:07,-013:36:01,14 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+3838,ROTA,SPAIN,+36:38:20,-006:19:54,21 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+Confirmed the minimum temperature of -4.7&#176;C day 28/01/2005.
+
+----------------------------------------------------------------
+3839,MADRID/TORREJON,SPAIN,+40:29:00,-003:27:01,611 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+3903,A CORUNA/ALVEDRO,SPAIN,+43:18:25,-008:22:20,98 m 
+----------------------------------------------------------------
+* Land use:
+Located on a hilltop in a rural, flat and clear area, with growing vegetation in normal quantity.
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+3904,VITORIA AERODROMO,SPAIN,+42:51:03,-002:39:17,521 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+3905,VITORIA/FORONDA,SPAIN,+42:52:19,-002:44:00,513 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+Data from March 1973 to October 1979 are actually data of the Arenzana station, before construction of Foronda Airport (ECA staid 3904, AEMET id 9091O). The old Vitoria airfield operated until 1980.
+
+----------------------------------------------------------------
+3906,ALBACETE OBS.,SPAIN,+39:00:25,-001:51:39,674 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+3907,ALMERIA,SPAIN,+36:50:00,-002:27:17,7 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+3908,ALMERIA/AEROPUERTO,SPAIN,+36:50:47,-002:21:25,21 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+3909,ASTURIAS/AVILES,SPAIN,+43:34:01,-006:02:39,127 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+3910,GIJON,SPAIN,+43:32:18,-005:38:31,3 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+3911,GIJON LA MERCED,SPAIN,+43:32:18,-005:38:31,22 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+3912,GIJON MUSEL,SPAIN,+43:33:39,-005:41:55,5 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+The meteorological garden (5 m. altitude) is shielded to NW winds through the Cape Torres (about 400-500 m nearest distance and about 100 m altitude), which makes data measures are not representative.
+
+----------------------------------------------------------------
+3913,OVIEDO,SPAIN,+43:21:16,-005:52:22,336 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+3914,AVILA,SPAIN,+40:39:33,-004:40:48,1130 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+3915,AVILA-AYUNTAMIENTO,SPAIN,+40:39:20,-004:41:58,1143 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+3916,IBIZA/ESCODOLA,SPAIN,+38:52:35,+001:23:04,6 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+3917,MENORCA/MAO,SPAIN,+39:51:17,+004:12:56,91 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+3918,PALMA DE MALLORCA CMT,SPAIN,+39:33:20,+002:37:35,3 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+3919,PALMA DE MALLORCA / SON SAN JUAN,SPAIN,+39:33:39,+002:44:12,8 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+Confirmed the minimum temperature of -10.0&#176;C day 12/02/1956.
+
+----------------------------------------------------------------
+3920,GIRONA-NOU INSTITUT,SPAIN,+41:58:44,+002:49:36,98 m 
+----------------------------------------------------------------
+* Land use:
+located on a flat roof of the new Secondary School Vicens Vives
+* Soil type:
+
+* Surface coverage:
+paving stone
+* History:
+The Observatory was established in 1967, as a continuity of the former one located at the first 
+Provincial Education Institute. No location changes were reported for the whole period (1967-1977).<br> Wind speed obtained as average total run of wind, from 07h to 07h through a mechanical counter (Robinson cup anemometer).
+
+----------------------------------------------------------------
+3921,CACERES CIUDAD,SPAIN,+39:29:00,-006:22:00,459 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+3922,SANTANDER CMT,SPAIN,+43:29:30,-003:47:59,52 m 
+----------------------------------------------------------------
+* Land use:
+rural environment clear and plain and natural vegetation. Located next to a cliff 50 meters above the sea.
+* Soil type:
+
+* Surface coverage:
+
+* History:
+The observations started in April 1997. Previously there was another tp station with the call sign 1111 located in the same place where the de Santander CMT is now placed. Meteorological observations were made between 1911 and 1962, but in the database the data are only recorded between 1946 and 1962 and their quality remain to be analyzed. <br> The precipitation series is valid, but we have to take into account that precipitation is significantly lower than in nearby towns due to the situation of the observatory. <br>
+From October 16, 2007, the wind sensors were placed at a height of 10 meters above the ground, next to the meteorological garden. The wind sensors between 13/11/2003 and 16/10/2007 were located at a height of about 21 meters above the ground. It is estimated that for this location the anemometer values are overestimated by about 10% compared with those that would measured to the height of 10 meters recommended by the World Meteorological Organization (WMO).<br>
+
+----------------------------------------------------------------
+3923,SANTANDER/PARAYAS,SPAIN,+43:25:45,-003:49:53,5 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+The observations started in 1953. They were not made between August 1975 and September 1977 due to repairs at the airport. From September 1977 data are taken from meteorological garden located near the passenger terminal. In March 2006, began taking data with a SIMAS automatic station located in the runway header 11, approximately 700 meters from the old meteorological garden. <br>
+The precipitation series is only valid from 1978. <br>
+The temperature series is only valid from 1961. <br>
+Confirmed the minimum temperature of -5.4&#176;C day 21/Jan/1957. <br>
+In September 1991, the anemometer which was located in the control tower to 39 meters high was placed in the runway header 29 to 10 meters high. Since March 2006 the wind data are obtained from an anemometer at the header 11, to 10 meters high.
+
+----------------------------------------------------------------
+3924,CASTELLON,SPAIN,+39:57:00,-000:04:17,35 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+3925,CASTELLON DE LA PLANA,SPAIN,+39:59:21,-000:02:26,25 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+3926,CEUTA,SPAIN,+35:53:24,-005:20:45,87 m 
+----------------------------------------------------------------
+* Land use:
+Located in an urban area, on the slopes of a mountainous region, clear with little natural vegetation.
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+3927,CEUTA (MONTE HACHO),SPAIN,+35:53:32,-005:17:22,200 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+3928,CIUDAD REAL (INSTITUTO),SPAIN,+38:59:21,-003:55:43,627 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+3929,CUENCA,SPAIN,+40:04:00,-002:08:17,945 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+3930,GIRONA (ANTIC INSTITUT),SPAIN,+41:58:48,+002:49:31,95 m 
+----------------------------------------------------------------
+* Land use:
+located on a flat roof of the former Provincial Education Institute, at the top of a tower, 14 m above the ground level
+* Soil type:
+
+* Surface coverage:
+paving stone
+* History:
+The Observatory was established at the Provincial Education Institute in 1884, although some observations were made previously. No location changes have been reported for the whole period. In 1967, the observatory was replaced to a new Institute (IES Vicen&ccedil; Vives).<br> The photography was taken in 1940s (source: Historical Archive of Girona). <br> For the period previous to Feb/1950, cloud cover was expressed originaly as tenths of covered sky. <br> Wind speed obtained as average total run of wind, from 07h to 07h through a mechanical counter (Robinson cup anemometer).
+
+----------------------------------------------------------------
+3931,GIRONA/COSTA BRAVA,SPAIN,+41:54:42,+002:45:48,143 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+On March 8, 2010 wind sensors were blocked by snow between 15 and 18 hours.<br>
+
+----------------------------------------------------------------
+3932,GRANADA/AEROPUERTO,SPAIN,+37:11:23,-003:47:22,567 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+3933,GUADALAJARA,SPAIN,+40:39:40,-003:10:27,639 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+From January 2009 due to a breakdown of the barometer it begins to measure the pressure with the barograph and there is a sudden drop in pressure.
+
+----------------------------------------------------------------
+3934,GUADALAJARA (INSTITUTO),SPAIN,+40:38:05,-003:09:52,685 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+3935,MOLINA DE ARAGON,SPAIN,+40:50:40,-001:53:07,1056 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+3937,HUELVA,SPAIN,+37:15:35,-006:56:57,17 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+Wind sensor to 21.75 m. in the port.
+
+----------------------------------------------------------------
+3938,JAEN,SPAIN,+37:46:40,-003:48:27,582 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+Confirmed the minimum temperature of  -7.8&#176;C day 27/01/2005.
+
+----------------------------------------------------------------
+3939,JAEN (INSTITUTO),SPAIN,+37:46:40,-003:47:17,510 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+3940,FUERTEVENTURA/AEROPUERTO,SPAIN,+28:26:41,-013:51:47,25 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+3942,LLEIDA,SPAIN,+41:37:33,+000:35:42,192 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+On 24/01/2009 confirmed wind gusts of 100 km/h (eight), plus the maximum gust of 108 km/h.
+
+----------------------------------------------------------------
+3943,LLEIDA (OBSERVATORIO),SPAIN,+41:37:07,+000:37:19,191 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+paving stone
+* History:
+The Observatory was established at the 6th floor of the Provincial Council main building (Diputaci&oacute; de Lleida), on a flat roof. No location changes have been reported for the whole period. In 1983, the observatory was relocated to a new site, at the outskirts of the city.<br> Wind speed obtained as average total run of wind, from 07h to 07h through a mechanical counter (Robinson cup anemometer). From Jan/1969 onwards, the observing period is 07-07h, while prior to this date it was 00-24h.
+
+----------------------------------------------------------------
+3944,LUGO/ROZAS,SPAIN,+43:06:55,-007:27:22,445 m 
+----------------------------------------------------------------
+* Land use:
+Located in a rural, flat and clear area with natural vegetation in normal quantity.
+* Soil type:
+
+* Surface coverage:
+
+* History:
+Confirmed the minimum temperature of -10.0&#176;C day 23/12/2005.
+
+----------------------------------------------------------------
+3945,COLMENAR VIEJO/FAMET,SPAIN,+40:41:55,-003:45:52,1004 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+3946,MADRID/BARAJAS,SPAIN,+40:28:00,-003:33:20,609 m 
+----------------------------------------------------------------
+* Land use:
+Barajas airport lies in the Jarama river valley, which goes from NNW to SSE, across plain open terrain free of obstacles. Until 1998 the observatory had two nearby trees to the W (around 20 m apart) which came to reach around 15 m height. Since the sensor
+* Soil type:
+loamy
+* Surface coverage:
+grass
+* History:
+terrain roughness: to N:3, to E: 3, to S: 3, to W: 3, Average: 3
+
+----------------------------------------------------------------
+3947,MADRID/CUATROVIENTOS,SPAIN,+40:22:40,-003:47:21,687 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+3948,MADRID/GETAFE,SPAIN,+40:18:00,-003:43:21,617 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+3949,MURCIA/ALCANTARILLA,SPAIN,+37:57:28,-001:13:47,85 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+3950,PAMPLONA (OBSERVATORIO),SPAIN,+42:49:03,-001:38:11,442 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+3951,OURENSE,SPAIN,+42:19:40,-007:51:37,143 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+3952,OURENSE (INSTITUTO),SPAIN,+42:20:00,-007:51:47,148 m 
+----------------------------------------------------------------
+* Land use:
+placed on a south-facing hillside, in a rural, flat and not clear area with little natural vegetation.
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+3953,PALENCIA (OBSERVATORIO),SPAIN,+42:00:30,-004:32:07,750 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+3954,PONTEVEDRA,SPAIN,+42:26:24,-008:36:59,108 m 
+----------------------------------------------------------------
+* Land use:
+placed on a west facing hillside, in a rural, flat and not clear area with natural vegetation  in normal quantity
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+3955,PONTEVEDRA (INSTITUTO),SPAIN,+42:25:50,-008:38:59,19 m 
+----------------------------------------------------------------
+* Land use:
+Located in a rural, flat and not clear area.
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+3956,SALAMANCA OBS.,SPAIN,+40:57:23,-005:39:41,775 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+Since December 1988 because of the location of the automatic station, in a very low place in Salamanca (hole type), the wind can be shielded and a temperature is generally higher.
+
+----------------------------------------------------------------
+3957,HIERRO/AEROPUERTO,SPAIN,+27:49:08,-017:53:20,32 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+Because of technical problems, meteorological shelter was at ground level since December 30, 2008 until February 10, 2009. <br>
+In September 2007 the position of the wind tower was changed. This removed the shade over the heliograph, influencing the measurements of the heliograph.
+
+----------------------------------------------------------------
+3958,LA PALMA/AEROPUERTO,SPAIN,+28:37:59,-017:45:18,33 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+3959,STA. CRUZ DE TENERIFE,SPAIN,+28:27:47,-016:15:19,35 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+3960,TENERIFE/SUR,SPAIN,+28:02:51,-016:33:39,64 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+3961,SEGOVIA,SPAIN,+40:56:52,-004:07:38,1005 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+3962,SEGOVIA (MARIANO QUINTANILLA),SPAIN,+40:56:52,-004:06:55,990 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+3963,MORON DE LA FRONTERA,SPAIN,+37:09:30,-005:36:57,87 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+Confirmed the minimum temperature  of -8.0&#176;C day 27/01/1976
+
+----------------------------------------------------------------
+3964,CALAMOCHA,SPAIN,+40:55:34,-001:17:36,890 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+3965,CALAMOCHA-VOR,SPAIN,+40:51:55,-001:18:17,932 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+3966,TERUEL,SPAIN,+40:20:59,-001:07:00,900 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+3967,TOLEDO,SPAIN,+39:53:05,-004:02:58,515 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+3968,TOLEDO LORENZANA,SPAIN,+39:51:40,-004:01:25,540 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+Confirmed the minimum temperature of -14.4&#176;C day 18/01/1945.
+
+----------------------------------------------------------------
+3969,VALENCIA/AEROPUERTO,SPAIN,+39:29:12,-000:28:24,69 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+3970,VALLADOLID (VILLANUBLA),SPAIN,+41:42:00,-004:51:00,846 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+Confirmed the minimum temperature of -18.8&#176;C day 03/01/1971.
+
+----------------------------------------------------------------
+3971,DAROCA,SPAIN,+41:06:53,-001:24:39,779 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+10904,LLEIDA-AJUNTAMENT,SPAIN,+41:36:59,+000:35:00,169 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+paving stone
+* History:
+The Observatory was established at the city council, probably located at the top of the building, on a flat roof. No location changes have been reported for the whole period.<br> For the period prior to Feb/1950, cloud cover was expressed originaly as tenths of covered sky.<br> No sunshine data available between 22/Jun/1951 and 20/Apr/1951 due to heliograph breakdown.<br> Wind speed obtained as average total run of wind, from 07h to 07h through a mechanical counter (Robinson cup anemometer).
+
+----------------------------------------------------------------
+10905,LLEIDA-ESCORXADOR,SPAIN,+41:36:49,+000:37:05,162 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+The Observatory was established at the former slaughterhouse of the city, probably located on a flat roof. No location changes have been reported for the whole period. The observatory was partly closed in 1947 for one month and a half (April and mid-May).<br>
+Cloud cover was expressed originaly as tenths of covered sky.
+
+----------------------------------------------------------------
+11009,HONDARRIBIA-MALKARROA,SPAIN,+43:21:25,-001:47:32,4 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+
+
+----------------------------------------------------------------
+11010,ALGUAIRE,SPAIN,+41:44:34,+000:32:09,370 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Natural herbs and small bushes
+* History:
+Automatic Weather Station established on June 6, 2006 in a semirural environment and next to the Lleida-Alguaire International Airport.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP 45AC) located at 1.50 m above ground level within a radiation shield.<br>Rain gaugue at 1.4 m ground level (Lambrecht).<br>Atmospheric pressure sensor (Vaisala PTB101B).<br>Datalogger (Campbell CR1000).<br><br>FG7 metadata:<br>For the period previous to 10/10/2009, average wind speed (FG7) is computed as vector averaging. Since then as scalar averaging.
+
+----------------------------------------------------------------
+11011,AMPOSTA,SPAIN,+40:42:28,+000:37:56,3 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Natural herbs
+* History:
+Automatic Weather Station established on February 6, 1992 in a rural environment close to the Ebro delta.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP 45AL) located at 1.50 m above ground level within a radiation shield.<br>Rain gaugue at 1.4 m ground level (Lambrecht).<br>Atmospheric pressure sensor (Vaisala PTB101C).<br>Datalogger (Campbell CR1000).<br><br>FG7 metadata:<br>For the period previous to 06/10/2009, average wind speed (FG7) is computed as vector averaging. Since then as scalar averaging.
+
+----------------------------------------------------------------
+11012,ANGLES,SPAIN,+41:57:39,+002:37:52,150 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Natural herbs
+* History:
+Automatic Weather Station established on May 10, 2001 in a semirural environment.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP155) located at 1.50 m above ground level within a radiation shield.<br>Rain gaugue at 1.4 m ground level (Lambrecht).<br>Atmospheric pressure sensor (Vaisala PTB101C).<br>Datalogger (Campbell CR1000).<br><br>FG7 metadata:<br>For the period previous to 15/05/2009, average wind speed (FG7) is computed as vector averaging. Since then as scalar averaging.
+
+----------------------------------------------------------------
+11013,BANYOLES,SPAIN,+42:06:59,+002:47:23,176 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Natural grass
+* History:
+Automatic Weather Station established on October 11, 1999 in a semirural environment.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP155) located at 1.50 m above ground level within a radiation shield.<br>Rain gaugue at 1.4 m ground level (Thies).<br>Atmospheric pressure sensor (Vaisala PTB101C).<br>Datalogger (Campbell CR1000).<br><br>FG7 metadata:<br>For the period previous to 15/05/2009, average wind speed (FG7) is computed as vector averaging. Since then as scalar averaging.
+
+----------------------------------------------------------------
+11014,BARCELONA-EL RAVAL,SPAIN,+41:23:02,+002:10:03,33 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Artificial herb and concrete
+* History:
+Automatic Weather Station established on October 11, 2006 in a urban environment, located on a roof of the Faculty of Geography (University of Barcelona), in the downtown.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP155) located at 1.50 m above ground level within a radiation shield.<br>Rain gaugue at 1.4 m ground level (Lambrecht).<br>Atmospheric pressure sensor (Vaisala PTB101C).<br>Datalogger (Campbell CR1000).<br><br>FG7 metadata:<br>For the period previous to 20/05/2009, average wind speed (FG7) is computed as vector averaging. Since then as scalar averaging.
+
+----------------------------------------------------------------
+11015,BARCELONA-ZONA UNIVERSITARIA,SPAIN,+41:22:45,+002:06:19,79 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Natural herbs and small bushes
+* History:
+Automatic Weather Station established on April 18, 2008 in a semiurban environment, located at the University Sports Area of the University of Barcelona.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP 45AL) located at 1.50 m above ground level within a radiation shield.<br>Rain gaugue at 1.4 m ground level (Thies).<br>Atmospheric pressure sensor (Vaisala PTB101C).<br>Datalogger (Campbell CR1000).<br><br>FG7 metadata:<br>For the period previous to 20/05/2009, average wind speed (FG7) is computed as vector averaging. Since then as scalar averaging.
+
+----------------------------------------------------------------
+11016,BENISSANET,SPAIN,+41:03:46,+000:38:06,32 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Natural herbs and small bushes
+* History:
+Automatic Weather Station established on July 14, 1993 in a rural environment, near the Ebro river.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP155) located at 1.50 m above ground level within a radiation shield.<br>Rain gaugue at 1.4 m ground level (Lambrecht).<br>Atmospheric pressure sensor (Vaisala PTB110).<br>Datalogger (Campbell CR1000).<br><br>Wind metadata:<br>Wind observations at 10 m begin on March 16, 2010. Since then wind was measured at 2 m.
+
+----------------------------------------------------------------
+11017,BOI,SPAIN,+42:27:58,+000:53:03,2535 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Alpine meadow
+* History:
+Automatic Weather Station established on November 13, 1998 in a mountainous environment at the Pyrenees.<br>Wind speed and direction measured at 6 m (RM Young 05103 Alpine).<br>Temperature and relative humidity sensor (Vaisala HMP 45A) located at 4.70 m above ground level within a radiation shield.<br>Rain gaugue at 1.7 m ground level (Geonor T200B).<br>Nivometer at 4.8 m above ground level (Campbell SR50A).<br>Datalogger (Campbell CR1000).<br><br>FG7 metadata:<br>For the period previous to 15/05/2009, average wind speed (FG7) is computed as vector averaging. Since then as scalar averaging.
+
+----------------------------------------------------------------
+11018,BONAIGUA,SPAIN,+42:38:49,+000:59:05,2266 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Alpine meadow
+* History:
+Automatic Weather Station established on November 16, 1997 in a mountainous environment at the Pyrenees.<br>Wind speed and direction measured at 6 m (RM Young 05103-45 Alpine).<br>Temperature and relative humidity sensor (Vaisala HMP155) located at 4.70 m above ground level within a radiation shield.<br>Rain gaugue at 1.7 m ground level (Geonor T200B).<br>Nivometer at 4.8 m above ground level (Campbell SR50A).<br>Datalogger (Campbell CR1000).
+
+----------------------------------------------------------------
+11019,CABRILS,SPAIN,+41:31:04,+002:22:37,81 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Natural grass
+* History:
+Automatic Weather Station established on November 27, 1995 in a semirural environment.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP 45AL) located at 1.50 m above ground level within a radiation shield.<br>Rain gaugue at 1.4 m ground level (Thies).<br>Atmospheric pressure sensor (Vaisala PTB101C).<br>Datalogger (Campbell CR1000).<br><br>FG7 metadata:<br>For the period previous to 02/10/2009, average wind speed (FG7) is computed as vector averaging. Since then as scalar averaging.
+
+----------------------------------------------------------------
+11020,CADI NORD-PRAT DAGUILO,SPAIN,+42:17:33,+001:42:54,2143 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Alpine forest
+* History:
+Automatic Weather Station established on November 6, 2003 in a mountainous environment at the Pyrenees.<br>Wind speed and direction measured at 10 m (RM Young 05103 Alpine).<br>Temperature and relative humidity sensor (Vaisala HMP 45AL) located at 4.70 m above ground level within a radiation shield.<br>Rain gaugue at 1.7 m ground level (Geonor T200B).<br>Nivometer at 4.8 m above ground level (Campbell SR50A).<br>Datalogger (Campbell CR1000).<br><br>FG7 metadata:<br>For the period previous to 15/05/2009, average wind speed (FG7) is computed as vector averaging. Since then as scalar averaging.<br>For the period previous to 17/06/2009 the wind sensor was located at 6 m above ground level, since then at 10 m.
+
+----------------------------------------------------------------
+11021,CALDES DE MONTBUI,SPAIN,+41:36:46,+002:10:06,176 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Natural grass
+* History:
+Automatic Weather Station established on March 8, 2007 in a crop environment.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP 45AL) located at 1.50 m above ground level within a radiation shield.<br>Rain gaugue at 1.4 m ground level (Lambrecht).<br>Atmospheric pressure sensor (Vaisala PTB101B).<br>Datalogger (Campbell CR1000).<br><br>FG7 metadata:<br>For the period previous to 14/10/2009, average wind speed (FG7) is computed as vector averaging. Since then as scalar averaging.
+
+----------------------------------------------------------------
+11022,CASTELLBISBAL,SPAIN,+41:28:44,+001:58:32,147 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Natural herbs and small bushes
+* History:
+Automatic Weather Station established on March 18, 2008 in a semiurban environment.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP155) located at 1.50 m above ground level within a radiation shield.<br>Rain gaugue at 1.4 m ground level (Thies).<br>Atmospheric pressure sensor (Setra 278).<br>Datalogger (Campbell CR1000).<br><br>FG7 metadata:<br>For the period previous to 21/05/2009, average wind speed (FG7) is computed as vector averaging. Since then as scalar averaging.
+
+----------------------------------------------------------------
+11023,CASTELL DARO,SPAIN,+41:48:31,+003:01:57,14 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Natural herbs
+* History:
+Automatic Weather Station established on May 10, 2001 in a semirural environment.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP 45AL) located at 1.50 m above ground level within a radiation shield.<br>Rain gaugue at 1.4 m ground level (Thies).<br>Atmospheric pressure sensor (Vaisala PTB101C).<br>Datalogger (Campbell CR1000).<br><br>FG7 metadata:<br>For the period previous to 15/05/2009, average wind speed (FG7) is computed as vector averaging. Since then as scalar averaging.
+
+----------------------------------------------------------------
+11024,CASTELLNOU DE BAGES,SPAIN,+41:49:51,+001:50:49,507 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Natural herbs
+* History:
+Automatic Weather Station established on January 22, 1998 in a rural environment.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP 45AL) located at 1.50 m above ground level within a radiation shield.<br>Rain gaugue at 1.4 m ground level (Lambrecht).<br>Datalogger (Campbell CR1000).<br><br>FG7 metadata:<br>For the period previous to 19/05/2009, average wind speed (FG7) is computed as vector averaging. Since then as scalar averaging.
+
+----------------------------------------------------------------
+11025,CASTELLNOU DE SEANA,SPAIN,+41:39:24,+000:57:06,264 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Natural grass
+* History:
+Automatic Weather Station established on December 16, 1995 in a rural environment next to a cultivation of fruit trees.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP155) located at 1.50 m above ground level within a radiation shield.<br>Rain gaugue at 1.4 m ground level (Lambrecht).<br>Atmospheric pressure sensor (Vaisala PTB101C).<br>Datalogger (Campbell CR1000).<br><br>FG7 metadata:<br>For the period previous to 07/05/2009, average wind speed (FG7) is computed as vector averaging. Since then as scalar averaging.
+
+----------------------------------------------------------------
+11026,CERTASCAN,SPAIN,+42:41:01,+001:16:19,2400 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Alpine meadow
+* History:
+Automatic Weather Station established on November 11, 2000 in a mountainous environment at the Pyrenees.<br>Wind speed and direction measured at 6 m (RM Young 05103 Alpine).<br>Temperature and relative humidity sensor (Vaisala HMP155) located at 4.70 m above ground level within a radiation shield.<br>Rain gaugue at 1.7 m ground level (Geonor T200B).<br>Nivometer at 4.8 m above ground level (Campbell SR50A).<br>Datalogger (Campbell CR1000).
+
+----------------------------------------------------------------
+11027,CERVERA,SPAIN,+41:40:32,+001:17:46,554 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Natural herbs and small bushes
+* History:
+Automatic Weather Station established on October 27, 1995 in a rural environment.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP155) located at 1.50 m above ground level within a radiation shield.<br>Rain gaugue at 1.4 m ground level (Lambrecht).<br>Atmospheric pressure sensor (Vaisala PTB101B).<br>Datalogger (Campbell CR1000).<br><br>FG7 metadata:<br>For the period previous to 08/05/2009, average wind speed (FG7) is computed as vector averaging. Since then as scalar averaging.
+
+----------------------------------------------------------------
+11028,CONSTANTI,SPAIN,+41:10:17,+001:10:04,112 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Natural herbs
+* History:
+Automatic Weather Station established on May 29, 1990 in a rural environment.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP155) located at 1.50 m above ground level within a radiation shield.<br>Rain gaugue at 1.4 m ground level (Lambrecht).<br>Atmospheric pressure sensor (Vaisala PTB101C).<br>Datalogger (Campbell CR1000).<br><br>FG7 metadata:<br>For the period previous to 07/10/2009, average wind speed (FG7) is computed as vector averaging. Since then as scalar averaging.
+
+----------------------------------------------------------------
+11029,CUNIT,SPAIN,+41:12:07,+001:38:00,17 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Natural herbs
+* History:
+Automatic Weather Station established on June 27, 2006 in a semirural environment.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP155) located at 1.50 m above ground level within a radiation shield.<br>Rain gaugue at 1.4 m ground level (Lambrecht).<br>Atmospheric pressure sensor (Vaisala PTB101C).<br>Datalogger (Campbell CR1000).<br><br>FG7 metadata:<br>For the period previous to 14/10/2009, average wind speed (FG7) is computed as vector averaging. Since then as scalar averaging.
+
+----------------------------------------------------------------
+11030,DAS-AERODROM,SPAIN,+42:23:10,+001:51:59,1097 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Natural herbs
+* History:
+Automatic Weather Station established on May 22, 2001 in a local airport placed at the Pyrenees.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP155) located at 1.50 m above ground level within a radiation shield.<br>Rain gaugue at 1.4 m ground level (Thies).<br>Nivometer (Campbell SR50).<br>Atmospheric pressure sensor (Vaisala PTB101B).<br>Datalogger (Campbell CR1000).<br><br>FG7 metadata:<br>For the period previous to 16/05/2009, average wind speed (FG7) is computed as vector averaging. Since then as scalar averaging.
+
+----------------------------------------------------------------
+11031,EL PERELLO,SPAIN,+40:52:22,+000:42:57,179 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Natural herbs and bushes
+* History:
+Automatic Weather Station established on February 5, 1998 in a rural area.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP 45AL) located at 1.50 m above ground level within a radiation shield.<br>Rain gaugue at 1.4 m ground level (Thies).<br>Atmospheric pressure sensor (Vaisala PTB101C).<br>Datalogger (Campbell CR1000).<br><br>FG7 metadata:<br>For the period previous to 15/05/2009, average wind speed (FG7) is computed as vector averaging. Since then as scalar averaging.
+
+----------------------------------------------------------------
+11032,EL PONT DE SUERT,SPAIN,+42:23:53,+000:44:37,823 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Natural herbs
+* History:
+Automatic Weather Station established on February 14, 1996 in a semirural area.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP 155) located at 1.50 m above ground level within a radiation shield.<br>Rain gaugue at 1.4 m ground level (Thies).<br>Atmospheric pressure sensor (Vaisala PTB101B).<br>Datalogger (Campbell CR1000).<br><br>FG7 metadata:<br>For the period previous to 12/05/2009, average wind speed (FG7) is computed as vector averaging. Since then as scalar averaging.
+
+----------------------------------------------------------------
+11033,EL PORT DEL COMTE,SPAIN,+42:10:57,+001:31:27,2316 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Alpine meadows
+* History:
+Automatic Weather Station established on October 3, 2002 in a mountainous environment at the prePyrenees.<br>Wind speed and direction measured at 10 m (RM Young 05103 Alpine).<br>Temperature and relative humidity sensor (Vaisala HMP155) located at 4.70 m above ground level within a radiation shield.<br>Rain gaugue at 1.7 m ground level (Geonor T200B).<br>Nivometer at 4.8 m above ground level (Campbell SR50A).<br>Datalogger (Campbell CR1000).<br><br>FG7 metadata:<br>For the period previous to 26/07/2008, average wind speed (FG7) is computed as vector averaging. Since then as scalar averaging.
+
+----------------------------------------------------------------
+11034,EL PRAT DE LLOBREGAT,SPAIN,+41:20:25,+002:04:49,8 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Natural herbs
+* History:
+Automatic Weather Station established on March 22, 2011 in a rural environment.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP155) located at 1.50 m above ground level within a radiation shield.<br>Rain gaugue at 1.4 m ground level (Lambrecht).<br>Datalogger (Campbell CR1000).
+
+----------------------------------------------------------------
+11035,ELS HOSTALETS DE PIEROLA,SPAIN,+41:31:52,+001:48:29,316 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Natural herbs
+* History:
+Automatic Weather Station established on March 31, 1996 in a semirural environment.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP 45AL) located at 1.50 m above ground level within a radiation shield.<br>Rain gaugue at 1.4 m ground level (Thies).<br>Atmospheric pressure sensor (Vaisala PTB101C).<br>Datalogger (Campbell CR1000).<br><br>FG7 metadata:<br>For the period previous to 08/05/2009, average wind speed (FG7) is computed as vector averaging. Since then as scalar averaging.
+
+----------------------------------------------------------------
+11036,EL VENDRELL,SPAIN,+41:12:56,+001:31:16,59 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Natural herbs and small bushes
+* History:
+Automatic Weather Station established on June 11, 1999 in a semirural environment.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP155) located at 1.50 m above ground level within a radiation shield.<br>Rain gaugue at 1.4 m ground level (Thies).<br>Atmospheric pressure sensor (Vaisala PTB101C).<br>Datalogger (Campbell CR1000).<br><br>FG7 metadata:<br>For the period previous to 14/10/2009, average wind speed (FG7) is computed as vector averaging. Since then as scalar averaging.
+
+----------------------------------------------------------------
+11037,ESPOT,SPAIN,+42:32:03,+001:03:17,2519 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Alpine meadow
+* History:
+Automatic Weather Station established on March 1, 2002 in a mountainous environment at the Pyrenees.<br>Wind speed and direction measured at 10 m (RM Young 05103 Alpine).<br>Temperature and relative humidity sensor (Vaisala HMP 45A) located at 4.70 m above ground level within a radiation shield.<br>Rain gaugue at 1.7 m ground level (Geonor T200B).<br>Nivometer at 4.8 m above ground level (Campbell SR50A).<br>Datalogger (Campbell CR1000).
+
+----------------------------------------------------------------
+11038,FALSET,SPAIN,+41:09:13,+000:49:10,359 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Natural herbs and small bushes
+* History:
+Automatic Weather Station established on December 20, 2006 in a rural environment.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP155) located at 1.50 m above ground level within a radiation shield.<br>Rain gaugue at 1.4 m ground level (Thies).<br>Atmospheric pressure sensor (Vaisala PTB101C).<br>Datalogger (Campbell CR1000).<br><br>FG7 metadata:<br>For the period previous to 20/05/2009, average wind speed (FG7) is computed as vector averaging. Since then as scalar averaging.
+
+----------------------------------------------------------------
+11039,FONT-RUBI,SPAIN,+41:25:58,+001:37:26,415 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Natural herbs and bushes
+* History:
+Automatic Weather Station established on June 18, 1998 in a rural area.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP 155) located at 1.50 m above ground level within a radiation shield.<br>Rain gaugue at 1.4 m ground level (Lambrecht).<br>Atmospheric pressure sensor (Vaisala PTB101C).<br>Datalogger (Campbell CR1000).<br><br>FG7 metadata:<br>For the period previous to 15/05/2009, average wind speed (FG7) is computed as vector averaging. Since then as scalar averaging.
+
+----------------------------------------------------------------
+11040,GIRONA,SPAIN,+41:58:56,+002:48:25,72 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Natural herbs
+* History:
+Automatic Weather Station established on September 16, 2010 in a semiurban environment.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP155) located at 1.50 m above ground level within a radiation shield.<br>Rain gaugue at 1.4 m ground level (Lambrecht).<br>Atmospheric pressure sensor (Vaisala PTB101C).<br>Datalogger (Campbell CR1000).
+
+----------------------------------------------------------------
+11041,GUARDIOLA DE BERGUEDA,SPAIN,+42:14:03,+001:52:29,788 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Natural herbs
+* History:
+Automatic Weather Station established on November 28, 2005 in a rural environment.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP155) located at 1.50 m above ground level within a radiation shield.<br>Rain gaugue at 1.4 m ground level (Lambrecht).<br>Atmospheric pressure sensor (Vaisala PTB101B).<br>Datalogger (Campbell CR1000).<br><br>FG7 metadata:<br>For the period previous to 10/10/2009, average wind speed (FG7) is computed as vector averaging. Since then as scalar averaging.
+
+----------------------------------------------------------------
+11042,HORTA DE SANT JOAN,SPAIN,+40:57:05,+000:18:20,515 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Natural herbs and small bushes
+* History:
+Automatic Weather Station established on January 28, 1998 in a rural environment.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP155) located at 1.50 m above ground level within a radiation shield.<br>Rain gaugue at 1.4 m ground level (Lambrecht).<br>Atmospheric pressure sensor (Vaisala PTB101B).<br>Datalogger (Campbell CR1000).<br><br>FG7 metadata:<br>For the period previous to 14/05/2009, average wind speed (FG7) is computed as vector averaging. Since then as scalar averaging.
+
+----------------------------------------------------------------
+11043,ILLA DE BUDA,SPAIN,+40:42:26,+000:50:04,1 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Natural herbs in a dune environment
+* History:
+Automatic Weather Station established on July 14, 1999 in a rural environment at the Ebro delta.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP 45AL) located at 1.50 m above ground level within a radiation shield.<br>Rain gaugue at 1.4 m ground level (Lambrecht).<br>Atmospheric pressure sensor (Vaisala PTB101C).<br>Datalogger (Campbell CR1000).<br><br>FG7 metadata:<br>For the period previous to 16/05/2009, average wind speed (FG7) is computed as vector averaging. Since then as scalar averaging.
+
+----------------------------------------------------------------
+11044,LA BISBAL DEMPORDA,SPAIN,+41:58:39,+003:02:07,29 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Natural herbs
+* History:
+Automatic Weather Station established on March 25, 1998 in a semirural environment.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP155) located at 1.50 m above ground level within a radiation shield.<br>Rain gaugue at 1.4 m ground level (Thies).<br>Atmospheric pressure sensor (Vaisala PTB101C).<br>Datalogger (Campbell CR1000).<br><br>FG7 metadata:<br>For the period previous to 15/05/2009, average wind speed (FG7) is computed as vector averaging. Since then as scalar averaging.
+
+----------------------------------------------------------------
+11045,LAC REDON,SPAIN,+42:38:18,+000:46:44,2247 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Alpine meadow
+* History:
+Automatic Weather Station established on July 15, 1999 in a mountainous environment at the Pyrenees.<br>Wind speed and direction measured at 10 m (RM Young 05103 Alpine).<br>Temperature and relative humidity sensor (Vaisala HMP155) located at 4.70 m above ground level within a radiation shield.<br>Rain gaugue at 1.7 m ground level (Geonor T200B).<br>Atmospheric pressure sensor (Vaisala PTB110). <br>Nivometer at 4.8 m above ground level (Campbell SR50A).<br>Datalogger (Campbell CR1000).<br><br>FG7 metadata:<br>For the period previous to 10/07/2008, average wind speed (FG7) is computed as vector averaging. Since then as scalar averaging.
+
+----------------------------------------------------------------
+11046,LA PANADELLA,SPAIN,+41:36:09,+001:24:02,785 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Natural herbs
+* History:
+Automatic Weather Station established on December 18, 2008 in a rural environment.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP 45AL) located at 1.50 m above ground level within a radiation shield.<br>Rain gaugue at 1.4 m ground level (Lambrecht).<br>Atmospheric pressure sensor (Vaisala PTB101B).<br>Datalogger (Campbell CR1000).<br><br>FG7 metadata:<br>For the period previous to 20/05/2009, average wind speed (FG7) is computed as vector averaging. Since then as scalar averaging.
+
+----------------------------------------------------------------
+11047,LA POBLA DE SEGUR - BOMBERS,SPAIN,+42:14:22,+000:57:52,513 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Natural herbs
+* History:
+Automatic Weather Station established on December 22, 1995 in a semirural environment, located in the gardens of the fire station.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP155) located at 1.50 m above ground level within a radiation shield.<br>Rain gaugue at 1.4 m ground level (Thies).<br>Atmospheric pressure sensor (Vaisala PTB101B).<br>Datalogger (Campbell CR1000).<br><br>FG7 metadata:<br>For the period previous to 12/05/2009, average wind speed (FG7) is computed as vector averaging. Since then as scalar averaging.<br>Station closed on 20161111 and replaced by La Pobla de Segur.
+
+----------------------------------------------------------------
+11048,LA QUAR,SPAIN,+42:04:49,+001:57:45,873 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Natural herbs and small bushes
+* History:
+Automatic Weather Station established on March 13, 1996 in a forest environment.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP155) located at 1.50 m above ground level within a radiation shield.<br>Rain gaugue at 1.4 m ground level (Thies).<br>Atmospheric pressure sensor (Vaisala PTB110).<br>Datalogger (Campbell CR1000).<br><br>FG7 metadata:<br>For the period previous to 12/05/2009, average wind speed (FG7) is computed as vector averaging. Since then as scalar averaging.
+
+----------------------------------------------------------------
+11049,LA SEU DURGELL,SPAIN,+42:22:15,+001:25:58,849 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Natural herbs
+* History:
+Automatic Weather Station established on January 16, 1996 in a semirural area.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP 45AL) located at 1.50 m above ground level within a radiation shield.<br>Rain gaugue at 1.4 m ground level (Thies).<br>Atmospheric pressure sensor (Vaisala PTB101B).<br>Datalogger (Campbell CR1000).<br><br>FG7 metadata:<br>For the period previous to 08/05/2009, average wind speed (FG7) is computed as vector averaging. Since then as scalar averaging.
+
+----------------------------------------------------------------
+11050,LESPLUGA DE FRANCOLI,SPAIN,+41:23:33,+001:05:56,446 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Natural herbs
+* History:
+Automatic Weather Station established on February 23, 1996 in a rural environment.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP 45AL) located at 1.50 m above ground level within a radiation shield.<br>Rain gaugue at 1.4 m ground level (Lambrecht).<br>Atmospheric pressure sensor (Vaisala PTB101C).<br>Datalogger (Campbell CR1000).<br><br>FG7 metadata:<br>For the period previous to 12/05/2009, average wind speed (FG7) is computed as vector averaging. Since then as scalar averaging.
+
+----------------------------------------------------------------
+11051,MALGRAT DE MAR,SPAIN,+41:38:49,+002:45:24,2 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Natural herbs
+* History:
+Automatic Weather Station established on May 4, 2005 in a semirural environment.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP 45AL) located at 1.50 m above ground level within a radiation shield.<br>Rain gaugue at 1.4 m ground level (Lambrecht).<br>Atmospheric pressure sensor (Vaisala PTB101B).<br>Datalogger (Campbell CR1000).<br><br>FG7 metadata:<br>For the period previous to 10/10/2009, average wind speed (FG7) is computed as vector averaging. Since then as scalar averaging.
+
+----------------------------------------------------------------
+11052,MALNIU,SPAIN,+42:27:58,+001:46:42,2230 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Alpine meadows and forest
+* History:
+Automatic Weather Station established on November 3, 1999 in a mountainous environment at the Pyrenees.<br>Wind speed and direction measured at 6 m (RM Young 05103 Alpine).<br>Temperature and relative humidity sensor (Vaisala HMP 45AL) located at 4.70 m above ground level within a radiation shield.<br>Rain gaugue at 1.7 m ground level (Geonor T200B).<br>Nivometer at 4.8 m above ground level (Campbell SR50A).<br>Datalogger (Campbell CR1000).
+
+----------------------------------------------------------------
+11053,MAS DE BARBERANS-ABOCADOR,SPAIN,+40:43:06,+000:23:59,240 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Natural herbs
+* History:
+Automatic Weather Station established on February 6, 1992 in a rural environment.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP155) located at 1.50 m above ground level within a radiation shield.<br>Rain gaugue at 1.4 m ground level (Lambrecht).<br>Atmospheric pressure sensor (Vaisala PTB110).<br>Datalogger (Campbell CR1000).<br><br>FG7 metadata:<br>For the period previous to 08/05/2009, average wind speed (FG7) is computed as vector averaging. Since then as scalar averaging.
+
+----------------------------------------------------------------
+11054,MOLLO-FABERT,SPAIN,+42:22:38,+002:24:52,1405 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Natural grass
+* History:
+Automatic Weather Station established on June 6, 1996 in a montane forest environment.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP 45AL) located at 1.50 m above ground level within a radiation shield.<br>Rain gaugue at 1.4 m ground level (Thies).<br>Atmospheric pressure sensor (Vaisala PTB101C).<br>Datalogger (Campbell CR1000).<br><br>FG7 metadata:<br>For the period previous to 09/05/2009, average wind speed (FG7) is computed as vector averaging. Since then as scalar averaging.
+
+----------------------------------------------------------------
+11055,MONTSEC,SPAIN,+42:03:05,+000:43:46,1572 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Natural herbs and bushes
+* History:
+Automatic Weather Station established on June 17, 2003 in a semiforested environment, located at the top of Montsec d Ares mountains.<br>Wind speed and direction measured at 10 m (RM Young 05103-45 Alpine).<br>Temperature and relative humidity sensor (Vaisala HMP155) located at 1.50 m above ground level within a radiation shield.<br>Rain gaugue at 1.4 m ground level (Lambrecht).<br>Atmospheric pressure sensor (Vaisala PTB110).<br>Datalogger (Campbell CR1000).<br><br>FG7 metadata:<br>For the period previous to 06/06/2009, average wind speed (FG7) is computed as vector averaging. Since then as scalar averaging.
+
+----------------------------------------------------------------
+11056,MONTSERRAT-SANT DIMES,SPAIN,+41:35:43,+001:50:15,916 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Rocky terrain
+* History:
+Automatic Weather Station established on January 2, 2003 on top of one of the mounds of Montserrat.<br>Wind speed and direction measured at 6 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP155) located at 1.50 m above ground level within a radiation shield.<br>Rain gaugue at 1.4 m ground level (Lambrecht).<br>Datalogger (Campbell CR1000).<br><br>FG7 metadata:<br>For the period previous to 14/10/2009, average wind speed (FG7) is computed as vector averaging. Since then as scalar averaging.
+
+----------------------------------------------------------------
+11057,MUNTANYOLA,SPAIN,+41:52:41,+002:10:43,816 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Natural herbs
+* History:
+Automatic Weather Station established on January 12, 1996 in a semirural environment.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP155) located at 1.50 m above ground level within a radiation shield.<br>Rain gaugue at 1.4 m ground level (Thies).<br>Atmospheric pressure sensor (Vaisala PTB101B).<br>Datalogger (Campbell CR1000).<br><br>FG7 metadata:<br>For the period previous to 12/05/2009, average wind speed (FG7) is computed as vector averaging. Since then as scalar averaging.
+
+----------------------------------------------------------------
+11058,NURIA,SPAIN,+42:22:54,+002:09:19,1971 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Alpine meadow
+* History:
+Automatic Weather Station established on May 15, 1998 in a subalpine environment, next to the Sanctuari of N�ria.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP 45AL) located at 1.50 m above ground level within a radiation shield.<br>Rain gaugue at 1.4 m ground level (Thies).<br>Atmospheric pressure sensor (Vaisala PTB101B).<br>Nivometer at 3.5 m above ground level (Campbell SR50A).<br>Datalogger (Campbell CR1000).<br><br>FG7 metadata:<br>For the period previous to 15/05/2009, average wind speed (FG7) is computed as vector averaging. Since then as scalar averaging.
+
+----------------------------------------------------------------
+11059,ODENA,SPAIN,+41:35:11,+001:39:11,333 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Natural herbs
+* History:
+Automatic Weather Station established on May 31, 1999 in a local airport.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP155) located at 1.50 m above ground level within a radiation shield.<br>Rain gaugue at 1.4 m ground level (Lambrecht).<br>Atmospheric pressure sensor (Vaisala PTB101C).<br>Datalogger (Campbell CR1000).<br><br>FG7 metadata:<br>For the period previous to 15/05/2009, average wind speed (FG7) is computed as vector averaging. Since then as scalar averaging.
+
+----------------------------------------------------------------
+11060,OLOT - PLA DE BAIX,SPAIN,+42:11:29,+002:28:57,421 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Natural herbs
+* History:
+Automatic Weather Station established on April 24, 1998 in a semirural environment.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP155) located at 1.50 m above ground level within a radiation shield.<br>Rain gaugue at 1.4 m ground level (Lambrecht).<br>Atmospheric pressure sensor (Vaisala PTB101C).<br>Datalogger (Campbell CR1000).<br><br>FG7 metadata:<br>For the period previous to 14/05/2009, average wind speed (FG7) is computed as vector averaging. Since then as scalar averaging.<br>Station closed on 20161111 and replaced by station Olot.
+
+----------------------------------------------------------------
+11061,ORGANYA,SPAIN,+42:12:58,+001:19:53,566 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Natural herbs
+* History:
+Automatic Weather Station established on May 16, 1996 in a rural area.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP 155) located at 1.50 m above ground level within a radiation shield.<br>Rain gaugue at 1.4 m ground level (Thies).<br>Atmospheric pressure sensor (Vaisala PTB101B).<br>Datalogger (Campbell CR1000).<br><br>FG7 metadata:<br>For the period previous to 12/05/2009, average wind speed (FG7) is computed as vector averaging. Since then as scalar averaging.
+
+----------------------------------------------------------------
+11062,ORIS,SPAIN,+42:04:26,+002:12:31,626 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Natural grass
+* History:
+Automatic Weather Station established on November 15, 1995 in a rural environment.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP 45AL) located at 1.50 m above ground level within a radiation shield.<br>Rain gaugue at 1.4 m ground level (Thies).<br>Atmospheric pressure sensor (Vaisala PTB101B).<br>Datalogger (Campbell CR1000).<br><br>FG7 metadata:<br>For the period previous to 08/05/2009, average wind speed (FG7) is computed as vector averaging. Since then as scalar averaging.
+
+----------------------------------------------------------------
+11063,PARETS DEL VALLES,SPAIN,+41:34:02,+002:13:34,123 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+located on a flat roof
+* History:
+Automatic Weather Station established on Octiber 30, 2008 located on a roof of a building 2 floors.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP155) located at 1.50 m above ground level within a radiation shield.<br>Rain gaugue at 1.4 m ground level (Thies).<br>Atmospheric pressure sensor (Vaisala PTB101C).<br>Datalogger (Campbell CR1000).<br><br>FG7 metadata:<br>For the period previous to 21/05/2009, average wind speed (FG7) is computed as vector averaging. Since then as scalar averaging.
+
+----------------------------------------------------------------
+11064,PN DELS PORTS,SPAIN,+40:47:49,+000:19:05,1055 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Natural herbs and bushes
+* History:
+Automatic Weather Station established on January 4, 2007 in terrains of the Natural Parc of Els Ports, a mountainous area.<br>Wind speed and direction measured at 10 m (RM Young 05103 Alpine).<br>Temperature and relative humidity sensor (Vaisala HMP 45AL) located at 1.50 m above ground level within a radiation shield.<br>Rain gaugue at 1.4 m ground level (Thies).<br>Atmospheric pressure sensor (Vaisala PTB110).<br>Nivometer (Campbell SR50A) installed on December 2, 2010 at 3.5 m above ground level.<br>Datalogger (Campbell CR1000).<br><br>FG7 metadata:<br>For the period previous to 20/05/2009, average wind speed (FG7) is computed as vector averaging. Since then as scalar averaging.
+
+----------------------------------------------------------------
+11065,PORTBOU,SPAIN,+42:26:07,+003:09:58,196 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Natural herbs and small bushes
+* History:
+Automatic Weather Station established on a top of a hill on February 7, 1998.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP 155) located at 1.50 m above ground level within a radiation shield.<br>Rain gaugue at 1.4 m ground level (Lambrecht).<br>Atmospheric pressure sensor (Vaisala PTB110).<br>Datalogger (Campbell CR1000).<br><br>FG7 metadata:<br>For the period previous to 14/05/2009, average wind speed (FG7) is computed as vector averaging. Since then as scalar averaging.
+
+----------------------------------------------------------------
+11066,PUIG SESOLLES,SPAIN,+41:46:25,+002:26:16,1668 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Natural grass
+* History:
+Automatic Weather Station established on September 22, 2010 in a mountainous environment at the Montseny massif.<br>Wind speed and direction measured at 6 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP155) located at 2.70 m above ground level within a radiation shield.<br>Rain gaugue at 1.7 m ground level (Thies).<br>Nivometer at 3.5 m above ground level (Campbell SR50A).<br>Datalogger (Campbell CR1000).
+
+----------------------------------------------------------------
+11067,RAIMAT,SPAIN,+41:41:00,+000:26:55,286 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Natural herbs and small bushes
+* History:
+Automatic Weather Station established on August 31, 1988 in a rural environment, next to a vineyard area.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP155) located at 1.50 m above ground level within a radiation shield.<br>Rain gaugue at 1.4 m ground level (Lambrecht).<br>Atmospheric pressure sensor (Paroscientific Digiquartz 6000-16B).<br>Datalogger (Campbell CR1000).<br><br>FG7 metadata:<br>For the period previous to 19/05/2009, average wind speed (FG7) is computed as vector averaging. Since then as scalar averaging.
+
+----------------------------------------------------------------
+11068,ROSES,SPAIN,+42:16:14,+003:10:54,24 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Natural herbs and small bushes
+* History:
+Automatic Weather Station established on February 7, 1996.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor located at 1.50 m above ground level within a shelter (Vaisala HMP 45AC).<br>Rain gaugue at 1.4 m ground level (Lambrecht).<br>Atmospheric pressure sensor (Vaisala PTB110).<br>Datalogger (Campbell CR1000).<br><br>FG7 metadata:<br>For the period previous to 13/05/2009, average wind speed (FG7) is computed as vector averaging. Since then as scalar averaging.
+
+----------------------------------------------------------------
+11069,SABADELL-PARC AGRARI,SPAIN,+41:33:56,+002:04:10,258 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Natural herbs
+* History:
+Automatic Weather Station established on October 23, 2008 in a rural environment.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP155) located at 1.50 m above ground level within a radiation shield.<br>Rain gaugue at 1.4 m ground level (Lambrecht).<br>Atmospheric pressure sensor (Vaisala PTB101C).<br>Datalogger (Campbell CR1000).<br><br>FG7 metadata:<br>For the period previous to 06/06/2009, average wind speed (FG7) is computed as vector averaging. Since then as scalar averaging.
+
+----------------------------------------------------------------
+11070,SALORIA,SPAIN,+42:31:10,+001:21:57,2451 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Alpine meadow
+* History:
+Automatic Weather Station established on September 30, 2005 in a mountainous environment at the Pyrenees.<br>Wind speed and direction measured at 10 m (RM Young 05103 Alpine).<br>Temperature and relative humidity sensor (Vaisala HMP 45A) located at 4.70 m above ground level within a radiation shield.<br>Rain gaugue at 1.7 m ground level (Geonor T200B).<br>Nivometer at 4.8 m above ground level (Campbell SR50A).<br>Datalogger (Campbell CR1000).
+
+----------------------------------------------------------------
+11071,SANT CUGAT DEL VALLES-CAR,SPAIN,+41:28:59,+002:04:46,158 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Natural grass
+* History:
+Automatic Weather Station established on August 8, 2013 in a semiurban environment, at the gardens of the Sports High Performance Centre.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP155) located at 1.50 m above ground level within a radiation shield.<br>Rain gaugue at 1.4 m ground level (Lambrecht).<br>Datalogger (Campbell CR1000).<br>
+
+----------------------------------------------------------------
+11072,SANT PAU DE SEGURIES,SPAIN,+42:15:30,+002:21:51,852 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Natural grass
+* History:
+Automatic Weather Station established on November 24, 1995 in a rural environment.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP155) located at 1.50 m above ground level within a radiation shield.<br>Rain gaugue at 1.4 m ground level (Lambrecht).<br>Atmospheric pressure sensor (Vaisala PTB101B).<br>Datalogger (Campbell CR1000).<br><br>FG7 metadata:<br>For the period previous to 09/05/2009, average wind speed (FG7) is computed as vector averaging. Since then as scalar averaging.
+
+----------------------------------------------------------------
+11073,SANT PERE PESCADOR,SPAIN,+42:10:38,+003:05:48,4 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Natural herbs
+* History:
+Automatic Weather Station established on May 1, 1989 in a crop environment.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP 45AC) located at 1.50 m above ground level within a radiation shield.<br>Rain gaugue at 1.4 m ground level (Lambrecht).<br>Atmospheric pressure sensor (Vaisala PTB101C).<br>Datalogger (Campbell CR1000).<br><br>FG7 metadata:<br>For the period previous to 15/05/2009, average wind speed (FG7) is computed as vector averaging. Since then as scalar averaging.
+
+----------------------------------------------------------------
+11074,SANT ROMA DABELLA,SPAIN,+42:08:21,+001:02:20,690 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Natural herbs and small bushes
+* History:
+Automatic Weather Station established on May 20, 1996 in a rural environment.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP155) located at 1.50 m above ground level within a radiation shield.<br>Rain gaugue at 1.4 m ground level (Thies).<br>Atmospheric pressure sensor (Vaisala PTB110).<br>Datalogger (Campbell CR1000).<br><br>FG7 metadata:<br>For the period previous to 12/05/2009, average wind speed (FG7) is computed as vector averaging. Since then as scalar averaging.
+
+----------------------------------------------------------------
+11075,SANT SALVADOR DE GUARDIOLA,SPAIN,+41:40:26,+001:46:04,349 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Natural herbs and bushes
+* History:
+Automatic Weather Station established on February 2, 1996 in a semirural area.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP155) located at 1.50 m above ground level within a radiation shield.<br>Rain gaugue at 1.4 m ground level (Lambrecht).<br>Atmospheric pressure sensor (Vaisala PTB101C).<br>Datalogger (Campbell CR1000).<br><br>FG7 metadata:<br>For the period previous to 12/05/2009, average wind speed (FG7) is computed as vector averaging. Since then as scalar averaging.
+
+----------------------------------------------------------------
+11076,SANTUARI DE QUERALT,SPAIN,+42:06:26,+001:49:36,1167 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Natural herbs
+* History:
+Automatic Weather Station established on January 23, 2002 in a forest environment, close to Santa Maria de Queralt Sanctuary.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP45AC) located at 1.50 m above ground level within a radiation shield.<br>Rain gaugue at 1.4 m ground level (Lambrecht).<br>Datalogger (Campbell CR1000).<br><br>FG7 metadata:<br>For the period previous to 13/11/2009, average wind speed (FG7) is computed as vector averaging. Since then as scalar averaging.
+
+----------------------------------------------------------------
+11077,SASSEUVA,SPAIN,+42:46:12,+000:43:55,2228 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Alpine meadow
+* History:
+Automatic Weather Station established on September 20, 2001 in a mountainous environment at the Pyrenees.<br>Wind speed and direction measured at 6 m (RM Young 05103 Alpine).<br>Temperature and relative humidity sensor (Vaisala HMP155) located at 4.70 m above ground level within a radiation shield.<br>Rain gaugue at 1.7 m ground level (Geonor T200B).<br>Nivometer at 4.8 m above ground level (Campbell SR50A).<br>Datalogger (Campbell CR1000).
+
+----------------------------------------------------------------
+11078,SOLSONA,SPAIN,+41:59:16,+001:30:42,691 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Natural herbs
+* History:
+Automatic Weather Station established on July 12, 2012 in a semirural environment.<br>Wind speed and direction measured at 10 m (RM Young 05103-5).<br>Temperature and relative humidity sensor (Vaisala HMP155) located at 1.50 m above ground level within a radiation shield.<br>Rain gaugue at 1.4 m ground level (Thies).<br>Atmospheric pressure sensor (Vaisala PTB110.<br>Datalogger (Campbell CR1000).<br>
+
+----------------------------------------------------------------
+11079,TARRAGONA-COMPLEX EDUCATIU,SPAIN,+41:06:14,+001:12:04,5 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Natural herbs
+* History:
+Automatic Weather Station established on February 5, 2006 in a semiurban environment, close to the petrochemical polygon of Tarragona.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP155) located at 1.50 m above ground level within a radiation shield.<br>Rain gaugue at 1.4 m ground level (Lambrecht).<br>Atmospheric pressure sensor (Vaisala PTB101C).<br>Datalogger (Campbell CR1000).<br><br>FG7 metadata:<br>For the period previous to 06/06/2009, average wind speed (FG7) is computed as vector averaging. Since then as scalar averaging.
+
+----------------------------------------------------------------
+11080,TARREGA,SPAIN,+41:40:01,+001:09:55,427 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Natural herbs and small bushes
+* History:
+Automatic Weather Station established on January 28, 1998 in a rural environment.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP155) located at 1.50 m above ground level within a radiation shield.<br>Rain gaugue at 1.4 m ground level (Lambrecht).<br>Atmospheric pressure sensor (Vaisala PTB101B).<br>Datalogger (Campbell CR1000).<br><br>FG7 metadata:<br>For the period previous to 08/05/2009, average wind speed (FG7) is computed as vector averaging. Since then as scalar averaging.
+
+----------------------------------------------------------------
+11081,TORREDEMBARRA,SPAIN,+41:08:48,+001:25:06,2 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Natural herbs and small bushes
+* History:
+Automatic Weather Station established on November 4, 1999 in a rural environment at a few meters of the seafront.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP155) located at 1.50 m above ground level within a radiation shield.<br>Rain gaugue at 1.4 m ground level (Lambrecht).<br>Atmospheric pressure sensor (Vaisala PTB101C).<br>Datalogger (Campbell CR1000).<br><br>FG7 metadata:<br>For the period previous to 15/05/2009, average wind speed (FG7) is computed as vector averaging. Since then as scalar averaging.
+
+----------------------------------------------------------------
+11082,ULLDEMOLINS,SPAIN,+41:19:12,+000:53:08,687 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Natural herbs
+* History:
+Automatic Weather Station established on April 17, 2008 in a rural environment, close to Montsant mountains.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP155) located at 1.50 m above ground level within a radiation shield.<br>Rain gaugue at 1.4 m ground level (Lambrecht).<br>Atmospheric pressure sensor (Vaisala PTB110).<br>Datalogger (Campbell CR1000).<br><br>FG7 metadata:<br>For the period previous to 21/05/2009, average wind speed (FG7) is computed as vector averaging. Since then as scalar averaging.
+
+----------------------------------------------------------------
+11083,VALLIRANA,SPAIN,+41:22:55,+001:56:08,252 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Natural herbs and small bushes
+* History:
+Automatic Weather Station established on October 28, 1995 in a semirural environment.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP155) located at 1.50 m above ground level within a radiation shield.<br>Rain gaugue at 1.4 m ground level (Lambrecht).<br>Atmospheric pressure sensor (Vaisala PTB110).<br>Datalogger (Campbell CR1000).<br><br>FG7 metadata:<br>For the period previous to 13/05/2009, average wind speed (FG7) is computed as vector averaging. Since then as scalar averaging.
+
+----------------------------------------------------------------
+11084,VIELHA E MIJARAN,SPAIN,+42:41:55,+000:47:38,1002 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Natural grass
+* History:
+Automatic Weather Station established on February 15, 1996 in a montane forest environment, located at the Aran Valley in the Pyrenees.<br>Wind speed and direction measured at 10 m (RM Young 05103-45).<br>Temperature and relative humidity sensor (Vaisala HMP45AL) located at 1.50 m above ground level within a radiation shield.<br>Rain gaugue at 1.4 m ground level (Thies).<br>Atmospheric pressure sensor (Vaisala PTB101B).<br>Nivometer at 4.8 m above ground level (Campbell SR50A).<br>Datalogger (Campbell CR1000).<br><br>FG7 metadata:<br>For the period previous to 12/05/2009, average wind speed (FG7) is computed as vector averaging. Since then as scalar averaging.
+
+----------------------------------------------------------------
+11085,VILADRAU,SPAIN,+41:50:24,+002:25:07,953 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Natural herbs
+* History:
+Automatic Weather Station established on March 17, 2005 in a rural environment, close to Montseny mountains.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP 45AL) located at 1.50 m above ground level within a radiation shield.<br>Rain gaugue at 1.4 m ground level (Thies).<br>Atmospheric pressure sensor (Vaisala PTB110).<br>Datalogger (Campbell CR1000).<br><br>FG7 metadata:<br>For the period previous to 10/10/2009, average wind speed (FG7) is computed as vector averaging. Since then as scalar averaging.
+
+----------------------------------------------------------------
+11086,VILANOVA DE MEIA,SPAIN,+41:59:44,+001:01:32,594 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Natural herbs and small bushes
+* History:
+Automatic Weather Station established on April 1, 1996 in a rural environment.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP155) located at 1.50 m above ground level within a radiation shield.<br>Rain gaugue at 1.4 m ground level (Lambrecht).<br>Atmospheric pressure sensor (Vaisala PTB101B).<br>Datalogger (Campbell CR1000).<br><br>FG7 metadata:<br>For the period previous to 12/05/2009, average wind speed (FG7) is computed as vector averaging. Since then as scalar averaging.
+
+----------------------------------------------------------------
+11087,VILA-RODONA,SPAIN,+41:18:26,+001:21:45,287 m 
+----------------------------------------------------------------
+* Land use:
+semirural
+* Soil type:
+--
+* Surface coverage:
+Natural herbs and small bushes
+* History:
+Automatic Weather Station established in a semirural area on May 29, 2005.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP 45AL) located at 1.50 m above ground level within a radiation shield.<br>Rain gaugue at 1.4 m ground level (Lambrecht).<br>Atmospheric pressure sensor (Vaisala PTB101C).<br>Datalogger (Campbell CR1000).<br><br>FG7 metadata:<br>For the period previous to 16/05/2009, average wind speed (FG7) is computed as vector averaging. Since then as scalar averaging.
+
+----------------------------------------------------------------
+11088,VINEBRE,SPAIN,+41:11:06,+000:35:37,53 m 
+----------------------------------------------------------------
+* Land use:
+--
+* Soil type:
+--
+* Surface coverage:
+Natural herbs and small bushes
+* History:
+Automatic Weather Station established on January 22, 1998 in a semirural environment.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP 45AL) located at 1.50 m above ground level within a radiation shield.<br>Rain gaugue at 1.4 m ground level (Thies).<br>Atmospheric pressure sensor (Vaisala PTB101C).<br>Datalogger (Campbell CR1000).<br><br>FG7 metadata:<br>For the period previous to 14/05/2009, average wind speed (FG7) is computed as vector averaging. Since then as scalar averaging.
+
+----------------------------------------------------------------
+11207,GRAN CANARIA AEROPUERTO,SPAIN,+27:55:55,-015:23:12,27 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+
+* History:
+relocated from 14:39:51E, 50:33:51N at 282m to 14:39:28E, 50:33:39N at 276m on March 1 1957<br> subsequently relocated to 14:39:37E, 50:33:32N at 279m on April 1 1965<br> subsequently relocated to 14:40:03E, 50:34:05N at 284m on October 1 1993<br> subsequently relocated to current position on December 20 2002<br> transition from manual to automated observations on December 20 2002 
+
+----------------------------------------------------------------
+11346,PANTA DE DARNIUS - BOADELLA,SPAIN,+42:20:32,+002:50:03,158 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+Natural grass
+* History:
+Automatic Weather Station established on January 5, 1996 in a rural environment, in a site close to Darnius dam.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP155) located at 1.50 m above ground level within a radiation shield.<br>Rain gaugue at 1.4 m ground level (Lambrecht).<br>Atmospheric pressure sensor (Vaisala PTB110).<br>Datalogger (Campbell CR1000).
+
+----------------------------------------------------------------
+11347,PUIGCERDA,SPAIN,+42:26:25,+001:56:05,1213 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+Natural grass
+* History:
+Automatic Weather Station established on March 23, 2016 in a semirural environment.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP155) located at 1.50 m above ground level within a radiation shield.<br>Rain gaugue at 1.4 m ground level (Lambrecht).<br>Atmospheric pressure sensor (Vaisala PTB110).<br>Datalogger (Campbell CR1000).
+
+----------------------------------------------------------------
+11348,TIVISSA,SPAIN,+41:02:36,+000:44:25,316 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+Natural herbs
+* History:
+Automatic Weather Station established on March 26, 2015 in a rural environment.<br>Wind speed and direction measured at 10 m (RM Young 05103-5).<br>Temperature and relative humidity sensor (Vaisala HMP 155) located at 1.50 m above ground level within a radiation shield.<br>Rain gaugue at 1.4 m ground level (Lambrecht).<br>Datalogger (Campbell CR1000).
+
+----------------------------------------------------------------
+11382,OLOT,SPAIN,+42:11:17,+002:28:49,433 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+Natural herbs
+* History:
+Station history:<br>Automatic Weather Station established on July 21, 2016 in a semirural environment.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP155) located at 1.50 m above ground level within a radiation shield (Vaisala DTR503A).<br>Rain gaugue at 1.4 m ground level (Lambrecht).<br>Atmospheric pressure sensor (Vaisala PTB101C) within a pressure shelter (Vaisala SPH10).<br>Datalogger (Campbell CR1000).
+
+----------------------------------------------------------------
+11383,LA POBLA DE SEGUR,SPAIN,+42:14:38,+000:58:05,508 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+Natural herbs
+* History:
+Station history:<br>Automatic Weather Station established on November 11, 2016 in a semirural environment.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP155) located at 1.50 m above ground level within a radiation shield (Vaisala DTR503A).<br>Rain gaugue at 1.4 m ground level (Thies).<br>Atmospheric pressure sensor (Vaisala PTB110) within a pressure shelter (Vaisala SPH10).<br>Datalogger (Campbell CR1000).
+
+----------------------------------------------------------------
+11385,LES BORGES BLANQUES,SPAIN,+41:30:38,+000:51:23,283 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+Natural herbs
+* History:
+Station history:<br>Automatic Weather Station established on January 25, 2017 in a rural environment.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP155) located at 1.50 m above ground level within a radiation shield (Vaisala DTR503A).<br>Rain gaugue at 1.4 m ground level (Lambrecht).<br>Atmospheric pressure sensor (Vaisala PTB101C) within a pressure shelter (Vaisala SPH10).<br>Datalogger (Campbell CR1000).
+
+----------------------------------------------------------------
+11386,MASSOTERES,SPAIN,+41:47:36,+001:18:21,513 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+Natural herbs
+* History:
+Station history:<br>Automatic Weather Station established on May 17, 2017 in a rural environment.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP155) located at 1.50 m above ground level within a radiation shield (Vaisala DTR503A).<br>Rain gaugue at 1.4 m ground level (Lambrecht).<br>Datalogger (Campbell CR1000).
+
+----------------------------------------------------------------
+16319,MONT-ROIG DEL CAMP,SPAIN,+41:01:08,+000:56:01,42 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+Natural herbs
+* History:
+Automatic Weather Station established on December 20, 2017 in a rural environment.<br> Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP155) located at 1.50 m above ground level within a radiation shield (Vaisala DTR503A).<br>Rain gaugue at 1.4 m ground level (Lambrecht).<br>Atmospheric pressure sensor (Vaisala PTB110).<br>Datalogger (Campbell CR1000).
+
+----------------------------------------------------------------
+16320,TIRVIA,SPAIN,+42:31:04,+001:14:28,954 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+Natural herbs
+* History:
+Automatic Weather Station established on January 11, 2018 in a rural environment in the Pyrenees.<br>Wind speed and direction measured at 6 m (RM Young 05103-45 Alpine).<br>Temperature and relative humidity sensor (Vaisala HMP155) located at 1.50 m above ground level within a radiation shield (Vaisala DTR503A).<br>Rain gaugue at 1.4 m ground level (Lambrecht).<br>Atmospheric pressure sensor (Vaisala PTB110).<br>Datalogger (Campbell CR1000).
+
+----------------------------------------------------------------
+16321,PUJALT,SPAIN,+41:42:58,+001:25:22,747 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+Natural herbs
+* History:
+Automatic Weather Station established on April 6, 2018 in a rural environment.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP155) located at 1.50 m above ground level within a radiation shield (Vaisala DTR503A).<br>Rain gaugue at 1.4 m ground level (Thies).<br>Datalogger (Campbell CR1000).
+
+----------------------------------------------------------------
+16617,LLEIDA - LA FEMOSA,SPAIN,+41:35:05,+000:19:15,170 m 
+----------------------------------------------------------------
+* Land use:
+Rural
+* Soil type:
+
+* Surface coverage:
+Natural herbs
+* History:
+Station history:<br> Automatic Weather Station established on August 21, 2018 in a rural environment.<br> Wind speed and direction measured at 10 m (RM Young 05103).<br> Temperature and relative humidity sensor (Vaisala HMP155) located at 1.50 m above ground level within a radiation shield (Vaisala DTR503A).<br> Rain gaugue at 1.4 m ground level (Lambrecht).<br> Datalogger (Campbell CR1000).
+
+----------------------------------------------------------------
+18004,RIUDECANYES,SPAIN,+41:07:22,+000:58:10,170 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+Natural herbs
+* History:
+Automatic weather station established on February 2, 2019 in a rural environment, close to a reservoir.<br>Wind speed and direction measured at 10 m (RM Young 05103).<br>Temperature and relative humidity sensor (Vaisala HMP155) located at 1.5m above ground level within a radiation shield (Vaisala DTR503a).<br>Rain gauge at 1.4 m ground level (Lambrecht).<br>Datalogger (Campbell CR1000).
+
+----------------------------------------------------------------
+22439,VIELHA-ELIPORT,SPAIN,+42:41:48,+000:48:07,1027 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+Natural herbs
+* History:
+Automatic Weather Station established on February 11, 2021 in a rural environment, close to a heliport. <br>Wind speed and direction measured at 6 m (RM Yound 05103).<br>Temperature and relative humidity sensor (Vaisala HMP155) located at 1.50 m above ground level within radiation shield (Vaisala DTR503A).<br>Rain gaugue at 1.4 m ground level (Lambrecht).<br>Atmospheric pressure sensor (Vaisala PTB110).<br>Nivometer at 4.8 m above ground level (Campbell SR50A).<br>Datalogger (Campbel CR1000).
+
+----------------------------------------------------------------
+25164,PORT DE BARCELONA - ZAL PRAT,SPAIN,+41:19:09,+002:08:13,7 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+Natural herbs
+* History:
+Station history:<br> Automatic Weather Station established on December 2, 2021 and located on semi-urban land in the port of Barcelona.<br> Wind speed and direction measured at 10 m (RM Young 05103).<br> Temperature and relative humidity sensor (Vaisala HMP155) located at 1.50 m above ground level within a radiation shield (Vaisala DTR503A).<br> Rain gaugue at 1.4 m ground level (Lambrecht).<br> Atmospheric pressure sensor (Vaisala PTB110).<br> Datalogger (Campbell CR1000).
+
+----------------------------------------------------------------
+25165,PALAFRUGELL,SPAIN,+41:54:25,+003:09:37,36 m 
+----------------------------------------------------------------
+* Land use:
+
+* Soil type:
+
+* Surface coverage:
+Natural herbs
+* History:
+Station history:<br> Automatic Weather Station established on December 2, 2021 in a rural environment, on the outskirts of the town of Palafrugell.<br> Wind speed and direction measured at 10 m (RM Young 05103).<br> Temperature and relative humidity sensor (Vaisala HMP155) located at 1.50 m above ground level within a radiation shield (Vaisala DTR503A).<br> Rain gaugue at 1.4 m ground level (Lambrecht).<br> Atmospheric pressure sensor (Vaisala PTB110).<br> Datalogger (Campbell CR1000).
+

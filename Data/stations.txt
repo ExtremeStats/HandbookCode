@@ -1,0 +1,228 @@
+EUROPEAN CLIMATE ASSESSMENT & DATASET (ECA&D), file created on 18-11-2023
+THESE DATA CAN BE USED FREELY PROVIDED THAT THE FOLLOWING SOURCE IS ACKNOWLEDGED:
+
+Klein Tank, A.M.G. and Coauthors, 2002. Daily dataset of 20th-century surface
+air temperature and precipitation series for the European Climate Assessment.
+Int. J. of Climatol., 22, 1441-1453.
+Data and metadata available at http://www.ecad.eu
+
+FILE FORMAT (MISSING VALUE CODE IS -9999):
+
+ 01- 05 STAID  : Station identifier
+ 07- 46 STANAME: Station name
+ 48- 49 CN     : Country code (ISO3116 country codes)
+ 51- 59 LAT    : Latitude in degrees:minutes:seconds (+: North, -: South)
+ 61- 70 LON    : Longitude in degrees:minutes:seconds (+: East, -: West)
+ 72- 75 HGTH   : Station elevation in meters
+
+STAID,STANAME                                 ,CN,      LAT,       LON,HGHT
+
+  229,BADAJOZ/TALAVERA LA REAL                ,ES,+38:53:00,-006:49:45, 185
+  231,MALAGA AEROPUERTO                       ,ES,+36:40:00,-004:29:17,   7
+  232,NAVACERRADA                             ,ES,+40:46:50,-004:00:37,1894
+  233,SALAMANCA AEROPUERTO                    ,ES,+40:57:34,-005:29:54, 790
+  234,SAN SEBASTIAN - IGUELDO                 ,ES,+43:18:27,-002:02:22, 251
+  235,TORREVIEJA                              ,ES,+37:58:38,-000:42:39,   1
+  236,TORTOSA - OBSERVATORIO DEL EBRO         ,ES,+40:49:14,+000:29:29,  44
+  237,VALENCIA                                ,ES,+39:28:50,-000:21:59,  11
+  238,ZARAGOZA AEROPUERTO                     ,ES,+41:39:43,-001:00:29, 247
+  230,MADRID - RETIRO                         ,ES,+40:24:43,-003:40:41, 667
+  309,ALICANTE EL ALTET                       ,ES,+38:16:58,-000:34:15,  43
+  412,ALICANTE                                ,ES,+38:22:21,-000:29:39,  81
+  337,CORDOBA AEROPUERTO                      ,ES,+37:50:39,-004:50:46,  90
+ 3838,ROTA                                    ,ES,+36:38:20,-006:19:54,  21
+ 3839,MADRID/TORREJON                         ,ES,+40:29:00,-003:27:01, 611
+  420,A CORUNA                                ,ES,+43:22:02,-008:25:10,  58
+ 3903,A CORUNA/ALVEDRO                        ,ES,+43:18:25,-008:22:20,  98
+ 1394,SANTIAGO DE COMPOSTELA/LABACOLLA        ,ES,+42:53:16,-008:24:39, 370
+ 3904,VITORIA AERODROMO                       ,ES,+42:51:03,-002:39:17, 521
+ 3905,VITORIA/FORONDA                         ,ES,+42:52:19,-002:44:00, 513
+ 3906,ALBACETE OBS.                           ,ES,+39:00:25,-001:51:39, 674
+  336,ALBACETE LOS LLANOS                     ,ES,+38:57:08,-001:51:47, 704
+ 3907,ALMERIA                                 ,ES,+36:50:00,-002:27:17,   7
+ 3908,ALMERIA/AEROPUERTO                      ,ES,+36:50:47,-002:21:25,  21
+ 3909,ASTURIAS/AVILES                         ,ES,+43:34:01,-006:02:39, 127
+ 3910,GIJON                                   ,ES,+43:32:18,-005:38:31,   3
+ 3911,GIJON LA MERCED                         ,ES,+43:32:18,-005:38:31,  22
+ 3912,GIJON MUSEL                             ,ES,+43:33:39,-005:41:55,   5
+ 3913,OVIEDO                                  ,ES,+43:21:16,-005:52:22, 336
+ 3914,AVILA                                   ,ES,+40:39:33,-004:40:48,1130
+ 3915,AVILA-AYUNTAMIENTO                      ,ES,+40:39:20,-004:41:58,1143
+ 3916,IBIZA/ESCODOLA                          ,ES,+38:52:35,+001:23:04,   6
+ 3917,MENORCA/MAO                             ,ES,+39:51:17,+004:12:56,  91
+ 3918,PALMA DE MALLORCA CMT                   ,ES,+39:33:20,+002:37:35,   3
+ 3919,PALMA DE MALLORCA / SON SAN JUAN        ,ES,+39:33:39,+002:44:12,   8
+  335,BARCELONA -FABRA OBSERVATORY            ,ES,+41:25:06,+002:07:26, 412
+ 2969,BARCELONA/AEROPUERTO                    ,ES,+41:17:34,+002:04:12,   4
+  414,BURGOS-VILLAFRIA                        ,ES,+42:21:22,-003:37:57, 890
+ 3920,GIRONA-NOU INSTITUT                     ,ES,+41:58:44,+002:49:36,  98
+ 3921,CACERES CIUDAD                          ,ES,+39:29:00,-006:22:00, 459
+  415,CADIZ                                   ,ES,+36:30:04,-006:15:24,   1
+ 1405,JEREZ DE LA FRONTERA                    ,ES,+36:45:02,-006:03:21,  27
+ 1406,TARIFA                                  ,ES,+36:00:55,-005:35:51,  32
+ 1392,SANTANDER CENTRO                        ,ES,+43:27:53,-003:49:08,  64
+ 3922,SANTANDER CMT                           ,ES,+43:29:30,-003:47:59,  52
+ 3923,SANTANDER/PARAYAS                       ,ES,+43:25:45,-003:49:53,   5
+ 3924,CASTELLON                               ,ES,+39:57:00,-000:04:17,  35
+ 3925,CASTELLON DE LA PLANA                   ,ES,+39:59:21,-000:02:26,  25
+ 3926,CEUTA                                   ,ES,+35:53:24,-005:20:45,  87
+ 3927,CEUTA (MONTE HACHO)                     ,ES,+35:53:32,-005:17:22, 200
+  416,CIUDAD REAL                             ,ES,+38:59:22,-003:55:11, 628
+ 3928,CIUDAD REAL (INSTITUTO)                 ,ES,+38:59:21,-003:55:43, 627
+ 3929,CUENCA                                  ,ES,+40:04:00,-002:08:17, 945
+ 3931,GIRONA/COSTA BRAVA                      ,ES,+41:54:42,+002:45:48, 143
+ 3932,GRANADA/AEROPUERTO                      ,ES,+37:11:23,-003:47:22, 567
+  417,GRANADA                                 ,ES,+37:08:13,-003:37:53, 687
+ 3933,GUADALAJARA                             ,ES,+40:39:40,-003:10:27, 639
+ 3934,GUADALAJARA (INSTITUTO)                 ,ES,+40:38:05,-003:09:52, 685
+ 3935,MOLINA DE ARAGON                        ,ES,+40:50:40,-001:53:07,1056
+  418,HUELVA (RONDA DEL ESTE)                 ,ES,+37:16:48,-006:54:35,  19
+ 3937,HUELVA                                  ,ES,+37:15:35,-006:56:57,  17
+  419,HUESCA                                  ,ES,+42:05:00,-000:19:35, 541
+ 3938,JAEN                                    ,ES,+37:46:40,-003:48:27, 582
+ 3939,JAEN (INSTITUTO)                        ,ES,+37:46:40,-003:47:17, 510
+ 1398,LOGRONO-AGONCILLO                       ,ES,+42:27:08,-002:19:52, 353
+ 3940,FUERTEVENTURA/AEROPUERTO                ,ES,+28:26:41,-013:51:47,  25
+ 2970,LANZAROTE/AEROPUERTO                    ,ES,+28:57:07,-013:36:01,  14
+ 1397,LEON VIRGEN DEL CAMINO                  ,ES,+42:35:20,-005:38:58, 916
+ 1396,PONFERRADA                              ,ES,+42:33:50,-006:36:00, 534
+ 3942,LLEIDA                                  ,ES,+41:37:33,+000:35:42, 192
+ 3943,LLEIDA (OBSERVATORIO)                   ,ES,+41:37:07,+000:37:19, 191
+ 3944,LUGO/ROZAS                              ,ES,+43:06:55,-007:27:22, 445
+ 3945,COLMENAR VIEJO/FAMET                    ,ES,+40:41:55,-003:45:52,1004
+ 3946,MADRID/BARAJAS                          ,ES,+40:28:00,-003:33:20, 609
+ 3947,MADRID/CUATROVIENTOS                    ,ES,+40:22:40,-003:47:21, 687
+ 3948,MADRID/GETAFE                           ,ES,+40:18:00,-003:43:21, 617
+ 1389,MELILLA                                 ,ES,+35:16:40,-002:57:19,  47
+  421,MURCIA                                  ,ES,+38:00:10,-001:10:10,  61
+ 3949,MURCIA/ALCANTARILLA                     ,ES,+37:57:28,-001:13:47,  85
+ 1404,MURCIA/SAN JAVIER                       ,ES,+37:47:20,-000:48:12,   4
+ 3950,PAMPLONA (OBSERVATORIO)                 ,ES,+42:49:03,-001:38:11, 442
+  422,PAMPLONA                                ,ES,+42:46:37,-001:39:00, 459
+ 3951,OURENSE                                 ,ES,+42:19:40,-007:51:37, 143
+ 3952,OURENSE (INSTITUTO)                     ,ES,+42:20:00,-007:51:47, 148
+ 3953,PALENCIA (OBSERVATORIO)                 ,ES,+42:00:30,-004:32:07, 750
+ 3954,PONTEVEDRA                              ,ES,+42:26:24,-008:36:59, 108
+ 3955,PONTEVEDRA (INSTITUTO)                  ,ES,+42:25:50,-008:38:59,  19
+ 1395,VIGO PEINADOR                           ,ES,+42:14:22,-008:37:26, 261
+ 3956,SALAMANCA OBS.                          ,ES,+40:57:23,-005:39:41, 775
+ 3957,HIERRO/AEROPUERTO                       ,ES,+27:49:08,-017:53:20,  32
+ 1388,IZANA                                   ,ES,+28:18:32,-016:29:58,2371
+ 3958,LA PALMA/AEROPUERTO                     ,ES,+28:37:59,-017:45:18,  33
+ 3959,STA. CRUZ DE TENERIFE                   ,ES,+28:27:47,-016:15:19,  35
+  455,TENERIFE/LOS RODEOS                     ,ES,+28:28:39,-016:19:46, 632
+ 3960,TENERIFE/SUR                            ,ES,+28:02:51,-016:33:39,  64
+ 3961,SEGOVIA                                 ,ES,+40:56:52,-004:07:38,1005
+ 3962,SEGOVIA (MARIANO QUINTANILLA)           ,ES,+40:56:52,-004:06:55, 990
+ 3963,MORON DE LA FRONTERA                    ,ES,+37:09:30,-005:36:57,  87
+  423,SEVILLA/SAN PABLO                       ,ES,+37:25:00,-005:52:45,  34
+  424,SORIA                                   ,ES,+41:46:30,-002:28:59,1082
+ 1401,REUS/AEROPUERTO                         ,ES,+41:08:59,+001:10:44,  71
+ 3964,CALAMOCHA                               ,ES,+40:55:34,-001:17:36, 890
+ 3965,CALAMOCHA-VOR                           ,ES,+40:51:55,-001:18:17, 932
+ 3966,TERUEL                                  ,ES,+40:20:59,-001:07:00, 900
+ 3967,TOLEDO                                  ,ES,+39:53:05,-004:02:58, 515
+ 3968,TOLEDO LORENZANA                        ,ES,+39:51:40,-004:01:25, 540
+ 3969,VALENCIA/AEROPUERTO                     ,ES,+39:29:12,-000:28:24,  69
+  425,VALLADOLID                              ,ES,+41:39:00,-004:46:00, 735
+ 3970,VALLADOLID (VILLANUBLA)                 ,ES,+41:42:00,-004:51:00, 846
+ 1393,BILBAO AEROPUERTO                       ,ES,+43:17:53,-002:54:21,  42
+ 1399,ZAMORA                                  ,ES,+41:31:00,-005:44:01, 656
+ 3971,DAROCA                                  ,ES,+41:06:53,-001:24:39, 779
+10904,LLEIDA-AJUNTAMENT                       ,ES,+41:36:59,+000:35:00, 169
+10905,LLEIDA-ESCORXADOR                       ,ES,+41:36:49,+000:37:05, 162
+ 3930,GIRONA (ANTIC INSTITUT)                 ,ES,+41:58:48,+002:49:31,  95
+11010,ALGUAIRE                                ,ES,+41:44:34,+000:32:09, 370
+11011,AMPOSTA                                 ,ES,+40:42:28,+000:37:56,   3
+11012,ANGLES                                  ,ES,+41:57:39,+002:37:52, 150
+11013,BANYOLES                                ,ES,+42:06:59,+002:47:23, 176
+11014,BARCELONA-EL RAVAL                      ,ES,+41:23:02,+002:10:03,  33
+11015,BARCELONA-ZONA UNIVERSITARIA            ,ES,+41:22:45,+002:06:19,  79
+11016,BENISSANET                              ,ES,+41:03:46,+000:38:06,  32
+11017,BOI                                     ,ES,+42:27:58,+000:53:03,2535
+11018,BONAIGUA                                ,ES,+42:38:49,+000:59:05,2266
+11019,CABRILS                                 ,ES,+41:31:04,+002:22:37,  81
+11020,CADI NORD-PRAT DAGUILO                  ,ES,+42:17:33,+001:42:54,2143
+11021,CALDES DE MONTBUI                       ,ES,+41:36:46,+002:10:06, 176
+11022,CASTELLBISBAL                           ,ES,+41:28:44,+001:58:32, 147
+11023,CASTELL DARO                            ,ES,+41:48:31,+003:01:57,  14
+11024,CASTELLNOU DE BAGES                     ,ES,+41:49:51,+001:50:49, 507
+11025,CASTELLNOU DE SEANA                     ,ES,+41:39:24,+000:57:06, 264
+11026,CERTASCAN                               ,ES,+42:41:01,+001:16:19,2400
+11027,CERVERA                                 ,ES,+41:40:32,+001:17:46, 554
+11028,CONSTANTI                               ,ES,+41:10:17,+001:10:04, 112
+11029,CUNIT                                   ,ES,+41:12:07,+001:38:00,  17
+11030,DAS-AERODROM                            ,ES,+42:23:10,+001:51:59,1097
+11031,EL PERELLO                              ,ES,+40:52:22,+000:42:57, 179
+11032,EL PONT DE SUERT                        ,ES,+42:23:53,+000:44:37, 823
+11033,EL PORT DEL COMTE                       ,ES,+42:10:57,+001:31:27,2316
+11034,EL PRAT DE LLOBREGAT                    ,ES,+41:20:25,+002:04:49,   8
+11035,ELS HOSTALETS DE PIEROLA                ,ES,+41:31:52,+001:48:29, 316
+11036,EL VENDRELL                             ,ES,+41:12:56,+001:31:16,  59
+11037,ESPOT                                   ,ES,+42:32:03,+001:03:17,2519
+11038,FALSET                                  ,ES,+41:09:13,+000:49:10, 359
+11039,FONT-RUBI                               ,ES,+41:25:58,+001:37:26, 415
+11040,GIRONA                                  ,ES,+41:58:56,+002:48:25,  72
+11041,GUARDIOLA DE BERGUEDA                   ,ES,+42:14:03,+001:52:29, 788
+11042,HORTA DE SANT JOAN                      ,ES,+40:57:05,+000:18:20, 515
+11043,ILLA DE BUDA                            ,ES,+40:42:26,+000:50:04,   1
+11044,LA BISBAL DEMPORDA                      ,ES,+41:58:39,+003:02:07,  29
+11045,LAC REDON                               ,ES,+42:38:18,+000:46:44,2247
+11046,LA PANADELLA                            ,ES,+41:36:09,+001:24:02, 785
+11047,LA POBLA DE SEGUR - BOMBERS             ,ES,+42:14:22,+000:57:52, 513
+11048,LA QUAR                                 ,ES,+42:04:49,+001:57:45, 873
+11049,LA SEU DURGELL                          ,ES,+42:22:15,+001:25:58, 849
+11050,LESPLUGA DE FRANCOLI                    ,ES,+41:23:33,+001:05:56, 446
+11051,MALGRAT DE MAR                          ,ES,+41:38:49,+002:45:24,   2
+11052,MALNIU                                  ,ES,+42:27:58,+001:46:42,2230
+11053,MAS DE BARBERANS-ABOCADOR               ,ES,+40:43:06,+000:23:59, 240
+11054,MOLLO-FABERT                            ,ES,+42:22:38,+002:24:52,1405
+11055,MONTSEC                                 ,ES,+42:03:05,+000:43:46,1572
+11056,MONTSERRAT-SANT DIMES                   ,ES,+41:35:43,+001:50:15, 916
+11057,MUNTANYOLA                              ,ES,+41:52:41,+002:10:43, 816
+11058,NURIA                                   ,ES,+42:22:54,+002:09:19,1971
+11059,ODENA                                   ,ES,+41:35:11,+001:39:11, 333
+11060,OLOT - PLA DE BAIX                      ,ES,+42:11:29,+002:28:57, 421
+11061,ORGANYA                                 ,ES,+42:12:58,+001:19:53, 566
+11062,ORIS                                    ,ES,+42:04:26,+002:12:31, 626
+11063,PARETS DEL VALLES                       ,ES,+41:34:02,+002:13:34, 123
+11064,PN DELS PORTS                           ,ES,+40:47:49,+000:19:05,1055
+11065,PORTBOU                                 ,ES,+42:26:07,+003:09:58, 196
+11066,PUIG SESOLLES                           ,ES,+41:46:25,+002:26:16,1668
+11067,RAIMAT                                  ,ES,+41:41:00,+000:26:55, 286
+11068,ROSES                                   ,ES,+42:16:14,+003:10:54,  24
+11069,SABADELL-PARC AGRARI                    ,ES,+41:33:56,+002:04:10, 258
+11070,SALORIA                                 ,ES,+42:31:10,+001:21:57,2451
+11071,SANT CUGAT DEL VALLES-CAR               ,ES,+41:28:59,+002:04:46, 158
+11072,SANT PAU DE SEGURIES                    ,ES,+42:15:30,+002:21:51, 852
+11073,SANT PERE PESCADOR                      ,ES,+42:10:38,+003:05:48,   4
+11074,SANT ROMA DABELLA                       ,ES,+42:08:21,+001:02:20, 690
+11075,SANT SALVADOR DE GUARDIOLA              ,ES,+41:40:26,+001:46:04, 349
+11076,SANTUARI DE QUERALT                     ,ES,+42:06:26,+001:49:36,1167
+11077,SASSEUVA                                ,ES,+42:46:12,+000:43:55,2228
+11078,SOLSONA                                 ,ES,+41:59:16,+001:30:42, 691
+11079,TARRAGONA-COMPLEX EDUCATIU              ,ES,+41:06:14,+001:12:04,   5
+11080,TARREGA                                 ,ES,+41:40:01,+001:09:55, 427
+11081,TORREDEMBARRA                           ,ES,+41:08:48,+001:25:06,   2
+11082,ULLDEMOLINS                             ,ES,+41:19:12,+000:53:08, 687
+11083,VALLIRANA                               ,ES,+41:22:55,+001:56:08, 252
+11084,VIELHA E MIJARAN                        ,ES,+42:41:55,+000:47:38,1002
+11085,VILADRAU                                ,ES,+41:50:24,+002:25:07, 953
+11086,VILANOVA DE MEIA                        ,ES,+41:59:44,+001:01:32, 594
+11087,VILA-RODONA                             ,ES,+41:18:26,+001:21:45, 287
+11088,VINEBRE                                 ,ES,+41:11:06,+000:35:37,  53
+11346,PANTA DE DARNIUS - BOADELLA             ,ES,+42:20:32,+002:50:03, 158
+11347,PUIGCERDA                               ,ES,+42:26:25,+001:56:05,1213
+11348,TIVISSA                                 ,ES,+41:02:36,+000:44:25, 316
+11382,OLOT                                    ,ES,+42:11:17,+002:28:49, 433
+11383,LA POBLA DE SEGUR                       ,ES,+42:14:38,+000:58:05, 508
+11385,LES BORGES BLANQUES                     ,ES,+41:30:38,+000:51:23, 283
+11386,MASSOTERES                              ,ES,+41:47:36,+001:18:21, 513
+16319,MONT-ROIG DEL CAMP                      ,ES,+41:01:08,+000:56:01,  42
+16320,TIRVIA                                  ,ES,+42:31:04,+001:14:28, 954
+16321,PUJALT                                  ,ES,+41:42:58,+001:25:22, 747
+16617,LLEIDA - LA FEMOSA                      ,ES,+41:35:05,+000:19:15, 170
+18004,RIUDECANYES                             ,ES,+41:07:22,+000:58:10, 170
+22439,VIELHA-ELIPORT                          ,ES,+42:41:48,+000:48:07,1027
+25164,PORT DE BARCELONA - ZAL PRAT            ,ES,+41:19:09,+002:08:13,   7
+25165,PALAFRUGELL                             ,ES,+41:54:25,+003:09:37,  36

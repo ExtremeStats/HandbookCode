@@ -1,0 +1,376 @@
+EUROPEAN CLIMATE ASSESSMENT & DATASET (ECA&D), file created on 18-11-2023
+THESE DATA CAN BE USED FREELY PROVIDED THAT THE FOLLOWING SOURCE IS ACKNOWLEDGED:
+
+Klein Tank, A.M.G. and Coauthors, 2002. Daily dataset of 20th-century surface
+air temperature and precipitation series for the European Climate Assessment.
+Int. J. of Climatol., 22, 1441-1453.
+Data and metadata available at http://www.ecad.eu
+
+FILE FORMAT (MISSING VALUE CODE IS -9999):
+
+ 01- 05 STAID  : Station identifier
+ 07- 12 SOUID  : Source identifier
+ 14- 53 SOUNAME: Source name
+ 55- 56 CN     : Country code (ISO3116 country codes)
+ 58- 66 LAT    : Latitude in degrees:minutes:seconds (+: North, -: South)
+ 68- 77 LON    : Longitude in degrees:minutes:seconds (+: East, -: West)
+ 79- 82 HGTH   : Station elevation in meters
+ 84- 87 ELEI   : Element identifier (see website at Daily Data > Data dictionary > Elements)
+ 89- 96 BEGIN  : Begin date YYYYMMDD
+ 98-105 END    : End date YYYYMMDD
+107-111 PARID  : Participant identifier
+113-163 PARNAME: Participant name
+
+STAID, SOUID,SOUNAME                                 ,CN,      LAT,       LON,HGHT,ELEI,   BEGIN,     END,PARID,PARNAME
+
+  229,100707,BADAJOZ/TALAVERA LA REAL                ,ES,+38:53:00,-006:49:45, 185, TN3,19550101,20231031,   31,Roser Botey Fullat                                
+  231,100711,MALAGA AEROPUERTO                       ,ES,+36:40:00,-004:29:17,   7, TN3,19420501,20231031,   31,Roser Botey Fullat                                
+  231,908482,MALAGA/AEROPUERTO                       ,ES,+36:40:00,-004:29:00,   7, TN6,19820217,20200229,     ,                    
+  232,100714,NAVACERRADA                             ,ES,+40:46:50,-004:00:37,1894, TN3,19460101,20231031,   31,Roser Botey Fullat                                
+  232,908215,NAVACERRADA                             ,ES,+40:47:00,-004:01:00,1888, TN6,19820303,20200229,     ,                    
+  233,100717,SALAMANCA AEROPUERTO                    ,ES,+40:57:34,-005:29:54, 790, TN3,19450101,20231031,   31,Roser Botey Fullat                                
+  233,908202,SALAMANCA/MATACAN                       ,ES,+40:57:00,-005:30:00, 794, TN6,19820212,20200229,     ,                    
+  234,100720,SAN SEBASTIAN - IGUELDO                 ,ES,+43:18:27,-002:02:22, 251, TN3,19280102,20231031,   31,Roser Botey Fullat                                
+  235,100723,TORREVIEJA                              ,ES,+37:58:38,-000:42:39,   1, TN3,19270101,20101031,   31,Roser Botey Fullat                                
+  236,100727,TORTOSA - OBSERVATORIO DEL EBRO         ,ES,+40:49:14,+000:29:29,  44, TN3,19200101,20231031,   31,Roser Botey Fullat                                
+  236,155250,TORTOSA - OBSERVATORIO DEL EBRO         ,ES,+40:49:14,+000:29:29,  44, TN3,19050101,20131231,   63,Marc Prohom                                       
+  237,100730,VALENCIA                                ,ES,+39:28:50,-000:21:59,  11, TN3,19371201,20231031,   31,Roser Botey Fullat                                
+  237,119207,VALENCIA                                ,ES,+39:28:50,-000:21:59,  11, TN1,19350101,19991231,   50,GHCND                                             
+  238,100733,ZARAGOZA AEROPUERTO                     ,ES,+41:39:43,-001:00:29, 247, TN3,19510101,20231031,   31,Roser Botey Fullat                                
+  238,908160,ZARAGOZA/AEROPUERTO                     ,ES,+41:40:00,-001:00:00, 258, TN6,19820130,20200229,     ,                    
+  230,100998,MADRID - RETIRO                         ,ES,+40:24:43,-003:40:41, 667, TN3,19200101,20231031,   31,Roser Botey Fullat                                
+  230,120281,MADRID/CUATROVIENTOS                    ,ES,+40:22:40,-003:47:21, 687, TN3,19450501,20231031,   31,Roser Botey Fullat                                
+  309,101033,ALICANTE EL ALTET                       ,ES,+38:16:58,-000:34:15,  43, TN3,19670101,20231031,   31,Roser Botey Fullat                                
+  309,908360,ALICANTE/EL ALTET                       ,ES,+38:17:00,-000:33:00,  31, TN6,19820130,20200229,     ,                    
+  412,101041,ALICANTE                                ,ES,+38:22:21,-000:29:39,  81, TN3,19380901,20231031,   31,Roser Botey Fullat                                
+  412,908359,ALICANTE                                ,ES,+38:22:00,-000:30:00,  82, TN6,19820801,20200229,     ,                    
+  337,101188,CORDOBA AEROPUERTO                      ,ES,+37:50:39,-004:50:46,  90, TN1,19590421,20110123,   47,GSN network                                       
+  337,120047,CORDOBA AEROPUERTO                      ,ES,+37:50:39,-004:50:46,  90, TN3,19590401,20231031,   31,Roser Botey Fullat                                
+  337,908410,CORDOBA/AEROPUERTO                      ,ES,+37:51:00,-004:51:00,  92, TN6,19820131,20200229,     ,                    
+ 3838,119219,ROTA                                    ,ES,+36:38:20,-006:19:54,  21, TN1,19600112,20021130,   50,GHCND                                             
+ 3838,119948,ROTA                                    ,ES,+36:38:20,-006:19:54,  21, TN3,19880901,20231031,   31,Roser Botey Fullat                                
+ 3839,119225,MADRID/TORREJON                         ,ES,+40:29:00,-003:27:01, 611, TN1,19571001,19671231,   50,GHCND                                             
+ 3839,120272,MADRID/BARAJAS                          ,ES,+40:28:00,-003:33:20, 609, TN3,19450101,20231031,   31,Roser Botey Fullat                                
+ 3839,120299,MADRID/TORREJON                         ,ES,+40:29:00,-003:27:01, 611, TN3,19610101,20231031,   31,Roser Botey Fullat                                
+  420,119705,A CORUNA                                ,ES,+43:22:02,-008:25:10,  58, TN3,19301001,20231031,   31,Roser Botey Fullat                                
+  420,908001,LA CORUNA                               ,ES,+43:22:00,-008:24:59,  67, TN6,19820121,20200229,     ,                    
+ 3903,119714,A CORUNA/ALVEDRO                        ,ES,+43:18:25,-008:22:20,  98, TN3,19711201,20231031,   31,Roser Botey Fullat                                
+ 3903,908002,LA CORUNA/ALVEDRO                       ,ES,+43:18:00,-008:23:00, 103, TN6,20160928,20200229,     ,                    
+ 1394,119723,SANTIAGO DE COMPOSTELA/LABACOLLA        ,ES,+42:53:16,-008:24:39, 370, TN3,19441101,20231031,   31,Roser Botey Fullat                                
+ 1394,908042,SANTIAGO/LABACOLLA                      ,ES,+42:54:00,-008:26:00, 367, TN6,19820303,20200229,     ,                    
+ 3904,119732,VITORIA AERODROMO                       ,ES,+42:51:03,-002:39:17, 521, TN3,19450201,19800229,   31,Roser Botey Fullat                                
+ 3904,119741,VITORIA/FORONDA                         ,ES,+42:52:19,-002:44:00, 513, TN3,19760101,20231031,   31,Roser Botey Fullat                                
+ 3905,119732,VITORIA AERODROMO                       ,ES,+42:51:03,-002:39:17, 521, TN3,19450201,19800229,   31,Roser Botey Fullat                                
+ 3905,119741,VITORIA/FORONDA                         ,ES,+42:52:19,-002:44:00, 513, TN3,19760101,20231031,   31,Roser Botey Fullat                                
+ 3906,119750,ALBACETE OBS.                           ,ES,+39:00:25,-001:51:39, 674, TN3,19830101,20231031,   31,Roser Botey Fullat                                
+  336,119759,ALBACETE LOS LLANOS                     ,ES,+38:57:08,-001:51:47, 704, TN3,19391201,20231031,   31,Roser Botey Fullat                                
+ 3907,119768,ALMERIA                                 ,ES,+36:50:00,-002:27:17,   7, TN3,19510101,19800428,   31,Roser Botey Fullat                                
+ 3907,119777,ALMERIA/AEROPUERTO                      ,ES,+36:50:47,-002:21:25,  21, TN3,19680101,20231031,   31,Roser Botey Fullat                                
+ 3907,908487,ALMERIA/AEROPUERTO                      ,ES,+36:51:00,-002:23:00,  21, TN6,19820130,20200229,     ,                    
+ 3908,119768,ALMERIA                                 ,ES,+36:50:00,-002:27:17,   7, TN3,19510101,19800428,   31,Roser Botey Fullat                                
+ 3908,119777,ALMERIA/AEROPUERTO                      ,ES,+36:50:47,-002:21:25,  21, TN3,19680101,20231031,   31,Roser Botey Fullat                                
+ 3908,908487,ALMERIA/AEROPUERTO                      ,ES,+36:51:00,-002:23:00,  21, TN6,19820130,20200229,     ,                    
+ 3909,119786,ASTURIAS/AVILES                         ,ES,+43:34:01,-006:02:39, 127, TN3,19680801,20231031,   31,Roser Botey Fullat                                
+ 3909,908011,ASTURIAS/AVILES                         ,ES,+43:34:00,-006:02:00, 130, TN6,19820303,20200229,     ,                    
+ 3910,119795,GIJON                                   ,ES,+43:32:18,-005:38:31,   3, TN3,19760601,20010305,   31,Roser Botey Fullat                                
+ 3910,119804,GIJON LA MERCED                         ,ES,+43:32:18,-005:38:31,  22, TN3,19381001,19760531,   31,Roser Botey Fullat                                
+ 3910,119813,GIJON MUSEL                             ,ES,+43:33:39,-005:41:55,   5, TN3,20010306,20231031,   31,Roser Botey Fullat                                
+ 3911,119795,GIJON                                   ,ES,+43:32:18,-005:38:31,   3, TN3,19760601,20010305,   31,Roser Botey Fullat                                
+ 3911,119804,GIJON LA MERCED                         ,ES,+43:32:18,-005:38:31,  22, TN3,19381001,19760531,   31,Roser Botey Fullat                                
+ 3911,119813,GIJON MUSEL                             ,ES,+43:33:39,-005:41:55,   5, TN3,20010306,20231031,   31,Roser Botey Fullat                                
+ 3912,119795,GIJON                                   ,ES,+43:32:18,-005:38:31,   3, TN3,19760601,20010305,   31,Roser Botey Fullat                                
+ 3912,119804,GIJON LA MERCED                         ,ES,+43:32:18,-005:38:31,  22, TN3,19381001,19760531,   31,Roser Botey Fullat                                
+ 3912,119813,GIJON MUSEL                             ,ES,+43:33:39,-005:41:55,   5, TN3,20010306,20231031,   31,Roser Botey Fullat                                
+ 3913,119822,OVIEDO                                  ,ES,+43:21:16,-005:52:22, 336, TN3,19721201,20230201,   31,Roser Botey Fullat                                
+ 3913,908015,OVIEDO                                  ,ES,+43:21:00,-005:52:00, 339, TN6,19820130,20200229,     ,                    
+ 3914,119831,AVILA                                   ,ES,+40:39:33,-004:40:48,1130, TN3,19830101,20231031,   31,Roser Botey Fullat                                
+ 3914,119840,AVILA-AYUNTAMIENTO                      ,ES,+40:39:20,-004:41:58,1143, TN3,19560701,19830131,   31,Roser Botey Fullat                                
+ 3914,908210,AVILA                                   ,ES,+40:39:00,-004:41:00,1132, TN6,19820306,20200229,     ,                    
+ 3915,119831,AVILA                                   ,ES,+40:39:33,-004:40:48,1130, TN3,19830101,20231031,   31,Roser Botey Fullat                                
+ 3915,119840,AVILA-AYUNTAMIENTO                      ,ES,+40:39:20,-004:41:58,1143, TN3,19560701,19830131,   31,Roser Botey Fullat                                
+ 3915,908210,AVILA                                   ,ES,+40:39:00,-004:41:00,1132, TN6,19820306,20200229,     ,                    
+ 3916,119849,IBIZA/ESCODOLA                          ,ES,+38:52:35,+001:23:04,   6, TN3,19650101,20231031,   31,Roser Botey Fullat                                
+ 3916,908373,IBIZA/ES CODOLA                         ,ES,+38:53:00,+001:22:00,  17, TN6,19820130,20200229,     ,                    
+ 3917,119858,MENORCA/MAO                             ,ES,+39:51:17,+004:12:56,  91, TN3,19650101,20231031,   31,Roser Botey Fullat                                
+ 3917,908314,MENORCA/MAHON                           ,ES,+39:52:00,+004:14:00,  86, TN6,19820130,20200229,     ,                    
+ 3918,119867,PALMA DE MALLORCA CMT                   ,ES,+39:33:20,+002:37:35,   3, TN3,19720801,20231031,   31,Roser Botey Fullat                                
+ 3918,119876,PALMA DE MALLORCA / SON SAN JUAN        ,ES,+39:33:39,+002:44:12,   8, TN3,19720801,20231031,   31,Roser Botey Fullat                                
+ 3919,119867,PALMA DE MALLORCA CMT                   ,ES,+39:33:20,+002:37:35,   3, TN3,19720801,20231031,   31,Roser Botey Fullat                                
+ 3919,119876,PALMA DE MALLORCA / SON SAN JUAN        ,ES,+39:33:39,+002:44:12,   8, TN3,19720801,20231031,   31,Roser Botey Fullat                                
+  335,119885,BARCELONA -FABRA OBSERVATORY            ,ES,+41:25:06,+002:07:26, 412, TN3,19260101,20231031,   31,Roser Botey Fullat                                
+ 2969,119894,BARCELONA/AEROPUERTO                    ,ES,+41:17:34,+002:04:12,   4, TN3,19240301,20231031,   31,Roser Botey Fullat                                
+ 2969,156168,EL PRAT DE LLOBREGAT                    ,ES,+41:20:25,+002:04:49,   8, TN3,20110323,20230630,   63,Marc Prohom                                       
+ 2969,908181,BARCELONA/AEROPUERTO                    ,ES,+41:17:00,+002:04:00,   6, TN6,19820118,20200229,     ,                    
+  414,119903,BURGOS-VILLAFRIA                        ,ES,+42:21:22,-003:37:57, 890, TN3,19430801,20231031,   31,Roser Botey Fullat                                
+  414,908075,BURGOS/VILLAFRIA                        ,ES,+42:21:00,-003:38:00, 890, TN6,19820130,20200229,     ,                    
+ 3920,119912,GIRONA-NOU INSTITUT                     ,ES,+41:58:44,+002:49:36,  98, TN3,19821201,20120831,   31,Roser Botey Fullat                                
+ 3920,155278,GIRONA-NOU INSTITUT                     ,ES,+41:58:44,+002:49:36,  98, TN3,19670101,19771231,   63,Marc Prohom                                       
+ 3920,155334,GIRONA (ANTIC INSTITUT)                 ,ES,+41:58:48,+002:49:31,  95, TN3,18961101,19661231,   63,Marc Prohom                                       
+ 3921,119921,CACERES CIUDAD                          ,ES,+39:29:00,-006:22:00, 459, TN3,19200101,20231031,   31,Roser Botey Fullat                                
+  415,119930,CADIZ                                   ,ES,+36:30:04,-006:15:24,   1, TN3,19550601,20231031,   31,Roser Botey Fullat                                
+  415,908452,CADIZ, OBS.                             ,ES,+36:30:00,-006:16:00,   9, TN6,19820303,19890802,     ,                    
+ 1405,119939,JEREZ DE LA FRONTERA                    ,ES,+36:45:02,-006:03:21,  27, TN3,19520501,20231031,   31,Roser Botey Fullat                                
+ 1405,908451,JEREZ DE LA FRONTERA AEROPUERTO         ,ES,+36:45:00,-006:04:00,  28, TN6,19820206,20200229,     ,                    
+ 1406,119957,TARIFA                                  ,ES,+36:00:55,-005:35:51,  32, TN3,19450501,20231031,   31,Roser Botey Fullat                                
+ 1406,908458,TARIFA                                  ,ES,+36:01:00,-005:36:00,  25, TN6,19820303,19991229,     ,                    
+ 1392,119966,SANTANDER CENTRO                        ,ES,+43:27:53,-003:49:08,  64, TN3,19240101,19970407,   31,Roser Botey Fullat                                
+ 1392,119975,SANTANDER CMT                           ,ES,+43:29:30,-003:47:59,  52, TN3,19570201,20231031,   31,Roser Botey Fullat                                
+ 1392,908023,SANTANDER                               ,ES,+43:29:00,-003:48:00,  59, TN6,19820130,20200229,     ,                    
+ 3922,119966,SANTANDER CENTRO                        ,ES,+43:27:53,-003:49:08,  64, TN3,19240101,19970407,   31,Roser Botey Fullat                                
+ 3922,119975,SANTANDER CMT                           ,ES,+43:29:30,-003:47:59,  52, TN3,19570201,20231031,   31,Roser Botey Fullat                                
+ 3922,908023,SANTANDER                               ,ES,+43:29:00,-003:48:00,  59, TN6,19820130,20200229,     ,                    
+ 3923,119984,SANTANDER/PARAYAS                       ,ES,+43:25:45,-003:49:53,   5, TN3,19540101,20231031,   31,Roser Botey Fullat                                
+ 3923,908021,SANTANDER/PARAYAS                       ,ES,+43:26:00,-003:49:00,  10, TN6,19820303,20200229,     ,                    
+ 3924,119993,CASTELLON                               ,ES,+39:57:00,-000:04:17,  35, TN3,19760101,20231031,   31,Roser Botey Fullat                                
+ 3924,120002,CASTELLON DE LA PLANA                   ,ES,+39:59:21,-000:02:26,  25, TN3,19200101,19751231,   31,Roser Botey Fullat                                
+ 3925,119993,CASTELLON                               ,ES,+39:57:00,-000:04:17,  35, TN3,19760101,20231031,   31,Roser Botey Fullat                                
+ 3925,120002,CASTELLON DE LA PLANA                   ,ES,+39:59:21,-000:02:26,  25, TN3,19200101,19751231,   31,Roser Botey Fullat                                
+ 3926,120011,CEUTA                                   ,ES,+35:53:24,-005:20:45,  87, TN3,20030609,20231031,   31,Roser Botey Fullat                                
+ 3926,960320,CEUTA                                   ,ES,+35:54:59,-005:21:00,  88, TN6,19820316,20200229,     ,                    
+ 3927,120020,CEUTA (MONTE HACHO)                     ,ES,+35:53:32,-005:17:22, 200, TN3,19350101,19861231,   31,Roser Botey Fullat                                
+  416,120029,CIUDAD REAL                             ,ES,+38:59:22,-003:55:11, 628, TN3,19701101,20231031,   31,Roser Botey Fullat                                
+  416,120038,CIUDAD REAL (INSTITUTO)                 ,ES,+38:59:21,-003:55:43, 627, TN3,19200101,19701031,   31,Roser Botey Fullat                                
+ 3928,120029,CIUDAD REAL                             ,ES,+38:59:22,-003:55:11, 628, TN3,19701101,20231031,   31,Roser Botey Fullat                                
+ 3928,120038,CIUDAD REAL (INSTITUTO)                 ,ES,+38:59:21,-003:55:43, 627, TN3,19200101,19701031,   31,Roser Botey Fullat                                
+ 3929,120056,CUENCA                                  ,ES,+40:04:00,-002:08:17, 945, TN3,19610101,20231031,   31,Roser Botey Fullat                                
+ 3929,908231,CUENCA                                  ,ES,+40:04:00,-002:08:00, 946, TN6,19820303,20200229,     ,                    
+ 3931,120074,GIRONA/COSTA BRAVA                      ,ES,+41:54:42,+002:45:48, 143, TN3,19730101,20231031,   31,Roser Botey Fullat                                
+ 3931,155970,ANGLES                                  ,ES,+41:57:39,+002:37:52, 150, TN3,20080101,20230630,   63,Marc Prohom                                       
+ 3931,908184,GIRONA/COSTA BRAVA                      ,ES,+41:54:00,+002:46:00, 129, TN6,19820303,20200229,     ,                    
+ 3932,120083,GRANADA/AEROPUERTO                      ,ES,+37:11:23,-003:47:22, 567, TN3,19720701,20231031,   31,Roser Botey Fullat                                
+ 3932,908419,GRANADA/AEROPUERTO                      ,ES,+37:11:00,-003:47:00, 570, TN6,19820116,20200229,     ,                    
+  417,120092,GRANADA                                 ,ES,+37:08:13,-003:37:53, 687, TN3,19510101,20231031,   31,Roser Botey Fullat                                
+ 3933,120101,GUADALAJARA                             ,ES,+40:39:40,-003:10:27, 639, TN3,19851011,20150802,   31,Roser Botey Fullat                                
+ 3933,908226,GUADALAJARA                             ,ES,+40:40:00,-003:10:00, 640, TN6,19820303,20200229,     ,                    
+ 3934,120110,GUADALAJARA (INSTITUTO)                 ,ES,+40:38:05,-003:09:52, 685, TN3,19610101,19850930,   31,Roser Botey Fullat                                
+ 3935,120119,MOLINA DE ARAGON                        ,ES,+40:50:40,-001:53:07,1056, TN3,19490901,20231031,   31,Roser Botey Fullat                                
+ 3935,908232,MOLINA DE ARAGON                        ,ES,+40:51:00,-001:53:00,1063, TN6,19820303,20200229,     ,                    
+  418,120137,HUELVA (RONDA DEL ESTE)                 ,ES,+37:16:48,-006:54:35,  19, TN3,19840601,20231031,   31,Roser Botey Fullat                                
+  418,120146,HUELVA                                  ,ES,+37:15:35,-006:56:57,  17, TN3,19200101,19840531,   31,Roser Botey Fullat                                
+  418,908383,HUELVA                                  ,ES,+37:17:00,-006:55:00,  20, TN6,19820304,20200229,     ,                    
+ 3937,120137,HUELVA (RONDA DEL ESTE)                 ,ES,+37:16:48,-006:54:35,  19, TN3,19840601,20231031,   31,Roser Botey Fullat                                
+ 3937,120146,HUELVA                                  ,ES,+37:15:35,-006:56:57,  17, TN3,19200101,19840531,   31,Roser Botey Fullat                                
+ 3937,908383,HUELVA                                  ,ES,+37:17:00,-006:55:00,  20, TN6,19820304,20200229,     ,                    
+  419,120155,HUESCA                                  ,ES,+42:05:00,-000:19:35, 541, TN3,19430301,20231031,   31,Roser Botey Fullat                                
+  419,908094,HUESCA/MONFLORITE                       ,ES,+42:05:00,-000:20:00, 554, TN6,19820306,20200229,     ,                    
+ 3938,120164,JAEN                                    ,ES,+37:46:40,-003:48:27, 582, TN3,19830801,20231031,   31,Roser Botey Fullat                                
+ 3938,908417,JAEN                                    ,ES,+37:47:00,-003:48:00, 580, TN6,19820304,20200229,     ,                    
+ 3939,120173,JAEN (INSTITUTO)                        ,ES,+37:46:40,-003:47:17, 510, TN3,19200501,19830731,   31,Roser Botey Fullat                                
+ 1398,120182,LOGRONO-AGONCILLO                       ,ES,+42:27:08,-002:19:52, 353, TN3,19481101,20231031,   31,Roser Botey Fullat                                
+ 1398,908084,LOGRONO/AGONCILLO                       ,ES,+42:27:00,-002:20:00, 363, TN6,19820130,20200229,     ,                    
+ 3940,120191,FUERTEVENTURA/AEROPUERTO                ,ES,+28:26:41,-013:51:47,  25, TN3,19670101,20231031,   31,Roser Botey Fullat                                
+ 3940,960035,FUERTEVENTURA/AEROPUERTO                ,ES,+28:27:00,-013:52:00,  30, TN6,19820216,20200229,     ,                    
+ 2970,120200,LANZAROTE/AEROPUERTO                    ,ES,+28:57:07,-013:36:01,  14, TN3,19721101,20231031,   31,Roser Botey Fullat                                
+ 2970,960040,LANZAROTE/AEROPUERTO                    ,ES,+28:57:00,-013:36:00,  21, TN6,19820216,20200229,     ,                    
+ 1397,120218,LEON VIRGEN DEL CAMINO                  ,ES,+42:35:20,-005:38:58, 916, TN3,19380101,20231031,   31,Roser Botey Fullat                                
+ 1396,120227,PONFERRADA                              ,ES,+42:33:50,-006:36:00, 534, TN3,19510101,20231031,   31,Roser Botey Fullat                                
+ 1396,908053,PONFERRADA                              ,ES,+42:34:00,-006:36:00, 550, TN6,19820303,20200229,     ,                    
+ 3942,120236,LLEIDA                                  ,ES,+41:37:33,+000:35:42, 192, TN3,19830201,20231031,   31,Roser Botey Fullat                                
+ 3942,120245,LLEIDA (OBSERVATORIO)                   ,ES,+41:37:07,+000:37:19, 191, TN3,19590601,19830131,   31,Roser Botey Fullat                                
+ 3942,155292,LLEIDA (OBSERVATORIO)                   ,ES,+41:37:07,+000:37:19, 191, TN3,19590601,19830131,   63,Marc Prohom                                       
+ 3942,155306,LLEIDA-AJUNTAMENT                       ,ES,+41:36:59,+000:35:00, 169, TN3,19470901,19590531,   63,Marc Prohom                                       
+ 3942,908171,LLEIDA                                  ,ES,+41:38:00,+000:36:00, 199, TN6,19820303,20200229,     ,                    
+ 3943,120236,LLEIDA                                  ,ES,+41:37:33,+000:35:42, 192, TN3,19830201,20231031,   31,Roser Botey Fullat                                
+ 3943,120245,LLEIDA (OBSERVATORIO)                   ,ES,+41:37:07,+000:37:19, 191, TN3,19590601,19830131,   31,Roser Botey Fullat                                
+ 3943,155292,LLEIDA (OBSERVATORIO)                   ,ES,+41:37:07,+000:37:19, 191, TN3,19590601,19830131,   63,Marc Prohom                                       
+ 3943,155306,LLEIDA-AJUNTAMENT                       ,ES,+41:36:59,+000:35:00, 169, TN3,19470901,19590531,   63,Marc Prohom                                       
+ 3943,908171,LLEIDA                                  ,ES,+41:38:00,+000:36:00, 199, TN6,19820303,20200229,     ,                    
+ 3944,120254,LUGO/ROZAS                              ,ES,+43:06:55,-007:27:22, 445, TN3,19850501,20231031,   31,Roser Botey Fullat                                
+ 3944,908008,LUGO/ROZAS                              ,ES,+43:07:00,-007:27:00, 446, TN6,19820121,20200229,     ,                    
+ 3945,120263,COLMENAR VIEJO/FAMET                    ,ES,+40:41:55,-003:45:52,1004, TN3,19780101,20231031,   31,Roser Botey Fullat                                
+ 3946,119225,MADRID/TORREJON                         ,ES,+40:29:00,-003:27:01, 611, TN1,19571001,19671231,   50,GHCND                                             
+ 3946,120272,MADRID/BARAJAS                          ,ES,+40:28:00,-003:33:20, 609, TN3,19450101,20231031,   31,Roser Botey Fullat                                
+ 3946,120299,MADRID/TORREJON                         ,ES,+40:29:00,-003:27:01, 611, TN3,19610101,20231031,   31,Roser Botey Fullat                                
+ 3947,100998,MADRID - RETIRO                         ,ES,+40:24:43,-003:40:41, 667, TN3,19200101,20231031,   31,Roser Botey Fullat                                
+ 3947,120281,MADRID/CUATROVIENTOS                    ,ES,+40:22:40,-003:47:21, 687, TN3,19450501,20231031,   31,Roser Botey Fullat                                
+ 3948,120290,MADRID/GETAFE                           ,ES,+40:18:00,-003:43:21, 617, TN3,19510101,20231031,   31,Roser Botey Fullat                                
+ 1389,120308,MELILLA                                 ,ES,+35:16:40,-002:57:19,  47, TN3,19700901,20231031,   31,Roser Botey Fullat                                
+ 1389,960338,MELILLA                                 ,ES,+35:17:00,-002:57:00,  55, TN6,19820303,20200229,     ,                    
+  421,120317,MURCIA                                  ,ES,+38:00:10,-001:10:10,  61, TN3,19840401,20231031,   31,Roser Botey Fullat                                
+  421,120326,MURCIA/ALCANTARILLA                     ,ES,+37:57:28,-001:13:47,  85, TN3,19400101,20231031,   31,Roser Botey Fullat                                
+ 3949,120326,MURCIA/ALCANTARILLA                     ,ES,+37:57:28,-001:13:47,  85, TN3,19400101,20231031,   31,Roser Botey Fullat                                
+ 1404,120335,MURCIA/SAN JAVIER                       ,ES,+37:47:20,-000:48:12,   4, TN3,19451101,20231031,   31,Roser Botey Fullat                                
+ 1404,908433,MURCIA/SAN JAVIER                       ,ES,+37:47:00,-000:48:00,   3, TN6,19820130,20200229,     ,                    
+ 3950,120344,PAMPLONA (OBSERVATORIO)                 ,ES,+42:49:03,-001:38:11, 442, TN3,19530901,20231031,   31,Roser Botey Fullat                                
+ 3950,120353,PAMPLONA                                ,ES,+42:46:37,-001:39:00, 459, TN3,19750101,20231031,   31,Roser Botey Fullat                                
+ 3950,908085,PAMPLONA/NOAIN                          ,ES,+42:46:00,-001:38:00, 453, TN6,19820303,20200229,     ,                    
+  422,120344,PAMPLONA (OBSERVATORIO)                 ,ES,+42:49:03,-001:38:11, 442, TN3,19530901,20231031,   31,Roser Botey Fullat                                
+  422,120353,PAMPLONA                                ,ES,+42:46:37,-001:39:00, 459, TN3,19750101,20231031,   31,Roser Botey Fullat                                
+  422,908085,PAMPLONA/NOAIN                          ,ES,+42:46:00,-001:38:00, 453, TN6,19820303,20200229,     ,                    
+ 3951,120362,OURENSE                                 ,ES,+42:19:40,-007:51:37, 143, TN3,19720801,20231031,   31,Roser Botey Fullat                                
+ 3951,120371,OURENSE (INSTITUTO)                     ,ES,+42:20:00,-007:51:47, 148, TN3,19610101,19690530,   31,Roser Botey Fullat                                
+ 3951,908048,ORENSE                                  ,ES,+42:20:00,-007:52:00, 147, TN6,19820303,20200229,     ,                    
+ 3952,120362,OURENSE                                 ,ES,+42:19:40,-007:51:37, 143, TN3,19720801,20231031,   31,Roser Botey Fullat                                
+ 3952,120371,OURENSE (INSTITUTO)                     ,ES,+42:20:00,-007:51:47, 148, TN3,19610101,19690530,   31,Roser Botey Fullat                                
+ 3952,908048,ORENSE                                  ,ES,+42:20:00,-007:52:00, 147, TN6,19820303,20200229,     ,                    
+ 3953,120380,PALENCIA (OBSERVATORIO)                 ,ES,+42:00:30,-004:32:07, 750, TN3,19590201,19900731,   31,Roser Botey Fullat                                
+ 3954,120389,PONTEVEDRA                              ,ES,+42:26:24,-008:36:59, 108, TN3,19851001,20231031,   31,Roser Botey Fullat                                
+ 3954,908044,PONTEVEDRA                              ,ES,+42:26:00,-008:37:00, 108, TN6,19820303,20200229,     ,                    
+ 3955,120398,PONTEVEDRA (INSTITUTO)                  ,ES,+42:25:50,-008:38:59,  19, TN3,19450401,19850930,   31,Roser Botey Fullat                                
+ 1395,120407,VIGO PEINADOR                           ,ES,+42:14:22,-008:37:26, 261, TN3,19600101,20231031,   31,Roser Botey Fullat                                
+ 1395,908045,VIGO/PEINADOR                           ,ES,+42:14:00,-008:38:00, 256, TN6,19820125,20200229,     ,                    
+ 3956,120416,SALAMANCA OBS.                          ,ES,+40:57:23,-005:39:41, 775, TN3,19700101,20231031,   31,Roser Botey Fullat                                
+ 3957,120425,HIERRO/AEROPUERTO                       ,ES,+27:49:08,-017:53:20,  32, TN3,19731201,20231031,   31,Roser Botey Fullat                                
+ 3957,960001,HIERRO/AEROPUERTO                       ,ES,+27:49:00,-017:53:00,  32, TN6,19820131,20200229,     ,                    
+ 1388,120434,IZANA                                   ,ES,+28:18:32,-016:29:58,2371, TN3,19200101,20231031,   31,Roser Botey Fullat                                
+ 1388,960010,IZANA                                   ,ES,+28:19:00,-016:30:00,2368, TN6,19820131,20200229,     ,                    
+ 3958,120443,LA PALMA/AEROPUERTO                     ,ES,+28:37:59,-017:45:18,  33, TN3,19700401,20231031,   31,Roser Botey Fullat                                
+ 3958,960005,LA PALMA/AEROPUERTO                     ,ES,+28:37:00,-017:45:00,  31, TN6,19820114,20200229,     ,                    
+ 3959,120452,STA. CRUZ DE TENERIFE                   ,ES,+28:27:47,-016:15:19,  35, TN3,19310101,20231031,   31,Roser Botey Fullat                                
+ 3959,960020,STA. CRUZ DE TENERIFE                   ,ES,+28:27:00,-016:15:00,  36, TN6,19820131,20200229,     ,                    
+  455,120461,TENERIFE/LOS RODEOS                     ,ES,+28:28:39,-016:19:46, 632, TN3,19410801,20231031,   31,Roser Botey Fullat                                
+  455,960015,TENERIFE/LOS RODEOS                     ,ES,+28:28:00,-016:19:00, 617, TN6,19820201,20200229,     ,                    
+ 3960,120470,TENERIFE/SUR                            ,ES,+28:02:51,-016:33:39,  64, TN3,19800701,20231031,   31,Roser Botey Fullat                                
+ 3960,960025,TENERIFE SUR                            ,ES,+28:03:00,-016:34:00,  77, TN6,19820201,20200229,     ,                    
+ 3961,120479,SEGOVIA                                 ,ES,+40:56:52,-004:07:38,1005, TN3,19881001,20231031,   31,Roser Botey Fullat                                
+ 3961,120488,SEGOVIA (MARIANO QUINTANILLA)           ,ES,+40:56:52,-004:06:55, 990, TN3,19310101,19860930,   31,Roser Botey Fullat                                
+ 3961,908213,SEGOVIA                                 ,ES,+40:57:00,-004:08:00,1005, TN6,19820305,20200229,     ,                    
+ 3962,120479,SEGOVIA                                 ,ES,+40:56:52,-004:07:38,1005, TN3,19881001,20231031,   31,Roser Botey Fullat                                
+ 3962,120488,SEGOVIA (MARIANO QUINTANILLA)           ,ES,+40:56:52,-004:06:55, 990, TN3,19310101,19860930,   31,Roser Botey Fullat                                
+ 3962,908213,SEGOVIA                                 ,ES,+40:57:00,-004:08:00,1005, TN6,19820305,20200229,     ,                    
+ 3963,120497,MORON DE LA FRONTERA                    ,ES,+37:09:30,-005:36:57,  87, TN3,19551201,20231031,   31,Roser Botey Fullat                                
+ 3963,908397,MORON DE LA FRONTERA                    ,ES,+37:10:00,-005:37:00,  88, TN6,19820303,20200229,     ,                    
+  423,120506,SEVILLA/SAN PABLO                       ,ES,+37:25:00,-005:52:45,  34, TN3,19510101,20231031,   31,Roser Botey Fullat                                
+  423,908391,SEVILLA/SAN PABLO                       ,ES,+37:25:00,-005:54:00,  31, TN6,19820114,20200229,     ,                    
+  424,120515,SORIA                                   ,ES,+41:46:30,-002:28:59,1082, TN3,19431101,20231031,   31,Roser Botey Fullat                                
+  424,908148,SORIA                                   ,ES,+41:46:00,-002:28:00,1082, TN6,19820306,20200229,     ,                    
+ 1401,120524,REUS/AEROPUERTO                         ,ES,+41:08:59,+001:10:44,  71, TN3,19521101,20231031,   31,Roser Botey Fullat                                
+ 1401,908175,REUS/AEROPUERTO                         ,ES,+41:09:00,+001:10:00,  76, TN6,19820303,20200229,     ,                    
+ 3964,120533,CALAMOCHA                               ,ES,+40:55:34,-001:17:36, 890, TN3,19920801,20231031,   31,Roser Botey Fullat                                
+ 3964,908233,CALAMOCHA                               ,ES,+40:56:00,-001:18:00, 889, TN6,19820130,20200229,     ,                    
+ 3965,120542,CALAMOCHA-VOR                           ,ES,+40:51:55,-001:18:17, 932, TN3,19610101,19850630,   31,Roser Botey Fullat                                
+ 3966,120551,TERUEL                                  ,ES,+40:20:59,-001:07:00, 900, TN3,19860401,20231031,   31,Roser Botey Fullat                                
+ 3966,908235,TERUEL                                  ,ES,+40:21:00,-001:07:00, 902, TN6,19820310,20200229,     ,                    
+ 3967,120560,TOLEDO                                  ,ES,+39:53:05,-004:02:58, 515, TN3,19820201,20231031,   31,Roser Botey Fullat                                
+ 3967,908272,TOLEDO                                  ,ES,+39:53:00,-004:03:00, 516, TN6,19820303,20200229,     ,                    
+ 3968,120569,TOLEDO LORENZANA                        ,ES,+39:51:40,-004:01:25, 540, TN3,19200101,19820430,   31,Roser Botey Fullat                                
+ 3969,120578,VALENCIA/AEROPUERTO                     ,ES,+39:29:12,-000:28:24,  69, TN3,19660103,20231031,   31,Roser Botey Fullat                                
+ 3969,908284,VALENCIA/AEROPUERTO                     ,ES,+39:30:00,-000:28:00,  62, TN6,19820130,20200229,     ,                    
+  425,120587,VALLADOLID                              ,ES,+41:39:00,-004:46:00, 735, TN3,19731001,20231031,   31,Roser Botey Fullat                                
+  425,908141,VALLADOLID                              ,ES,+41:39:00,-004:46:00, 735, TN6,19820130,20200229,     ,                    
+ 3970,120596,VALLADOLID (VILLANUBLA)                 ,ES,+41:42:00,-004:51:00, 846, TN3,19380315,20231031,   31,Roser Botey Fullat                                
+ 3970,908140,VALLADOLID/VILLANUBLA                   ,ES,+41:42:00,-004:51:00, 846, TN6,19820303,20200229,     ,                    
+ 1393,120605,BILBAO AEROPUERTO                       ,ES,+43:17:53,-002:54:21,  42, TN3,19470317,20231031,   31,Roser Botey Fullat                                
+ 1393,908025,BILBAO/AEROPUERTO                       ,ES,+43:18:00,-002:54:00,  39, TN6,19820303,20200229,     ,                    
+ 1399,120614,ZAMORA                                  ,ES,+41:31:00,-005:44:01, 656, TN3,19310101,20231031,   31,Roser Botey Fullat                                
+ 1399,908130,ZAMORA                                  ,ES,+41:31:00,-005:44:00, 667, TN6,19820306,20200228,     ,                    
+ 3971,120623,DAROCA                                  ,ES,+41:06:53,-001:24:39, 779, TN3,19200101,20231031,   31,Roser Botey Fullat                                
+ 3971,908157,DAROCA                                  ,ES,+41:07:00,-001:25:00, 779, TN6,19820304,20200229,     ,                    
+10904,120236,LLEIDA                                  ,ES,+41:37:33,+000:35:42, 192, TN3,19830201,20231031,   31,Roser Botey Fullat                                
+10904,120245,LLEIDA (OBSERVATORIO)                   ,ES,+41:37:07,+000:37:19, 191, TN3,19590601,19830131,   31,Roser Botey Fullat                                
+10904,155292,LLEIDA (OBSERVATORIO)                   ,ES,+41:37:07,+000:37:19, 191, TN3,19590601,19830131,   63,Marc Prohom                                       
+10904,155306,LLEIDA-AJUNTAMENT                       ,ES,+41:36:59,+000:35:00, 169, TN3,19470901,19590531,   63,Marc Prohom                                       
+10904,155320,LLEIDA-ESCORXADOR                       ,ES,+41:36:49,+000:37:05, 162, TN3,19381201,19470831,   63,Marc Prohom                                       
+10905,155306,LLEIDA-AJUNTAMENT                       ,ES,+41:36:59,+000:35:00, 169, TN3,19470901,19590531,   63,Marc Prohom                                       
+10905,155320,LLEIDA-ESCORXADOR                       ,ES,+41:36:49,+000:37:05, 162, TN3,19381201,19470831,   63,Marc Prohom                                       
+ 3930,119912,GIRONA-NOU INSTITUT                     ,ES,+41:58:44,+002:49:36,  98, TN3,19821201,20120831,   31,Roser Botey Fullat                                
+ 3930,155278,GIRONA-NOU INSTITUT                     ,ES,+41:58:44,+002:49:36,  98, TN3,19670101,19771231,   63,Marc Prohom                                       
+ 3930,155334,GIRONA (ANTIC INSTITUT)                 ,ES,+41:58:48,+002:49:31,  95, TN3,18961101,19661231,   63,Marc Prohom                                       
+ 3930,156222,GIRONA                                  ,ES,+41:58:56,+002:48:25,  72, TN3,20100916,20230630,   63,Marc Prohom                                       
+11010,155952,ALGUAIRE                                ,ES,+41:44:34,+000:32:09, 370, TN3,20080101,20230630,   63,Marc Prohom                                       
+11011,155961,AMPOSTA                                 ,ES,+40:42:28,+000:37:56,   3, TN3,20080101,20230630,   63,Marc Prohom                                       
+11012,120074,GIRONA/COSTA BRAVA                      ,ES,+41:54:42,+002:45:48, 143, TN3,19730101,20231031,   31,Roser Botey Fullat                                
+11012,155970,ANGLES                                  ,ES,+41:57:39,+002:37:52, 150, TN3,20080101,20230630,   63,Marc Prohom                                       
+11013,155979,BANYOLES                                ,ES,+42:06:59,+002:47:23, 176, TN3,20080101,20230630,   63,Marc Prohom                                       
+11014,155988,BARCELONA-EL RAVAL                      ,ES,+41:23:02,+002:10:03,  33, TN3,20080101,20230630,   63,Marc Prohom                                       
+11015,155997,BARCELONA-ZONA UNIVERSITARIA            ,ES,+41:22:45,+002:06:19,  79, TN3,20080418,20230630,   63,Marc Prohom                                       
+11016,156006,BENISSANET                              ,ES,+41:03:46,+000:38:06,  32, TN3,20080101,20230630,   63,Marc Prohom                                       
+11017,156015,BOI                                     ,ES,+42:27:58,+000:53:03,2535, TN3,20080101,20230630,   63,Marc Prohom                                       
+11018,156024,BONAIGUA                                ,ES,+42:38:49,+000:59:05,2266, TN3,20080101,20230630,   63,Marc Prohom                                       
+11019,156033,CABRILS                                 ,ES,+41:31:04,+002:22:37,  81, TN3,20080101,20230630,   63,Marc Prohom                                       
+11020,156042,CADI NORD-PRAT DAGUILO                  ,ES,+42:17:33,+001:42:54,2143, TN3,20080101,20230630,   63,Marc Prohom                                       
+11021,156051,CALDES DE MONTBUI                       ,ES,+41:36:46,+002:10:06, 176, TN3,20080101,20230630,   63,Marc Prohom                                       
+11022,156060,CASTELLBISBAL                           ,ES,+41:28:44,+001:58:32, 147, TN3,20080319,20230630,   63,Marc Prohom                                       
+11022,156501,SANT CUGAT DEL VALLES-CAR               ,ES,+41:28:59,+002:04:46, 158, TN3,20130809,20230630,   63,Marc Prohom                                       
+11023,156069,CASTELL DARO                            ,ES,+41:48:31,+003:01:57,  14, TN3,20080101,20230630,   63,Marc Prohom                                       
+11024,156078,CASTELLNOU DE BAGES                     ,ES,+41:49:51,+001:50:49, 507, TN3,20080101,20230630,   63,Marc Prohom                                       
+11025,156087,CASTELLNOU DE SEANA                     ,ES,+41:39:24,+000:57:06, 264, TN3,20150101,20230630,   63,Marc Prohom                                       
+11026,156096,CERTASCAN                               ,ES,+42:41:01,+001:16:19,2400, TN3,20080101,20230630,   63,Marc Prohom                                       
+11027,156105,CERVERA                                 ,ES,+41:40:32,+001:17:46, 554, TN3,20080103,20230630,   63,Marc Prohom                                       
+11028,156114,CONSTANTI                               ,ES,+41:10:17,+001:10:04, 112, TN3,20080101,20230630,   63,Marc Prohom                                       
+11029,156123,CUNIT                                   ,ES,+41:12:07,+001:38:00,  17, TN3,20080101,20230630,   63,Marc Prohom                                       
+11030,156132,DAS-AERODROM                            ,ES,+42:23:10,+001:51:59,1097, TN3,20080101,20230630,   63,Marc Prohom                                       
+11031,156141,EL PERELLO                              ,ES,+40:52:22,+000:42:57, 179, TN3,20080101,20230630,   63,Marc Prohom                                       
+11032,156150,EL PONT DE SUERT                        ,ES,+42:23:53,+000:44:37, 823, TN3,20080101,20230630,   63,Marc Prohom                                       
+11033,156159,EL PORT DEL COMTE                       ,ES,+42:10:57,+001:31:27,2316, TN3,20080101,20230630,   63,Marc Prohom                                       
+11034,119894,BARCELONA/AEROPUERTO                    ,ES,+41:17:34,+002:04:12,   4, TN3,19240301,20231031,   31,Roser Botey Fullat                                
+11034,156168,EL PRAT DE LLOBREGAT                    ,ES,+41:20:25,+002:04:49,   8, TN3,20110323,20230630,   63,Marc Prohom                                       
+11034,908181,BARCELONA/AEROPUERTO                    ,ES,+41:17:00,+002:04:00,   6, TN6,19820118,20200229,     ,                    
+11035,156177,ELS HOSTALETS DE PIEROLA                ,ES,+41:31:52,+001:48:29, 316, TN3,20080101,20230630,   63,Marc Prohom                                       
+11036,156186,EL VENDRELL                             ,ES,+41:12:56,+001:31:16,  59, TN3,20080101,20230630,   63,Marc Prohom                                       
+11037,156195,ESPOT                                   ,ES,+42:32:03,+001:03:17,2519, TN3,20080101,20230630,   63,Marc Prohom                                       
+11038,156204,FALSET                                  ,ES,+41:09:13,+000:49:10, 359, TN3,20080101,20230630,   63,Marc Prohom                                       
+11039,156213,FONT-RUBI                               ,ES,+41:25:58,+001:37:26, 415, TN3,20080101,20230630,   63,Marc Prohom                                       
+11040,155334,GIRONA (ANTIC INSTITUT)                 ,ES,+41:58:48,+002:49:31,  95, TN3,18961101,19661231,   63,Marc Prohom                                       
+11040,156222,GIRONA                                  ,ES,+41:58:56,+002:48:25,  72, TN3,20100916,20230630,   63,Marc Prohom                                       
+11041,156231,GUARDIOLA DE BERGUEDA                   ,ES,+42:14:03,+001:52:29, 788, TN3,20080101,20230630,   63,Marc Prohom                                       
+11042,156240,HORTA DE SANT JOAN                      ,ES,+40:57:05,+000:18:20, 515, TN3,20080101,20230630,   63,Marc Prohom                                       
+11043,156249,ILLA DE BUDA                            ,ES,+40:42:26,+000:50:04,   1, TN3,20080101,20230630,   63,Marc Prohom                                       
+11044,156258,LA BISBAL DEMPORDA                      ,ES,+41:58:39,+003:02:07,  29, TN3,20080101,20230630,   63,Marc Prohom                                       
+11045,156267,LAC REDON                               ,ES,+42:38:18,+000:46:44,2247, TN3,20080101,20230630,   63,Marc Prohom                                       
+11046,156276,LA PANADELLA                            ,ES,+41:36:09,+001:24:02, 785, TN3,20081219,20230630,   63,Marc Prohom                                       
+11047,156285,LA POBLA DE SEGUR - BOMBERS             ,ES,+42:14:22,+000:57:52, 513, TN3,20080101,20161211,   63,Marc Prohom                                       
+11047,175565,LA POBLA DE SEGUR                       ,ES,+42:14:38,+000:58:05, 508, TN3,20160112,20170630,   63,Marc Prohom                                       
+11048,156294,LA QUAR                                 ,ES,+42:04:49,+001:57:45, 873, TN3,20080101,20230630,   63,Marc Prohom                                       
+11049,156303,LA SEU DURGELL                          ,ES,+42:22:15,+001:25:58, 849, TN3,20080101,20230630,   63,Marc Prohom                                       
+11050,156312,LESPLUGA DE FRANCOLI                    ,ES,+41:23:33,+001:05:56, 446, TN3,20080101,20230630,   63,Marc Prohom                                       
+11051,156321,MALGRAT DE MAR                          ,ES,+41:38:49,+002:45:24,   2, TN3,20080101,20221231,   63,Marc Prohom                                       
+11052,156330,MALNIU                                  ,ES,+42:27:58,+001:46:42,2230, TN3,20080101,20230630,   63,Marc Prohom                                       
+11053,156339,MAS DE BARBERANS-ABOCADOR               ,ES,+40:43:06,+000:23:59, 240, TN3,20080101,20230630,   63,Marc Prohom                                       
+11054,156348,MOLLO-FABERT                            ,ES,+42:22:38,+002:24:52,1405, TN3,20080101,20230630,   63,Marc Prohom                                       
+11055,156357,MONTSEC                                 ,ES,+42:03:05,+000:43:46,1572, TN3,20080101,20230630,   63,Marc Prohom                                       
+11056,156366,MONTSERRAT-SANT DIMES                   ,ES,+41:35:43,+001:50:15, 916, TN3,20080101,20230630,   63,Marc Prohom                                       
+11057,156375,MUNTANYOLA                              ,ES,+41:52:41,+002:10:43, 816, TN3,20080101,20230630,   63,Marc Prohom                                       
+11058,156384,NURIA                                   ,ES,+42:22:54,+002:09:19,1971, TN3,20080101,20230630,   63,Marc Prohom                                       
+11059,156393,ODENA                                   ,ES,+41:35:11,+001:39:11, 333, TN3,20080101,20230630,   63,Marc Prohom                                       
+11060,156402,OLOT - PLA DE BAIX                      ,ES,+42:11:29,+002:28:57, 421, TN3,20080101,20161207,   63,Marc Prohom                                       
+11060,175556,OLOT                                    ,ES,+42:11:17,+002:28:49, 433, TN3,20160108,20180630,   63,Marc Prohom                                       
+11061,156411,ORGANYA                                 ,ES,+42:12:58,+001:19:53, 566, TN3,20080101,20230630,   63,Marc Prohom                                       
+11062,156420,ORIS                                    ,ES,+42:04:26,+002:12:31, 626, TN3,20080101,20230630,   63,Marc Prohom                                       
+11063,156429,PARETS DEL VALLES                       ,ES,+41:34:02,+002:13:34, 123, TN3,20081031,20230630,   63,Marc Prohom                                       
+11064,156438,PN DELS PORTS                           ,ES,+40:47:49,+000:19:05,1055, TN3,20080101,20230630,   63,Marc Prohom                                       
+11065,156447,PORTBOU                                 ,ES,+42:26:07,+003:09:58, 196, TN3,20080101,20230630,   63,Marc Prohom                                       
+11066,156456,PUIG SESOLLES                           ,ES,+41:46:25,+002:26:16,1668, TN3,20100923,20230630,   63,Marc Prohom                                       
+11067,156465,RAIMAT                                  ,ES,+41:41:00,+000:26:55, 286, TN3,20080101,20230630,   63,Marc Prohom                                       
+11068,156474,ROSES                                   ,ES,+42:16:14,+003:10:54,  24, TN3,20080101,20230630,   63,Marc Prohom                                       
+11069,156483,SABADELL-PARC AGRARI                    ,ES,+41:33:56,+002:04:10, 258, TN3,20081024,20230630,   63,Marc Prohom                                       
+11070,156492,SALORIA                                 ,ES,+42:31:10,+001:21:57,2451, TN3,20080101,20230630,   63,Marc Prohom                                       
+11071,156060,CASTELLBISBAL                           ,ES,+41:28:44,+001:58:32, 147, TN3,20080319,20230630,   63,Marc Prohom                                       
+11071,156501,SANT CUGAT DEL VALLES-CAR               ,ES,+41:28:59,+002:04:46, 158, TN3,20130809,20230630,   63,Marc Prohom                                       
+11072,156510,SANT PAU DE SEGURIES                    ,ES,+42:15:30,+002:21:51, 852, TN3,20080101,20230630,   63,Marc Prohom                                       
+11073,156519,SANT PERE PESCADOR                      ,ES,+42:10:38,+003:05:48,   4, TN3,20080101,20230630,   63,Marc Prohom                                       
+11074,156528,SANT ROMA DABELLA                       ,ES,+42:08:21,+001:02:20, 690, TN3,20080101,20230630,   63,Marc Prohom                                       
+11075,156537,SANT SALVADOR DE GUARDIOLA              ,ES,+41:40:26,+001:46:04, 349, TN3,20080101,20230630,   63,Marc Prohom                                       
+11076,156546,SANTUARI DE QUERALT                     ,ES,+42:06:26,+001:49:36,1167, TN3,20080101,20230630,   63,Marc Prohom                                       
+11077,156555,SASSEUVA                                ,ES,+42:46:12,+000:43:55,2228, TN3,20080101,20230630,   63,Marc Prohom                                       
+11078,156564,SOLSONA                                 ,ES,+41:59:16,+001:30:42, 691, TN3,20120713,20230630,   63,Marc Prohom                                       
+11079,156573,TARRAGONA-COMPLEX EDUCATIU              ,ES,+41:06:14,+001:12:04,   5, TN3,20090206,20230630,   63,Marc Prohom                                       
+11080,156582,TARREGA                                 ,ES,+41:40:01,+001:09:55, 427, TN3,20080101,20230630,   63,Marc Prohom                                       
+11081,156591,TORREDEMBARRA                           ,ES,+41:08:48,+001:25:06,   2, TN3,20080101,20230630,   63,Marc Prohom                                       
+11082,156600,ULLDEMOLINS                             ,ES,+41:19:12,+000:53:08, 687, TN3,20080417,20230630,   63,Marc Prohom                                       
+11083,156609,VALLIRANA                               ,ES,+41:22:55,+001:56:08, 252, TN3,20080101,20230630,   63,Marc Prohom                                       
+11084,156618,VIELHA E MIJARAN                        ,ES,+42:41:55,+000:47:38,1002, TN3,20080101,20210630,   63,Marc Prohom                                       
+11085,156627,VILADRAU                                ,ES,+41:50:24,+002:25:07, 953, TN3,20080101,20230630,   63,Marc Prohom                                       
+11086,156636,VILANOVA DE MEIA                        ,ES,+41:59:44,+001:01:32, 594, TN3,20080101,20230630,   63,Marc Prohom                                       
+11087,156645,VILA-RODONA                             ,ES,+41:18:26,+001:21:45, 287, TN3,20080101,20230630,   63,Marc Prohom                                       
+11088,156654,VINEBRE                                 ,ES,+41:11:06,+000:35:37,  53, TN3,20080101,20230630,   63,Marc Prohom                                       
+11346,173102,PANTA DE DARNIUS - BOADELLA             ,ES,+42:20:32,+002:50:03, 158, TN3,20160101,20230630,   63,Marc Prohom                                       
+11347,173111,PUIGCERDA                               ,ES,+42:26:25,+001:56:05,1213, TN3,20160104,20230630,   63,Marc Prohom                                       
+11348,173120,TIVISSA                                 ,ES,+41:02:36,+000:44:25, 316, TN3,20160101,20230630,   63,Marc Prohom                                       
+11382,156402,OLOT - PLA DE BAIX                      ,ES,+42:11:29,+002:28:57, 421, TN3,20080101,20161207,   63,Marc Prohom                                       
+11382,175556,OLOT                                    ,ES,+42:11:17,+002:28:49, 433, TN3,20160108,20180630,   63,Marc Prohom                                       
+11383,156285,LA POBLA DE SEGUR - BOMBERS             ,ES,+42:14:22,+000:57:52, 513, TN3,20080101,20161211,   63,Marc Prohom                                       
+11383,175565,LA POBLA DE SEGUR                       ,ES,+42:14:38,+000:58:05, 508, TN3,20160112,20170630,   63,Marc Prohom                                       
+11385,175678,LES BORGES BLANQUES                     ,ES,+41:30:38,+000:51:23, 283, TN3,20170125,20230630,   63,Marc Prohom                                       
+11386,175687,MASSOTERES                              ,ES,+41:47:36,+001:18:21, 513, TN3,20170518,20230630,   63,Marc Prohom                                       
+16319,190619,MONT-ROIG DEL CAMP                      ,ES,+41:01:08,+000:56:01,  42, TN3,20180101,20230630,   63,Marc Prohom                                       
+16320,190628,TIRVIA                                  ,ES,+42:31:04,+001:14:28, 954, TN3,20180111,20230630,   63,Marc Prohom                                       
+16321,190637,PUJALT                                  ,ES,+41:42:58,+001:25:22, 747, TN3,20180407,20230630,   63,Marc Prohom                                       
+16617,191298,LLEIDA - LA FEMOSA                      ,ES,+41:35:05,+000:19:15, 170, TN3,20180822,20230630,   63,Marc Prohom                                       
+18004,198312,RIUDECANYES                             ,ES,+41:07:22,+000:58:10, 170, TN3,20190103,20230630,   63,Marc Prohom                                       
+22439,220943,VIELHA-ELIPORT                          ,ES,+42:41:48,+000:48:07,1027, TN3,20210312,20230630,   63,Marc Prohom                                       
+25164,119894,BARCELONA/AEROPUERTO                    ,ES,+41:17:34,+002:04:12,   4, TN3,19240301,20231031,   31,Roser Botey Fullat                                
+25164,156168,EL PRAT DE LLOBREGAT                    ,ES,+41:20:25,+002:04:49,   8, TN3,20110323,20230630,   63,Marc Prohom                                       
+25164,240929,PORT DE BARCELONA - ZAL PRAT            ,ES,+41:19:09,+002:08:13,   7, TN3,20220101,20230630,   63,Marc Prohom                                       
+25164,908181,BARCELONA/AEROPUERTO                    ,ES,+41:17:00,+002:04:00,   6, TN6,19820118,20200229,     ,                    
+25165,240939,PALAFRUGELL                             ,ES,+41:54:25,+003:09:37,  36, TN3,20220101,20230630,   63,Marc Prohom                                       
