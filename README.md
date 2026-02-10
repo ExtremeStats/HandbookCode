@@ -3,7 +3,7 @@
 <p align="left">
   <img src="https://extremestats.github.io/Handbook/images/cover.jpg"
        alt="Handbook on Statistics of Extremes cover"
-       width="100">
+       width="150">
 </p>
 
 https://extremestats.github.io/Handbook/
