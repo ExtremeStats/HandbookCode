@@ -12,8 +12,9 @@ https://extremestats.github.io/Handbook/
 
 <ul style="font-size: 35%; margin-top: 0;">
   <li>
-    Davison, A. and Miralles, O. (2026). Modeling univariate extremes—why and how.
-    In <em>Handbook on Statistics of Extremes</em>, Chapter 2, pp. 11–35.
+    Cooley, D., Sabourin, A., and Wixson, T. (2026).
+    Principal component analysis for multivariate extremes.
+    In <em>Handbook on Statistics of Extremes</em>, Chapter 11, pp. 221–242.
     Chapman &amp; Hall/CRC, Boca Raton, FL.
   </li>
   <li>
