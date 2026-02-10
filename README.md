@@ -6,9 +6,9 @@
        width="100">
 </p>
 
-**Web:** https://extremestats.github.io/Handbook/
+https://extremestats.github.io/Handbook/
 
-##### References
+#### References
 - de Carvalho, M., Huser, R., Naveau, P., and Reich, B. J. (2026). _Handbook on Statistics of Extremes_. Chapman & Hall/CRC. Boca Raton, FL
 
 - de Carvalho, M. and Carcaiso, V. (2026). Learning About Extreme Value Distributions from Data. In _Handbook on Statistics of Extremes_, Chapter 3, pp. 37–56. Chapman & Hall/CRC, Boca Raton, FL.
