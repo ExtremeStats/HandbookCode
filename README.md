@@ -12,13 +12,14 @@ https://extremestats.github.io/Handbook/
 
 <ul style="font-size: 35%; margin-top: 0;">
   <li>
-    Davison, A. and Miralles, O. (2026). Modeling univariate extremes—why and how.
-    In <em>Handbook on Statistics of Extremes</em>, Chapter 2, pp. 11–35.
+    de Carvalho, M., Huser, R., Naveau, P., and Reich, B. J. (2026).
+    <em>Handbook on Statistics of Extremes</em>.
     Chapman &amp; Hall/CRC, Boca Raton, FL.
   </li>
   <li>
-    de Carvalho, M., Huser, R., Naveau, P., and Reich, B. J. (2026).
-    <em>Handbook on Statistics of Extremes</em>.
+    Smith, R. L. (2026).
+    Detection and attribution of extreme weather events: a statistical review.
+    In <em>Handbook on Statistics of Extremes</em>, Chapter 23, pp. 523–543.
     Chapman &amp; Hall/CRC, Boca Raton, FL.
   </li>
 </ul>
