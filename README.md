@@ -12,9 +12,10 @@ https://extremestats.github.io/Handbook/
 
 <ul style="font-size: 35%; margin-top: 0;">
   <li>
-    Davison, A. and Miralles, O. (2026). Modeling univariate extremes—why and how.
-    In <em>Handbook on Statistics of Extremes</em>, Chapter 2, pp. 11–35.
-    Chapman &amp; Hall/CRC, Boca Raton, FL.
+    de Carvalho, M. and Castro-Camilo, D. (2026).
+    Regression models for multivariate extremes.
+    In <em>Handbook on Statistics of Extremes</em>, Chapter 9, pp. 175–198.
+    Chapman & Hall/CRC, Boca Raton, FL.
   </li>
   <li>
     de Carvalho, M., Huser, R., Naveau, P., and Reich, B. J. (2026).
