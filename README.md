@@ -18,7 +18,7 @@ https://extremestats.github.io/Handbook/
   </li>
   <li>
     Naveau, P. (2026).
-    Jointly Modeling the Bulk and Tails.
+    Jointly modeling the bulk and tails.
     In <em>Handbook on Statistics of Extremes</em>, Chapter 5, pp. 79–98.
     Chapman &amp; Hall/CRC, Boca Raton, FL.
   </li>
