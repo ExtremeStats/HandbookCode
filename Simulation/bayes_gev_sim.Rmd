@@ -1,0 +1,99 @@
+# Simulation study of a Bayesian analysis of the GEV model
+
+
+
+
+```{r functions}
+
+ library(evd)
+ source("GEV_MCMC_functions.R") 
+ source("GEV_reference_MCMC_functions.R")
+
+ # Simulation settings
+
+ nsims    <- 1000
+ type     <- 4
+ n        <- ifelse(type==1 | type==2, 50,200)
+ mu       <- 2
+ sigma    <- 4
+ xi       <- ifelse(type==1 | type==3, 0.1,-0.1)
+ theta    <- c(mu,sigma,xi,qgev(0.99,mu,sigma,xi))
+
+ #MCMC settings
+
+ iters <- 20000
+ burn  <- 5000
+ sd1   <- c(10,2,0.5)  # prior SD for theta
+ sd2   <- c(10,2,0.2) # prior SD for theta
+
+ est <- array(0,c(nsims,4,4))
+ models             <- c("MLE","Bayes, ref","Bayes, c=0.5","Bayes, c=0.2")
+ dimnames(est)[[2]] <- models
+ params             <- c("Location","Scale","Shape","Q99")  
+ dimnames(est)[[3]] <- params
+ se                 <- est 
+
+for(sim in 1:nsims){
+
+  # Generate data
+   set.seed(919*sim)
+   Y        <- rgev(n,mu,sigma,xi)
+
+  # Analyze data
+   mle            <- fgev(Y)
+   est[sim,1,1:3] <- mle$est
+   se[sim,1,1:3]  <- sqrt(diag(mle$var.cov))
+   est[sim,1,4]   <- qgev(0.99,mle$est[1],mle$est[2],mle$est[3])
+
+   fit0           <- GEV_ref_MCMC(Y,iters=iters,burn=burn)$samples
+   q99            <- rep(0,iters)
+   for(i in 1:iters){q99[i] <- qgev(0.99,fit0[i,1],fit0[i,2],fit0[i,3])}   
+   est[sim,2,1:3] <- apply(fit0[burn:iters,],2,median)
+   se[sim,2,1:3]  <- apply(fit0[burn:iters,],2,sd)
+   est[sim,2,4]   <- median(q99[burn:iters])
+   se[sim,2,4]    <- sd(q99[burn:iters])
+
+
+   fit1           <- GEV_MCMC(Y,iters=iters,burn=burn,prior_sd=sd1)$samples
+   fit1[,2]       <- exp(fit1[,2])
+   q99            <- rep(0,iters)
+   for(i in 1:iters){q99[i] <- qgev(0.99,fit1[i,1],fit1[i,2],fit1[i,3])}   
+   est[sim,3,1:3] <- apply(fit1[burn:iters,],2,median)
+   se[sim,3,1:3]  <- apply(fit1[burn:iters,],2,sd)
+   est[sim,3,4]   <- median(q99[burn:iters])
+   se[sim,3,4]    <- sd(q99[burn:iters])
+
+   fit2           <- GEV_MCMC(Y,iters=iters,burn=burn,prior_sd=sd2)$samples
+   fit2[,2]       <- exp(fit2[,2])
+   q99            <- rep(0,iters)
+   for(i in 1:iters){q99[i] <- qgev(0.99,fit2[i,1],fit2[i,2],fit2[i,3])}   
+   est[sim,4,1:3] <- apply(fit2[burn:iters,],2,median)
+   se[sim,4,1:3]  <- apply(fit2[burn:iters,],2,sd)
+   est[sim,4,4]   <- median(q99[burn:iters])
+   se[sim,4,4]    <- sd(q99[burn:iters])
+ }
+
+```
+
+## Summarize results
+
+```{r sum}
+   for(j in 1:4){
+       boxplot(est[,,j],ylab=params[j])
+       abline(theta[j],0,col=2)
+   }
+   e  <- z <- est
+   for(j in 1:4){e[,,j] <- est[,,j]-theta[j]}
+   for(j in 1:4){z[,,j] <- e[,,j]/se[,,j]}
+   
+   mse     <- apply(e^2,2:3,mean)
+   mse_se  <- apply(e^2,2:3,sd)/sqrt(nsims)
+   cov     <- apply(abs(z)<1.96,2:3,mean)
+   cov_se  <- apply(abs(z)<1.96,2:3,sd)/sqrt(nsims)
+
+   print(round(mse,3))
+   print(round(100*cov))
+
+   save.image(paste0("sim",type,".RData"))
+```
+
