@@ -12,13 +12,14 @@ https://extremestats.github.io/Handbook/
 
 <ul style="font-size: 35%; margin-top: 0;">
   <li>
-    Davison, A. and Miralles, O. (2026). Modeling univariate extremes—why and how.
-    In <em>Handbook on Statistics of Extremes</em>, Chapter 2, pp. 11–35.
+    de Carvalho, M., Huser, R., Naveau, P., and Reich, B. J. (2026).
+    <em>Handbook on Statistics of Extremes</em>.
     Chapman &amp; Hall/CRC, Boca Raton, FL.
   </li>
   <li>
-    de Carvalho, M., Huser, R., Naveau, P., and Reich, B. J. (2026).
-    <em>Handbook on Statistics of Extremes</em>.
+    Strokorb, K. and Oesting, M. (2026).
+    Max-stable processes for spatial extremes.
+    In <em>Handbook on Statistics of Extremes</em>, Chapter 15, pp. 321–348.
     Chapman &amp; Hall/CRC, Boca Raton, FL.
   </li>
 </ul>
