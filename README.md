@@ -1,6 +1,5 @@
 # Chapter-2
-<div style="text-align: center;">
-https://extremestats.github.io/Handbook/images/cover.jpg
-</div>
 
-
+<p align="center">
+  <img src="https://extremestats.github.io/Handbook/images/cover.jpg" alt="" width="400">
+</p>
