@@ -18,7 +18,7 @@ https://extremestats.github.io/Handbook/
   </li>
   <li>
     Majumder, R., Shaby, B. A., and Reich, B. J. (2026).
-    Bayesian Methods for Extreme Value Analysis.
+    Bayesian methods for extreme value analysis.
     In *Handbook on Statistics of Extremes*, Chapter 4, pp. 57–78.
     Chapman & Hall/CRC, Boca Raton, FL.
   </li>
