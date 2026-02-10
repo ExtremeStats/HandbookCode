@@ -12,8 +12,9 @@ https://extremestats.github.io/Handbook/
 
 <ul style="font-size: 35%; margin-top: 0;">
   <li>
-    Davison, A. and Miralles, O. (2026). Modeling univariate extremes—why and how.
-    In <em>Handbook on Statistics of Extremes</em>, Chapter 2, pp. 11–35.
+    Auld, G., De Monte, L., and Papastathopoulos, I. (2026).
+    Time series in extremes.
+    In <em>Handbook on Statistics of Extremes</em>, Chapter 14, pp. 293–320.
     Chapman &amp; Hall/CRC, Boca Raton, FL.
   </li>
   <li>
