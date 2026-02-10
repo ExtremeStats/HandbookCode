@@ -10,7 +10,7 @@ https://extremestats.github.io/Handbook/
 
 #### References
 
-<ul style="font-size: 85%; margin-top: 0;">
+<ul style="font-size: 35%; margin-top: 0;">
   <li>
     Davison, A. and Miralles, O. (2026). Modeling univariate extremes—why and how.
     In <em>Handbook on Statistics of Extremes</em>, Chapter 2, pp. 11–35.
