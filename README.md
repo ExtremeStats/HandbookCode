@@ -18,7 +18,7 @@ https://extremestats.github.io/Handbook/
   </li>
   <li>
     de Carvalho, M., Palacios, V., Henriques-Rodrigues, L., and Lee, M. W. (2026).
-    Regression Models for Extreme Events.
+    Regression models for extreme events.
     In <em>Handbook on Statistics of Extremes</em>, Chapter 6, pp. 99–120.
     Chapman &amp; Hall/CRC, Boca Raton, FL.
   </li>
