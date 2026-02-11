@@ -8,7 +8,7 @@
 
 https://extremestats.github.io/Handbook/
 
-#### Code is available from
+#### Code is sourced from
 
 https://github.com/noemielc/egpd4gamlss
 
