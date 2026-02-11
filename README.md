@@ -8,6 +8,10 @@
 
 https://extremestats.github.io/Handbook/
 
+#### Code is sourced from
+
+http://github.com/cgaetan/Handbook-on-Statistics-of-Extremes-Chapter25
+
 #### References
 
 <ul style="font-size: 35%; margin-top: 0;">
