@@ -8,7 +8,7 @@
 
 https://extremestats.github.io/Handbook/
 
-\u2020 The code is sourced from the following link, where additional details can also be found
+The code is sourced from the following link, where additional details can also be found
 
 https://github.com/ptredondo/HSE_Chap30_Neuroscience
 
