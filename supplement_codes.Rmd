@@ -1,0 +1,557 @@
+---
+title: "Pareto processes"
+author: "Clément Dombry, Juliette Legrand and Thomas Opitz"
+date: ""
+output: 
+  bookdown::pdf_document2: 
+    number_sections: TRUE
+    fig_caption: true
+bibliography: biblio-chapter16.bib
+fontsize: 12pt
+nocite: |   
+    @mvPotTutorial, @B2023
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, fig.width = 8, fig.height = 4,message=F,results = FALSE)
+
+library(ggplot2)
+library(viridis)
+```
+
+# Introduction
+
+This document is a supplementary file for the Chapter \textit{Pareto processes} from \textit{Handbook of Statistics of Extremes}. It presents additional simulation frameworks and the complete code for the application example.
+
+Note that some external sources that have proved very valuable are the \texttt{R} vignette from Léo Belzile presenting some of the uses of the \texttt{mev} package (https://lbelzile.github.io/mev/articles/04-simulation.html#exercice), and a R tutorial from Raphael De Fondeville on the \texttt{mvPot} package, available here: https://github.com/r-fndv/mvPot_tutorial/blob/master/EVA%202019%20Workshop.ipynb
+
+
+
+# Numerical experiments
+
+
+
+In the following, we propose several implementations for simulations of r-Pareto processes, given different risk functional $r$. For each risk functional, we propose an implementation "by hand", \textit{i.e.} following Example 3 of the Chapter, and compare it with the \texttt{mev} package.
+
+In addition to the choice of $r$, simulations also involves the choice of a variogram (or semivariogram) function for the underlying process, as explained in the Chapter. We consider here only the power variogram for different parameters. 
+
+
+For more details on the codes, please refer to the Chapter.
+
+The numerical experiments will be performed on a regular grid $20\times 20$, denoted \texttt{grid}. We also need the matrix of distances \texttt{distmat}, which comprises the distances between each pair of grid cells. 
+
+```{r}
+grid = as.matrix(expand.grid(1:20,1:20))
+distmat = as.matrix(dist(grid))
+```
+
+
+## Site conditioning risk functional 
+
+The following compare simulations using the power variogram for different set of parameters, using the methodology presented in Example 3 as presented in the Chapter. Results are depicted in Figure \@ref(fig:site1).
+
+```{r echo=F}
+set.seed(123) # set a seed for the simulation of Gaussian fields
+```
+
+
+```{r}
+s0 = 110
+vario_power = function(h,beta=1,alpha=1.5){(h/beta)^alpha}
+gamma = vario_power(distmat) 
+
+G = geoR::grf(grid = grid, cov.pars = c(1, 1.5),cov.model="power")$data
+Y = exp(G-G[s0]-gamma[,s0])
+R = evd::rgpd(n = 1, loc = 1, scale = 1, shape = 1)
+Z1 = R*Y
+
+gamma = vario_power(distmat,beta=1.5,alpha=0.8) 
+G = geoR::grf(grid = grid, cov.pars = c((1/1.5)^0.8, 0.8),
+                  cov.model="power")$data
+Y = exp(G-G[s0]-gamma[,s0])
+Z2 = R*Y
+```
+
+
+```{r site1, echo=F, fig.cap="One realisation on logarithmic scale of a r-Pareto process with $r(f)=f(s_0)$, using a Brown-Resnick model and a power variogram defined as $\\gamma(h)=(h/\\beta)^\\alpha$. Left panel: $\\beta=1$, $\\alpha=1.5$. Right panel: $\\beta=1.5$, $\\alpha=0.8$. The red square highlights the conditioning site $s_0$."}
+
+  
+data = rbind(data.frame("Sim"=Z1,lab =1),
+             data.frame("Sim"=Z2,lab=2))
+data$X = rep(grid[,1],2)
+data$Y = rep(grid[,2],2)
+plot =
+  ggplot(data)+
+  facet_wrap(~lab)+
+  geom_raster(aes(x=X,y=Y,fill = Sim))+
+  geom_point(aes(x=grid[s0,1],y=grid[s0,2]),colour='red',size=5,shape=0)
+
+breaks = c(0, 0.01, 0.1, 1, 10)
+plot + scale_fill_viridis(trans = scales::pseudo_log_trans(sigma = 0.001),
+                          breaks = breaks, labels = breaks)+
+  theme_bw()+
+  labs( fill="")+
+  xlab("")+
+  ylab("")+
+  guides(fill = guide_colourbar(barwidth = 1,barheight = 10))+
+  theme(axis.text=element_text(size=10),
+        axis.title=element_text(size=14),
+        legend.title=element_text(size=14),
+        legend.text=element_text(size=12),
+        strip.text.x = element_blank(),
+        panel.spacing = unit(1,"cm"))
+
+
+
+```
+
+We can also consider the function \texttt{rparp} from the R package \texttt{mev}. The user can specify the risk functional with the argument \texttt{riskf}, where currently available risks includes maxima, minima, geometric average, location-conditioning value and $L^2$ norm, and a specific dependence model using the argument \texttt{model} (\emph{e.g.}, ``br" for the Brown-Resnick model) along with a user-defined semivariogram (argument \texttt{vario}) or a parameter matrix (argument \texttt{sigma}).
+
+In the following we consider the site conditioning risk functional for a Brown-Resnick model with the power variogram, and compare it with the previous approach (see Figure \@ref(fig:site2)).
+
+```{r}
+s0 = 350
+mev_samp = mev::rparp(n = 1,shape = 1,riskf = "site",siteindex=s0,
+                      vario = vario_power,beta=0.5,alpha=0.9,
+                      coord=grid,model = "br")
+
+gamma = vario_power(distmat,beta=0.5,alpha=0.9) 
+G = geoR::grf(grid = grid, cov.pars = c((1/0.5)^0.9, 0.9),
+              cov.model="power")$data
+Y = exp(G-G[s0]-gamma[,s0])
+R = evd::rgpd(n = 1, loc = 1, scale = 1, shape = 1)
+Z1 = R*Y
+```
+
+
+```{r site2, echo=F, fig.cap="One realisation on logarithmic scale of a r-Pareto process with $r(f)=f(s_0)$, using a Brown-Resnick model and a power variogram defined as $\\gamma(h)=(h/\\beta)^\\alpha$ with $\\beta=0.5$, $\\alpha=0.9$. Left panel: by hand. Right panel: using mev package. The red square highlights the conditioning site $s_0$."}
+
+  
+data = rbind(data.frame("Sim"=Z1,lab =1),
+             data.frame("Sim"=mev_samp[1,],lab=2))
+data$X = rep(grid[,1],2)
+data$Y = rep(grid[,2],2)
+plot =
+  ggplot(data)+
+  facet_wrap(~lab)+
+  geom_raster(aes(x=X,y=Y,fill = Sim))+
+  geom_point(aes(x=grid[s0,1],y=grid[s0,2]),colour='red',size=5,shape=0)
+
+breaks = c(0, 0.01,0.1, 1,10)
+plot + scale_fill_viridis(trans = scales::pseudo_log_trans(sigma = 0.001),
+                          breaks = breaks, labels = breaks)+
+  theme_bw()+
+  labs( fill="")+
+  xlab("")+
+  ylab("")+
+  guides(fill = guide_colourbar(barwidth = 1,barheight = 10))+
+  theme(axis.text=element_text(size=10),
+        axis.title=element_text(size=14),
+        legend.title=element_text(size=14),
+        legend.text=element_text(size=12),
+        strip.text.x = element_blank(),
+        panel.spacing = unit(1,"cm"))
+
+
+
+```
+
+## Sum risk functional 
+
+Following Proposition 1 and since simulation given the site conditioning risk functional is feasible, simulation of r-Pareto processes with $r=\sum_{i=1}^{K}f(s_k)$ can be performed as follow. Again we compare with the built-in function of the package \texttt{mev}, see Figure \@ref(fig:sum).
+
+
+```{r}
+s0 = sample(1:nrow(grid),1)
+G = geoR::grf(grid = grid, cov.pars = c(1, 1.5),cov.model="power")$data
+gamma = vario_power(distmat) 
+Y = exp(G-G[s0]-gamma[,s0])
+R = evd::rgpd(n = 1, loc = 1, scale = 1, shape = 1)
+Z1 = R*Y/sum(Y)
+
+mev_samp = mev::rparp(n = 1,shape = 1,riskf = "sum",vario = vario_power,
+                      coord=grid,model = "br")
+
+```
+
+
+```{r sum, echo=F,fig.cap="One realisation on logarithmic scale of a r-Pareto process with $r(f)=\\sum_{i=1}^K f(s_k)$, using a Brown-Resnick model and a power variogram defined as $\\gamma(h)=(h/\\beta)^\\alpha$, with $\\beta=1$, $\\alpha=1.5$. Left panel: by hand. Right panel: using the mev package."}
+data = rbind(data.frame("Sim"=Z1,lab =1),
+             data.frame("Sim"=mev_samp[1,],lab=2))
+data$X = rep(grid[,1],2)
+data$Y = rep(grid[,2],2)
+plot =
+  ggplot(data)+
+  facet_wrap(~lab)+
+  geom_raster(aes(x=X,y=Y,fill = Sim))
+
+breaks = c(0, 0.01, 0.1, 1, 10)
+plot + scale_fill_viridis(trans = scales::pseudo_log_trans(sigma = 0.001),
+                          breaks = breaks, labels = breaks)+
+  theme_bw()+
+  labs( fill="")+
+  xlab("")+
+  ylab("")+
+  guides(fill = guide_colourbar(barwidth = 1,barheight = 10))+
+  theme(axis.text=element_text(size=10),
+        axis.title=element_text(size=14),
+        legend.title=element_text(size=14),
+        legend.text=element_text(size=12),
+        strip.text.x = element_blank(),
+        panel.spacing = unit(1,"cm"))
+
+
+```
+
+## Maximum risk functional 
+
+Following Proposition 2, and since we are able to simulate Pareto processes with mean risk functional, we can also perform simulations of Pareto processes using a rejection-sampling approach for maximum risk functional. Results are presented in Figure \@ref(fig:max).
+
+```{r}
+Z1 = rep(0,nrow(grid))
+gamma = vario_power(distmat) 
+while(max(Z1)<nrow(grid)){
+  s0 = sample(1:nrow(grid),1)
+  G = geoR::grf(grid = grid, cov.pars = c(1, 1.5),cov.model="power")$data
+  Y = exp(G-G[s0]-gamma[,s0])
+  R = evd::rgpd(n = 1, loc = 1, scale = 1, shape = 1)
+  Z1 = R*Y/mean(Y)
+}
+Z2 = Z1/nrow(grid)
+
+mev_samp = mev::rparp(n = 5,shape = 1,riskf = "max",vario = vario_power,
+                      coord=grid, model = "br")
+```
+
+
+```{r max, echo=F, fig.cap="One realisation on logarithmic scale of a r-Pareto process with $r(X)=\\max_{s\\in S} f(s)$, using a Brown-Resnick model and a power variogram defined as $\\gamma(h)= (h/\\beta)^\\alpha$ (with $\\beta=1$, $\\alpha=1.5$). Left panel: using the procedure described in Proposition 2. Right panel: using the R package mev, also based on rejection sampling."}
+data = rbind(data.frame("Sim"=Z2,lab =1),
+             data.frame("Sim"=mev_samp[1,],lab=2))
+data$X = rep(grid[,1],2)
+data$Y = rep(grid[,2],2)
+plot =
+  ggplot(data)+
+  facet_wrap(~lab)+
+  geom_raster(aes(x=X,y=Y,fill = Sim))
+
+breaks = c(0, 0.01, 0.1, 1, 10)
+plot + scale_fill_viridis(trans = scales::pseudo_log_trans(sigma = 0.001),
+                          breaks = breaks, labels = breaks)+
+  theme_bw()+
+  labs( fill="")+
+  xlab("")+
+  ylab("")+
+  guides(fill = guide_colourbar(barwidth = 1,barheight = 10))+
+  theme(axis.text=element_text(size=10),
+        axis.title=element_text(size=14),
+        legend.title=element_text(size=14),
+        legend.text=element_text(size=12),
+        strip.text.x = element_blank(),
+        panel.spacing = unit(1,"cm"))
+```
+
+
+
+## Minimum risk functional 
+
+With minimum risk functional, codes can be computationally heavy since we use the rejection-sampling approach. The example below is therefore run on a smaller grid $10\times 10$, see Figure \@ref(fig:min).
+Similarly, simulation with the \texttt{mev} package can take some time. To avoid this, one can use the function \texttt{rparpcs} instead, which uses composition sampling (note that this function takes as argument the variogram matrix, defined as $\Lambda_{i,j}=\gamma(s_i,s_j)/4$ for sites $s_i,s_j\in\mathcal{S}$). The \texttt{rparpcs} function is implemented only for $r=\min$ and $r=\max$.
+
+```{r echo = F}
+set.seed(111)
+```
+
+```{r}
+grid = as.matrix(expand.grid(1:10,1:10))
+distmat = as.matrix(dist(grid))
+gamma = vario_power(distmat,beta=2,alpha=1.2)
+
+Z1 = rep(0,nrow(grid))
+while(min(Z1)<1){
+  s0 = sample(1:nrow(grid),1)
+  G = geoR::grf(grid = grid, cov.pars = c((1/2)^1.2,1.2),cov.model="power")$data
+  Y = exp(G-G[s0]-gamma[,s0])
+  R = evd::rgpd(n = 1, loc = 1, scale = 1, shape = 1)
+  Z1 = R*Y/mean(Y)
+}
+Z2 = Z1
+
+mev_samp = mev::rparpcs(n = 1,shape = 1,riskf = "min",Lambda = gamma/4,model = "br")
+```
+
+
+```{r min, echo=F, fig.cap="One realisation on logarithmic scale of a r-Pareto process with $r(X)=\\min_{s\\in S} f(s)$, using a Brown-Resnick model and a power variogram defined as $\\gamma(h)= (h/\\beta)^\\alpha$ (with $\\beta=2$, $\\alpha=1.2$). Left panel: following Proposition 2. Right panel: with the mev package."}
+data = rbind(data.frame("Sim"=Z2,lab =1),
+             data.frame("Sim"=mev_samp[1,],lab =2))
+data$X = rep(grid[,1],2)
+data$Y = rep(grid[,2],2)
+plot =
+  ggplot(data)+
+  facet_wrap(~lab)+
+  geom_raster(aes(x=X,y=Y,fill = Sim))
+
+breaks = c(0, 0.01, 0.1, 1, 10,100,1000)
+plot + scale_fill_viridis(trans = scales::pseudo_log_trans(sigma = 0.001),
+                          breaks = breaks, labels = breaks)+
+  theme_bw()+
+  labs( fill="")+
+  xlab("")+
+  ylab("")+
+  guides(fill = guide_colourbar(barwidth = 1,barheight = 10))+
+  theme(axis.text=element_text(size=10),
+        axis.title=element_text(size=14),
+        legend.title=element_text(size=14),
+        legend.text=element_text(size=12),
+        strip.text.x = element_blank(),
+        panel.spacing = unit(1,"cm"))
+
+
+```
+
+
+# Application to significant wave heights
+
+For the application, we follow the same procedure as in the \texttt{R} tutorial of Raphael De Fondeville, available here https://github.com/r-fndv/mvPot_tutorial/blob/master/EVA%202019%20Workshop.ipynb
+Therefore, some part of the codes are identical to the ones in the tutorial previously mentioned.
+
+We first load the data. A complete description can be found in the \texttt{readme.txt} file. The data are also available from the R package \texttt{DATAstudio}.
+
+```{r}
+load("waveheights.RData")
+```
+
+Some transformations of the coordinates need to be performed prior to the modelization. For this we use the \texttt{R} package \texttt{sp} to transform longitude/latitude coordinates to UTM coordinates system, in km. Given the spatial data at hand, attention must be paid to the projection region defined with the function \texttt{CRS}.
+
+```{r}
+library(sp)
+# Create coordinates object
+coords = data.frame("X" = Locations$Longitude,"Y"=Locations$Latitude)
+coordinates(coords) = c("X", "Y")
+# Define system of coordinates
+proj4string(coords) = CRS("+proj=longlat +datum=WGS84")
+# Project lon/lat coordinates to UTM (m) system of coordinates
+projected_coordinates =  spTransform(coords, 
+                                     CRS("+proj=utm +zone=30 ellps=WGS84"))
+# Rescale to have new coordinates in km
+projected_coordinates@coords =  projected_coordinates@coords / 1000
+```
+
+
+## Marginal standardization
+
+Before modelling the extremal dependence structure, data are first standardized to common margins. Here to standard Pareto distribution (but could also be to common unit Frechet distributions).
+
+For this we define a local quantile vector \texttt{Quantiles}, with quantile level $0.95$.
+
+```{r}
+quantileLevel = 0.95
+Quantiles = as.vector(apply(hs_dat,FUN = quantile,probs=quantileLevel,
+                            MARGIN = 2))
+```
+
+Above these quantiles, a GPD is fitted at each location, here using the function \texttt{fit.gpd} from the \texttt{R} package \texttt{mev}.
+
+```{r}
+# Parameters for generalized Pareto distributions
+scales = rep(NA, ncol(hs_dat))
+shapes = rep(NA, ncol(hs_dat))
+
+# Local GP fit above the 0.95 quantile
+for(i in 1:length(scales)){
+  fitGP = mev::fit.gpd(hs_dat[, i],threshold = Quantiles[i])
+  # Store estimation results
+  scales[i] = fitGP$estimate[1]
+  shapes[i] = fitGP$estimate[2]
+}
+
+# Marginal standardization ----
+# Create object for normalized data
+normalized_database = matrix(NA, nrow = nrow(hs_dat), ncol = ncol(hs_dat))
+# Standarize to unit Pareto 
+for(i in 1:length(scales)){
+  # Compute local empirical CDF
+  empiricalCdf  = ecdf(hs_dat[,i])
+  # Use empirical cdf below the threshold
+  normalized_database[(hs_dat[,i] <= Quantiles[i] & !is.na(hs_dat[,i])),i] = 
+    1 / (1 - empiricalCdf(hs_dat[(hs_dat[,i] <= Quantiles[i] &
+                                    !is.na(hs_dat[,i])),i]))-1
+  # Use estimated GP distribution above the threshold
+  normalized_database[(hs_dat[,i] > Quantiles[i] & !is.na(hs_dat[,i])),i] =
+    1 /  ((1 - quantileLevel) * (1 + shapes[i]*(hs_dat[(hs_dat[,i] > 
+                                                          Quantiles[i] &
+                                      !is.na(hs_dat[,i])),i]-Quantiles[i])/ 
+                                   scales[i])^(-1 / shapes[i])) - 1
+}
+```
+
+Figure \@ref(fig:shapes) highlights the spatial variability of the estimated shape parameters, showing negative parameters, which decrease closer to the coast (which is to be expected with this type of data).
+
+```{r shapes, echo=F, fig.cap="Estimated shape parameters from the fitted GPD at each location."}
+lim_lon = c(-5.3, -4.2)
+lim_lat = c(46.5, 47.6)
+ggplot()+
+  geom_point(aes(x=Locations$Longitude,y=Locations$Latitude,
+                 color = shapes),size=4)+
+  coord_sf(xlim=lim_lon,ylim=lim_lat,expand=F,crs = sf::st_crs(4326))+
+  scale_color_viridis(na.value = NA)+
+  theme_bw()+
+  labs( color="Shape",
+        y = 'Latitude', x = 'Longitude')+
+  guides(color = guide_colourbar(barwidth = 1,barheight = 10))+
+  theme(axis.text=element_text(size=10),
+        axis.title=element_text(size=14),
+        legend.title=element_text(size=14),
+        legend.text=element_text(size=14),
+        strip.text.x = element_text(size = 16))
+```
+
+## Extremal dependance
+
+Next we model the extremal dependence structure of the marginally normalized data by fitting a r-Pareto process associated with risk functional $r(X)=\max_{s\in S}X(s)$. In addition to the choice of risk functional (often driven by the application), we can assume a parametric form for the angular process $Y$. A simple choice is to consider a log-Gaussian model, with power variogram $\gamma(h)=(h/\beta)^\alpha$.
+
+The power variogram is defined as follows:
+
+```{r}
+power_vario = function(h,scale=0.5,shape=1.5){(norm(h,type="2")/scale)^shape}
+```
+
+
+The estimation procedure is performed using the gradient scoring rule approach (see the Chapter for more details). Note that this approach can be applied for any risk function that is differentiable. This excludes for instance the risks functional $r(X)=\max_{s\in S}X(s)$ or $r(X)=\sup_{s\in S}X(s)$. However smooth approximations can be used, such as the $p$-norm for the maximum risk functional, which is what is done below. We then define the weight function and its derivative, as explained in Section 1.3.3 and in @dFD18.
+
+```{r}
+# Risk functional
+riskFun = function(x,p=40){sum(x^p)^{1/p}}
+# Derivative of the risk functional
+dRiskFun = function(x,p=40){sum(x^(p-1))*sum(x^p)^{1/p-1}}
+# Weighting function
+weightFun = function(x,u){x*(1-exp(1-riskFun(x/u)))}
+# Derivative of weighting function
+dWeightFun = function(x, u){(1-exp(1-riskFun(x/u)))+
+    x*dRiskFun(x/u)*exp(1-riskFun(x/u))}
+```
+
+
+Then, we compute the local maxima on the rescaled observations and define the list of observations that belongs to the exceedance region $\{x : r(x)>u\}$.
+
+```{r}
+# Compute spatial maxima for each rescaled observations
+maxs = apply(normalized_database,1, riskFun)
+# Define threshold for exceedance 
+threshold = quantile(maxs, 0.9)
+# Create matrix of exceedances for spatial maxima
+spatial_accumulation_excesses = normalized_database[maxs > threshold,]
+# Convert to a list for the function scoreEstimation
+list_spatial_accumulation_excesses =
+  lapply(1:length(spatial_accumulation_excesses[,1]), function(i){
+    spatial_accumulation_excesses[i,]})
+
+```
+
+
+Then the objective function is optimized in order to obtain the variogram parameters. The objective function for the gradient scoring rule approach is implemented in the \texttt{mvPot} package with the function \texttt{scoreEstimation}.
+
+```{r}
+# Define the objective function
+objective_function = function(parameter, excesses,locations_coordinates, 
+                              vario,weightFun, 
+                              dWeightFun, 
+                              threshold){
+  # Enforce boundaries on the variogram parameters
+  if(parameter[1] < 0 | parameter[2] >= 2 | parameter[2] < 0){return(1e50)}
+  variogram_model = function(h){
+    power_vario(h, scale=parameter[1], shape=parameter[2])
+    }
+  #Compute score
+  mvPot::scoreEstimation(excesses, locations_coordinates, variogram_model,
+                         weightFun,dWeightFun,u = threshold)
+}
+
+# Estimate the parameter 
+estimates = optim(par = c(290,1.6),
+                  fn = objective_function,
+                  excesses = list_spatial_accumulation_excesses,
+                  locations_coordinates =
+                    as.data.frame(projected_coordinates@coords),
+                  vario = power_vario,
+                  weightFun = weightFun,
+                  dWeightFun = dWeightFun,
+                  threshold = threshold,
+                  control = list(maxit = 10000, trace = 0),
+                  method = "Nelder-Mead")
+```
+
+The estimated parameters of the power variogram $\gamma(h)= (h/\beta)^\alpha$ are then the following:
+
+```{r results = T,echo=F}
+print(paste(expression(beta), " = ",round(estimates$par[1],2), ", alpha =", round(estimates$par[2],2)))
+```
+## Model validation with the extremogram
+
+Finaly, we report hereinafter the code used for Figure \@ref(fig:extremogram). For the empirical extremograms we use the function \texttt{extremo} from the package \texttt{mev}.
+
+```{r eval =T, echo=T}
+# Compute all possible pairwise combinations
+pairs_combination = expand.grid(1:ncol(hs_dat),1:ncol(hs_dat))
+
+# Compute vector of distance between each pairs
+distances = sqrt((projected_coordinates@coords[pairs_combination[,1],1]-
+                  projected_coordinates@coords[pairs_combination[,2],1])^2+
+                   (projected_coordinates@coords[pairs_combination[,1],2]-
+                  projected_coordinates@coords[pairs_combination[,2],2])^2)
+
+# Compute orientation of each pairs
+matAngles = atan((projected_coordinates@coords[pairs_combination[,1],2]-
+                    projected_coordinates@coords[pairs_combination[,2],2]) /
+                   (projected_coordinates@coords[pairs_combination[,1],1] -
+                  projected_coordinates@coords[pairs_combination[,2],1]))*
+       (180/ pi)
+matAngles[is.nan(matAngles)] = 0
+
+# Compute theoretical extremogram from variogram
+extremogram_model = rep(0,length(distances))
+for(i in 1:length(distances)){
+  # Vector of coordinates difference between pairs
+  coord_diff = c(distances[i]*cos(matAngles[i]),
+                 distances[i] * sin(matAngles[i]))
+  # Compute extremogram between pairs
+  extremogram_model[i] = 
+    2*(1-pnorm(sqrt(power_vario(coord_diff,scale = estimates$par[1],
+                                shape = estimates$par[2]) / 2)))
+}
+```
+
+
+```{r extremogram, eval =T, echo=F, fig.cap="Empirical extremogram $\\chi_u$ for $u=0.95$ (dark dots) and $u=0.98$ (light dots), and theoretical extremogram obtained using the estimated parameters (solid line), as functions of the transformed distance.",fig.width=4}
+extremoHigh = extdat = mev::extremo(dat = hs_dat, margp = 0.98,
+  coord = as.matrix(projected_coordinates@coords),
+  scale = 1,rho = 0,plot = F)
+mev::extremo(dat = hs_dat, margp = 0.95,
+  coord = as.matrix(projected_coordinates@coords),scale = 1,
+  rho = 0,plot = T,col=scales::alpha('grey',0.25),ylim=c(0.6,1.05))
+points(extremoHigh[,1],extremoHigh[,2],pch=20)
+lines(sort(distances),extremogram_model[order(distances)],
+      col='red',lwd=4)
+
+```
+
+
+# References
+
+
+<div id="refs"></div>
+
+# Additional informations
+
+\texttt{R} packages that have been used for graphical purposes are the following:
+```{r echo=T, eval=F}
+library(ggplot2)      # for nice graphics
+library(viridis)      # for nice colors 
+```
+
+And session information:
+
+```{r echo=F,results=T} 
+  sessionInfo() 
+``` 
+
+
