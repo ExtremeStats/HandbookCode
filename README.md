@@ -8,6 +8,10 @@
 
 https://extremestats.github.io/Handbook/
 
+The code is sourced from the following link, where additional details can also be found:
+
+https://github.com/gillesstupfler/HandbookRiskMeasures
+
 #### References
 
 <ul style="font-size: 35%; margin-top: 0;">
