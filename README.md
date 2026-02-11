@@ -8,7 +8,7 @@
 
 https://extremestats.github.io/Handbook/
 
-### Full code available from
+### Code available from
 
 https://github.com/strokorb/max-stable-spatial-inference
 
