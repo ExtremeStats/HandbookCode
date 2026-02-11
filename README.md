@@ -8,6 +8,10 @@
 
 https://extremestats.github.io/Handbook/
 
+### Code available from 
+
+https://github.com/likun-stat/Ch_Subasymptotic
+
 #### References
 
 <ul style="font-size: 35%; margin-top: 0;">
