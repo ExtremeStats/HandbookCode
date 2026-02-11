@@ -1,0 +1,504 @@
+---
+title: "JM.landslide: Joint Modeling of Landslide Counts and Sizes Using Subasymptotic Landslide Size Distributions"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Joint Modeling of Landslide Counts and Sizes Using Subasymptotic Landslide Size Distributions}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+
+# Introduction
+
+In this vignette, we demonstrate the `R` package `JM.landslide` to jointly model landslide counts and sizes, using a sub-asymptotic distribution for the landslide sizes. This follows the joint modeling approach presented in [Yadav et al. (2024)](https://arxiv.org/abs/2404.09156) and [Yadav et al. (2023)](https://doi.org/10.1093/jrsssc/qlad077). The package performs simulation-based MCMC inference to simultaneously carry out inference and prediction of landslide counts and sizes. Additionally, the package provides estimates of landslide hazards and susceptibility maps over the study regions, key components often sought in landslide literature. Moreover, the package also generates outputs that provide estimates and summaries of fixed and random effects, along with the fitted counts and sizes.
+
+We will begin by briefly outlining the joint modeling framework of [Yadav et al. (2024)](https://arxiv.org/abs/2404.09156) and [Yadav et al. (2023)](https://doi.org/10.1093/jrsssc/qlad077). We will then detail, step by step, the approach from simulating data from the model to model fitting and extracting the results from the fitted object.
+
+## Modeling framework
+Briefly, the joint model implemented in `JM.landslide` is as follows:
+
+\begin{equation}
+\begin{aligned}
+Y_i \mid \boldsymbol \eta &\sim \text{Poisson}\left(\exp(\eta_i)\right), \quad i = 1, \ldots, d; \\
+\boldsymbol \eta &= \gamma_1 \mathbf{1}_n + \mathbf{Z}_1 \boldsymbol \beta_1 + \boldsymbol W_1 + \boldsymbol \varepsilon_{\eta}; \\
+A_j \mid \boldsymbol \mu, \boldsymbol \Theta_A &\sim F_A\left(\cdot; \exp(\mu_j), \boldsymbol \Theta_A\right), \quad j : Y_j > 0; \\
+\boldsymbol \mu &= \gamma_2 \mathbf{1}_n + \mathbf{Z}_2 \beta_2 + \beta \boldsymbol W_1 + \boldsymbol W_2 + \boldsymbol \varepsilon_{\mu}.
+\end{aligned}
+\end{equation}
+
+Where:
+
+- **Data:**  
+  - $\boldsymbol Y = (Y_1,\ldots,Y_d)'$: Landslide counts  
+  - $\boldsymbol A = (A_1,\ldots,A_J)'$: Landslide sizes in square root (used as a mark, defined whenever there is a positive landslide; i.e., when $Y_j > 0$)
+
+The priors on the model components are as follows:
+
+- **Spatial random effects:** $\boldsymbol W_1$ and $\boldsymbol W_2$ follow intrinsic conditional auto-regressive (ICAR) priors [Besag & Kooperberg, 1995](https://doi.org/10.2307/2337341). Specifically:   
+  - $\boldsymbol W_1 \sim MVN_{d-1}(\boldsymbol 0, \tau_{\boldsymbol w_1}^{-1} \boldsymbol Q^{-1})$  
+  - $\boldsymbol W_2 \sim MVN_{d-1}(\boldsymbol 0, \tau_{\boldsymbol w_2}^{-1} \boldsymbol Q^{-1})$  
+  - $\boldsymbol Q = D - A.Q$ is a $d \times d$ precision matrix, where $A.Q$ is the adjacency matrix, and $D$ is a diagonal matrix with the diagonal elements listing the degree (number of neighbors) of a given node (slope unit)
+  - $d$: Total number of slope units
+  - For the precision parameters $\tau_{\boldsymbol w_1}$ and $\tau_{\boldsymbol w_2}$, an inverse gamma distribution is used with appropriate parameters.
+
+- **Independent random effects:**  
+  - $\boldsymbol \varepsilon_{\boldsymbol \eta} \sim MVN(\boldsymbol 0, \tau_{\boldsymbol \eta}^{-1} \boldsymbol I_{d})$  
+  - $\boldsymbol \varepsilon_{\boldsymbol \mu} \sim MVN(\boldsymbol 0, \tau_{\boldsymbol \mu}^{-1} \boldsymbol I_{d})$
+  - For the precision parameters $\tau_{\boldsymbol \eta}$ and $\tau_{\boldsymbol \mu}$, relatively vague inverse gamma distributions are used.
+
+- **Fixed effects:**  
+  - $\boldsymbol \beta_1 \sim MVN_p(\boldsymbol 0, 100 \boldsymbol I_p)$  
+  - $\boldsymbol \beta_2 \sim MVN_q(\boldsymbol 0, 100 \boldsymbol I_q)$  
+  - $\boldsymbol Z_1$, $\boldsymbol Z_2$: Design matrices of dimension $d \times p$ and $d \times q$, respectively, that include the geographical covariates.
+
+- **Sharing parameter:**  
+  - $\beta \sim N(0, 100)$: Measures the strength of the relationship between the count and size processes, with no correlation for $\beta = 0$, positive correlation for $\beta > 0$, and negative correlation for $\beta < 0$, respectively.
+
+- **Intercepts:**  
+  - $\gamma_1 \sim N(0, 100)$  
+  - $\gamma_2 \sim N(0, 100)$
+  
+- **Sub-asymptotic distribution** for landslide size distribution $F_A$ with hyperparameter $\boldsymbol \Theta_A$. 
+
+For further details, see [Yadav et al. (2023)](https://doi.org/10.1093/jrsssc/qlad077) and [Yadav et al. (2024)](https://arxiv.org/abs/2404.09156).  
+
+## Installation
+
+You may install the development version of `JM.landslide` from [GitHub](https://github.com/) using the following command:
+
+```r
+devtools::install_github("yadavrishikesh/JM.landslide")
+```
+
+# Simulating data from the model
+
+### Loading required libraries and data
+
+```{r, warning=FALSE, message=FALSE}
+library(JM.landslide)  # Contains functions for joint modeling of landslide counts and sizes data.
+library(spdep)         # Provides functions for spatial dependence analysis.
+library(INLA)          # Used here for creating the neighborhood structures.
+library(ggplot2)
+library(gridExtra)
+library(viridis)
+
+# The dataset contains the necessary spatial information, such as the shapefile with spatial locations and coordinates.
+data("Wenchuan_info_used_for_simulation")
+```
+
+### Creating the adjacency graph and precision matrix
+
+This below code constructs the precision matrix `Q`, based on the spatial dependency structures of the data.
+```{r}
+nb2INLA("adjgraph-sim.txt", poly2nb(shp_selected, queen = FALSE, row.names = shp_selected$SU_ID))
+adjacensy <- inla.read.graph(filename = "adjgraph-sim.txt")
+N <- adjacensy$n
+diag.Q <- diag(adjacensy$nnbs, N)
+A.Q <- matrix(0, nrow = N, ncol = N)
+for (i in 1:N) {
+  A.Q[i, adjacensy$nbs[[i]]] <- 1
+}
+Q <- diag.Q - A.Q  # Precision matrix
+```
+Here:
+
+- **`diag.Q`**: Creates a diagonal matrix where the diagonal elements represent the number of neighbors for each node
+- **`A.Q`**: Adjacency matrix
+- The final precision matrix, **`Q = diag.Q - A.Q`**, is obtained by subtracting the adjacency matrix from the diagonal matrix
+
+
+
+### Setting fixed parameters
+
+Fixed the model hyperparameters $\kappa_{\boldsymbol w_1}$ `(kappa_w1)`, $\kappa_{\boldsymbol w_2}$ `(kappa_w2)`, $\kappa_{\boldsymbol \eta}$ `(kappa_eta)`, $\kappa_{\boldsymbol \mu }$ `(kappa_mu)`, the model intercepts $\gamma_1$ `(intercept1)` and $\gamma_2$ `(intercept2)`, the sharing correlation parameter $\beta$ `(beta)`, the regression coefficients $\boldsymbol\beta_1$ `(beta1)` and $\boldsymbol\beta_2$ `(beta2)`, and the parameters of the sub-asymptotic distribution $\boldsymbol \Theta_A$ `(hyper.mu)` to reasonable values. Additionally, simulated covariate matrices $\boldsymbol Z_1$ `(Z1)` and $\boldsymbol Z_2$ `(Z2)` were generated, which contain the fixed effects for landslide counts and sizes.
+
+
+```{r}
+# Set fixed parameters
+kappa_w1 <- 10
+kappa_w2 <- 5
+kappa_eta <- 10
+kappa_mu <- 5
+intercept1 <- 2
+intercept2 <- 4
+beta <- 1
+other.hyper <- list(
+  kappa_w1 = kappa_w1,
+  kappa_w2 = kappa_w2,
+  kappa_eta = kappa_eta,
+  kappa_mu = kappa_mu,
+  intercept1 = intercept1,
+  intercept2 = intercept2,
+  beta = beta
+)
+hyper.mu<- c(20,0.1)
+
+set.seed(1)
+Z1 <- mvtnorm::rmvnorm(N, mean = rep(0, 3))
+Z2 <- mvtnorm::rmvnorm(N, mean = rep(0, 2))
+beta1 <- runif(ncol(Z1), -1, 1)
+beta2 <- runif(ncol(Z2), -1, 1)
+```
+
+### Simulating data
+
+Given a fixed set of parameter values, we can use forward sampling techniques to simulate data from the model, which is implemented in the function `sim_mark_function`. This function simulates landslide count and size data according to the specified model introduced in the Introduction section, based on the given precision matrix, hyperparameters, and covariates. 
+For example, setting `model_type = "jSp"` simulates the joint spatial model described earlier, whereas `model_type = "FE"` simulates the data using only the available covariate information, excluding any ICAR random effects. 
+Additionally, setting `mark_dist = "eGPD"` simulates the model where the size distribution $F_A$ follows an extended generalized Pareto distribution. Other options include `mark_dist = "bGPD"` for a mixture of Beta and generalized Pareto distributions, and `mark_dist = "tgGPD"` for a mixture of truncated Gamma and generalized Pareto distributions. For more details, see [Yadav et al. (2024)](https://arxiv.org/abs/2404.09156).
+
+```{r, warning=FALSE}
+set.seed(1)
+Sim_mark_data <- JM.landslide::sim_mark_function(
+  Q = Q,
+  hyper.mu =  hyper.mu,
+  other.hyper = other.hyper,
+  beta1 = beta1, beta2 = beta2,
+  Z1 = as.matrix(Z1), Z2 = as.matrix(Z2),
+  mark_dist = "eGPD",
+  model_type = "jSp"  
+)
+# Access results
+Y <- Sim_mark_data$Y
+A <- Sim_mark_data$A
+mu <- Sim_mark_data$mu
+eta <- Sim_mark_data$eta
+W1 <- Sim_mark_data$W1
+W2 <- Sim_mark_data$W2
+```
+
+#### Plots
+
+```{r, warning=FALSE, fig.width = 7, fig.height = 6}
+generate_histogram <- function(data, var_name, binwidth = 30, title = NULL, fill_color = "blue", y_label = "Frequency") {
+  ggplot(data, aes_string(x = var_name)) +
+    geom_histogram(binwidth = binwidth, fill = fill_color, alpha = 0.7, color = "black") +
+    labs(title = title, y = y_label) +  # Add custom y-axis label
+    theme_minimal()
+}
+Sim_data <- data.frame(Y = Sim_mark_data$Y, 
+                            A = Sim_mark_data$A, 
+                            mu = Sim_mark_data$mu,
+                            eta = Sim_mark_data$eta, 
+                            W1 = Sim_mark_data$W1, 
+                            W2 = Sim_mark_data$W2)
+p1 <- generate_histogram(Sim_data, var_name = "Y", binwidth = 30, title = "Histogram of Y", fill_color = "blue", y_label = "Frequency")
+p2 <- generate_histogram(Sim_data, var_name = "A", binwidth = 30, title = "Histogram of A", fill_color = "green", y_label = "Frequency")
+p3 <- generate_histogram(Sim_data, var_name = "eta", binwidth = 0.5, title = "Histogram of eta", fill_color = "red", y_label = "Frequency")
+p4 <- generate_histogram(Sim_data, var_name = "mu", binwidth = 0.5, title = "Histogram of mu", fill_color = "purple", y_label = "Frequency")
+p5 <- generate_histogram(Sim_data, var_name = "W1", binwidth = 0.5, title = "Histogram of W1", fill_color = "orange", y_label = "Frequency")
+p6 <- generate_histogram(Sim_data, var_name = "W2", binwidth = 0.5, title = "Histogram of W2", fill_color = "yellow", y_label = "Frequency")
+grid.arrange(p1, p2, p3, p4, p5, p6, nrow = 3, ncol = 2)
+
+```
+
+Here:
+
+- **`Y`**: Simulated landslide counts.
+- **`A`**: Simulated landslide sizes.
+- **`mu`**, **`eta`**: Latent variables representing the log-linear predictors for counts and sizes, respectively.
+- **`W1`**, **`W2`**: Spatially structured latent ICAR random effects for counts and sizes, respectively.
+
+#  Fitting the model
+
+After simulating the data, we can proceed to fit the model using the hybrid MCMC sampler `mcmc_sampler`, as detailed in Algorithm 1 of [Yadav et al. (2024)](https://arxiv.org/abs/2404.09156), which is implemented in the `JM.landslide` package.
+
+```{r, warning=FALSE}
+outputs <- JM.landslide::mcmc_sampler(
+  Y = Y,               
+  A = A,               
+  Z1 = Z1,                           
+  Z2 = Z2,                           
+  CV = "WS",                         
+  mark_dist = "eGPD",                
+  thr.family = "gamma",              
+  model_type = "jSp",                
+  adjacensy = adjacensy,            
+  no.rm.obs = 200,                 
+  N.MCMC = 2000,                     
+  samples.store = 250,              
+  print.result = FALSE            
+)
+```
+
+
+The **`mcmc_sampler`** function takes the following inputs:
+
+- **`Y`** and **`A`**: Landslide counts and sizes, respectively.
+- **`Z1`** and **`Z2`**: Design matrices for the log-linear predictors, **$\eta$** and **$\mu$**, of counts and sizes, respectively.
+- **`CV`**: Specifies the cross-validation method (`"WS"`: within-sample, `"OOS"`: out-of-sample).
+- **`mark_dist`**: Specifies the distribution for landslide sizes. Available choices are `"eGPD"` (extended generalized Pareto distribution), `"bGPD"` (Beta and generalized Pareto mixture), and `"tgGPD"` (truncated Gamma and generalized Pareto mixture).
+- **`thr.family`**: Specifies the family for the threshold model, with `"gamma"` as the current option.
+- **`model_type`**: Indicates the model type (e.g., `"jSp"` for the joint spatial model). If set to `"FE"`, a fixed-effects model without ICAR random effects is fitted.
+- **`adjacency`**: Defines the adjacency structure for spatial dependencies in the model.
+- **`N.MCMC`**: Number of MCMC iterations to be run.
+- **`samples.store`**: Number of MCMC samples to store for summarizing the model.
+- **`print.result`**: Flag to print the progress of the MCMC sampler during execution.
+
+
+
+# Extracting model outputs 
+
+### Models hyperparameters 
+
+We may get the posterior summary of the model hyperparameters from fitted object `outputs` using `outputs$JM.info$summry_hyper` as below
+
+```{r, warning=FALSE}
+outputs$JM.info$summry_hyper
+```
+
+
+### Covarite coeffiecients 
+
+The posterior summaries of the covariate coefficients (fixed effects) from the fitted model can be accessed to evaluate the influence of each covariate on the response variables. We can obtain the posterior summary of the covariate coefficients and intercepts for landslide counts and sizes using `outputs$JM.info$summ_fixed_effects`. In this output, `counts` refers to the covariate coefficients used for counts (i.e., coefficients of $Z_1$), while `sizes` refers to the covariate coefficients for landslide sizes (i.e., coefficients of $Z_2$).
+
+
+```{r, warning=FALSE}
+outputs$JM.info$summ_fixed_effects
+```
+
+### Model fit assesments (QQ-plots)
+The package `JM.landslide`  provides functionality to generate QQ plots for both within-sample (WS) and out-of-sample (OOS) cross-validation, to asses the model's performance. To extract and plot the QQ plots for either WS or OOS, we may follow the same steps, but simply switch between `"WS"` and `"OOS"` as needed. For example for WS use `outputs$JM.info$qqplots_with_CIs$WS$` for OOS use `outputs$JM.info$qqplots_with_CIs$OOS$`. These estimates may be accessed as shown below:
+
+```{r}
+coords<- cbind(shp_selected$POINT_X, shp_selected$POINT_Y)
+WS_results.Y<- data.frame(true.Y = outputs$JM.info$qqplots_with_CIs$WS$true.Y, 
+                          est.Y = outputs$JM.info$qqplots_with_CIs$WS$est.Y,
+                          lci.Y = outputs$JM.info$qqplots_with_CIs$WS$lci.Y,
+                          uci.Y = outputs$JM.info$qqplots_with_CIs$WS$uci.Y
+)
+```
+
+#### Plots
+
+```{r, fig.width=7, fig.height=4}
+range<- c(min(WS_results.Y$true.Y, WS_results.Y$est.Y, WS_results.Y$lci.Y, WS_results.Y$uci.Y),
+          max(WS_results.Y$true.Y, WS_results.Y$est.Y, WS_results.Y$lci.Y, WS_results.Y$uci.Y))
+
+p.WS.Y <- ggplot(WS_results.Y, aes(x = est.Y, y = true.Y)) +
+  geom_point(size = 0.5) +  # Smaller points for estimates
+  geom_ribbon(aes(ymin = lci.Y, ymax = uci.Y), fill = "blue", alpha = 0.2) +  # Shaded area for confidence intervals
+  geom_abline(intercept = 0, slope = 1, col = "red", linetype = "dashed") +  # Diagonal line for reference
+  labs(title = "count (WS)", x = "Estimated Quantile", y = "Data Quantile") +
+  xlim(range) + ylim(range) +
+  #theme_classic() +
+  theme(plot.title = element_text(hjust = 0.5, face = "bold"), 
+        axis.title = element_text(size = 10),
+        axis.text = element_text(size = 10),
+        legend.title = element_text(size = 10), 
+        legend.text = element_text(size = 10))
+## For sizes
+WS_results.A<- data.frame(true.A = outputs$JM.info$qqplots_with_CIs$WS$true.A[outputs$JM.info$qqplots_with_CIs$WS$true.A>0], 
+                          est.A =  outputs$JM.info$qqplots_with_CIs$WS$est.A,
+                          lci.A =  outputs$JM.info$qqplots_with_CIs$WS$lci.A,
+                          uci.A = outputs$JM.info$qqplots_with_CIs$WS$uci.A
+)
+
+range<- c(min(WS_results.A$true.A, WS_results.A$est.A, WS_results.A$lci.A, WS_results.A$uci.A),
+          max(WS_results.A$true.A, WS_results.A$est.A, WS_results.A$lci.A, WS_results.A$uci.A))
+p.WS.A <- ggplot(WS_results.A, aes(x = est.A, y = true.A)) +
+  geom_point(size = 0.5) +  # Smaller points for estimates
+  geom_ribbon(aes(ymin = lci.A, ymax = uci.A), fill = "blue", alpha = 0.2) +  # Shaded area for confidence intervals
+  geom_abline(intercept = 0, slope = 1, col = "red", linetype = "dashed") +  # Diagonal line for reference
+  labs(title = "size (WS)", x = "Estimated Quantile", y = "Data Quantile") +
+  xlim(range) + ylim(range) +
+  #theme_classic() +
+  theme(plot.title = element_text(hjust = 0.5, face = "bold"), 
+        axis.title = element_text(size = 10),
+        axis.text = element_text(size = 10),
+        legend.title = element_text(size = 10), 
+        legend.text = element_text(size = 10))
+
+grid.arrange(p.WS.Y, p.WS.A, ncol = 2)
+```
+
+
+### ICAR random effects 
+
+We may extract from the fitted object the posterior mean and standard deviation for ICAR random effects $\boldsymbol W_1$ and $\boldsymbol W_2$. These can be visualized to assess the spatial variation of these random effects across the study region. These estimates may be accessed as shown below:
+
+```{r}
+post_mean_w1<- outputs$JM.info$est_random_effects$W1$mean 
+post_mean_w2<- outputs$JM.info$est_random_effects$W2$mean 
+post_std_w1<- outputs$JM.info$est_random_effects$W1$sd
+post_std_w2<-  outputs$JM.info$est_random_effects$W2$sd
+```
+
+#### Plots 
+
+```{r, fig.width=7, fig.height=4}
+# Data frame for plotting
+df <- data.frame(
+  lat = coords[,1], 
+  lon = coords[,2], 
+  post_mean_w1 = post_mean_w1,
+  post_mean_w2 = post_mean_w2,
+  post_std_w1 = post_std_w1,
+  post_std_w2 = post_std_w2
+)
+
+# W1 mean
+p1 <- ggplot(df, aes(x = lat, y = lon, col = post_mean_w1)) +
+  geom_point() + 
+  ggtitle("W1 (mean)") +
+  xlab(expression("Lon ["*degree*"]")) + 
+  ylab(expression("Lat ["*degree*"]")) + 
+  theme(plot.title = element_text(hjust = 0.5, face = "bold"), 
+        axis.title = element_text(size = 10),
+        axis.text = element_text(size = 10),
+        legend.title = element_text(size = 10), 
+        legend.text = element_text(size = 10)) +
+  labs(color = 'mean') +
+  scale_color_viridis()
+
+#  W1 standard deviation
+p2 <- ggplot(df, aes(x = lat, y = lon, col = post_std_w1)) +
+  geom_point() + 
+  ggtitle("W1 (sd)") +
+  xlab(expression("Lon ["*degree*"]")) + 
+  ylab(expression("Lat ["*degree*"]")) + 
+  theme(plot.title = element_text(hjust = 0.5), 
+        axis.text.x = element_text(vjust = 0.5, hjust = 1)) +
+  theme(plot.title = element_text(hjust = 0.5, face = "bold"), 
+        axis.title = element_text(size = 10),
+        axis.text = element_text(size = 10),
+        legend.title = element_text(size = 10), 
+        legend.text = element_text(size = 10)) +
+  labs(color = 'sd') +
+  scale_color_viridis()
+
+# W2 mean
+p3 <- ggplot(df, aes(x = lat, y = lon, col = post_mean_w2)) +
+  geom_point() + 
+  ggtitle("W2 (mean)") +
+  xlab(expression("Lon ["*degree*"]")) + 
+  ylab(expression("Lat ["*degree*"]")) + 
+  theme(plot.title = element_text(hjust = 0.5, face = "bold"), 
+        axis.title = element_text(size = 10),
+        axis.text = element_text(size = 10),
+        legend.title = element_text(size = 10), 
+        legend.text = element_text(size = 10)) +
+  labs(color = 'mean') +
+  scale_color_viridis()
+
+# W2 standard deviation
+p4 <- ggplot(df, aes(x = lat, y = lon, col = post_std_w2)) +
+  geom_point() + 
+  ggtitle("W2 (sd)") +
+  xlab(expression("Lon ["*degree*"]")) + 
+  ylab(expression("Lat ["*degree*"]")) + 
+  theme(plot.title = element_text(hjust = 0.5), 
+        axis.text.x = element_text(vjust = 0.5, hjust = 1)) +
+  theme(plot.title = element_text(hjust = 0.5, face = "bold"), 
+        axis.title = element_text(size = 10),
+        axis.text = element_text(size = 10),
+        legend.title = element_text(size = 10), 
+        legend.text = element_text(size = 10)) +
+  labs(color = 'sd') +
+  scale_color_viridis()
+
+# Arrange the four plots into a 2x2 grid
+grid.arrange(p1, p2, p3, p4, nrow = 2, ncol = 2)
+
+```
+
+
+### Estimated counts, sizes, susceptibility, and hazard estimates
+
+From the fitted model we may directly extracts the posterior estimates for counts, sizes, hazards, and susceptibility along with their standard errors, which are useful for analyzing the spatial distribution of landslide risks and magnitudes. These estimates may be accessed as shown below:
+
+```{r}
+est.counts<- outputs$JM.info$est_counts_and_sizes$WS$post.mean.Y
+est.sizes<- rep(0, length(est.counts))
+est.sizes[outputs$data$size.full==0]<- NA
+est.sizes[!(outputs$data$size.full==0)]<- outputs$JM.info$est_counts_and_sizes$WS$post.mean.A 
+est.log.hazard<- outputs$JM.info$est_hazards$mean
+est.suscept<- outputs$JM.info$est_susceptibility$mean
+```
+
+#### Plots
+
+```{r, fig.width=7, fig.height=4}
+# Load the data
+df <- data.frame(
+  lat = coords[,1], 
+  lon = coords[,2], 
+  log.counts = log(est.counts), 
+  log.areas = log(est.sizes),
+  suscep = est.suscept,
+  log.hazard = est.log.hazard
+)
+
+# Plot 1: estimated log-count
+p1 <- ggplot(df, aes(x = lat, y = lon, col = log.counts)) +
+  geom_point() + 
+  ggtitle("Estimated Log-Count") +
+  xlab(expression("Lon ["*degree*"]")) + 
+  ylab(expression("Lat ["*degree*"]")) + 
+  theme(plot.title = element_text(hjust = 0.5, face = "bold"), 
+        axis.title = element_text(size = 10),
+        axis.text = element_text(size = 10),
+        legend.title = element_text(size = 10), 
+        legend.text = element_text(size = 10)) +
+  labs(color = 'count') +
+  scale_color_viridis()
+
+# Plot 2: estimated log-size
+p2 <- ggplot(df, aes(x = lat, y = lon, col = log.areas)) +
+  geom_point() + 
+  ggtitle("Estimated Log-Size") +
+  xlab(expression("Lon ["*degree*"]")) + 
+  ylab(expression("Lat ["*degree*"]")) + 
+  theme(plot.title = element_text(hjust = 0.5), 
+        axis.text.x = element_text(vjust = 0.5, hjust = 1)) +
+  theme(plot.title = element_text(hjust = 0.5, face = "bold"), 
+        axis.title = element_text(size = 10),
+        axis.text = element_text(size = 10),
+        legend.title = element_text(size = 10), 
+        legend.text = element_text(size = 10)) +
+  labs(color = 'size') +
+  scale_color_viridis()
+
+# Plot 3: susceptibility
+p3 <- ggplot(df, aes(x = lat, y = lon, col = suscep)) +
+  geom_point() + 
+  ggtitle("Susceptibility") +
+  xlab(expression("Lon ["*degree*"]")) + 
+  ylab(expression("Lat ["*degree*"]")) + 
+  theme(plot.title = element_text(hjust = 0.5, face = "bold"), 
+        axis.title = element_text(size = 10),
+        axis.text = element_text(size = 10),
+        legend.title = element_text(size = 10), 
+        legend.text = element_text(size = 10)) +
+  labs(color = "prob") +
+  scale_color_viridis()
+
+# Plot 4: log-hazard
+p4 <- ggplot(df, aes(x = lat, y = lon, col = log.hazard)) +
+  geom_point() + 
+  ggtitle("Log-Hazard") +
+  xlab(expression("Lon ["*degree*"]")) + 
+  ylab(expression("Lat ["*degree*"]")) + 
+  theme(plot.title = element_text(hjust = 0.5, face = "bold"), 
+        axis.title = element_text(size = 10),
+        axis.text = element_text(size = 10),
+        legend.title = element_text(size = 10), 
+        legend.text = element_text(size = 10)) +
+  labs(color = "hazard") +
+  scale_color_viridis()
+grid.arrange(p1, p2, p3, p4, ncol = 2)
+
+```
+
+
+# References
+1. Besag, J., & Kooperberg, C. (1995). *On conditional and intrinsic autoregression*. Biometrika, 82(4), 733-746. Oxford University Press. [https://doi.org/10.2307/2337341](https://doi.org/10.2307/2337341).
+2. Yadav, R., Lombardo, L., & Huser, R. (2024). *Statistics of extremes for natural hazards: landslides and earthquakes*. `arXiv preprint` [arXiv:2404.09156](https://arxiv.org/abs/2404.09156).
+3.  Yadav, R., Huser, R., Opitz, T., & Lombardo, L. (2024). *Joint modeling of landslide counts and sizes using spatial marked point processes with sub-asymptotic mark distributions.* `Journal of the Royal Statistical Society Series C (JRSSC): Applied Statistics, qlad077`. [https://doi.org/10.1093/jrsssc/qlad077](https://doi.org/10.1093/jrsssc/qlad077)
+
