@@ -8,7 +8,7 @@
 
 https://extremestats.github.io/Handbook/
 
-#### Code available from 
+#### Code is sourced from 
 
 https://github.com/Jbrich95/extQuantRegressDL
 
