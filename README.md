@@ -8,7 +8,7 @@
 
 https://extremestats.github.io/Handbook/
 
-#### Code is sourced from the following link, where additional details can also be found
+The code is sourced from the following link, where additional details can also be found:
 
 http://github.com/cgaetan/Handbook-on-Statistics-of-Extremes-Chapter25
 
