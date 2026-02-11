@@ -8,6 +8,10 @@
 
 https://extremestats.github.io/Handbook/
 
+#### Code is sourced from
+
+https://github.com/yadavrishikesh/JM.landslide/
+
 #### References
 
 <ul style="font-size: 35%; margin-top: 0;">
