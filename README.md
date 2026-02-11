@@ -8,6 +8,10 @@
 
 https://extremestats.github.io/Handbook/
 
+#### Code is available from
+
+https://github.com/noemielc/egpd4gamlss
+
 #### References
 
 <ul style="font-size: 35%; margin-top: 0;">
