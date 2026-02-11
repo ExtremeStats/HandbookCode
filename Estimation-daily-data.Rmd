@@ -1,0 +1,204 @@
+---
+title: "Ax example of estimation"
+output: 
+  html_document:
+    toc: yes
+date: "`r Sys.Date()`"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,warning = FALSE, message = FALSE) 
+```
+
+# Preliminary checks and extraction of the annual maxima 
+
+We verify if the required packages have been installed.
+
+
+```{r}
+pkgTest <- function(x)
+  {
+    if (!require(x,character.only = TRUE))
+    {
+      install.packages(x,dep=TRUE)
+        if(!require(x,character.only = TRUE)) stop("Package not found")
+    }
+}
+pkgTest("xts")
+pkgTest("lmomco")
+```
+
+
+```{r}
+load("single-daily.Rdata")
+```
+
+
+Evaluation of yearly maxima
+
+```{r}
+ymax<-apply.yearly(y,FUN=max,na.rm=TRUE)
+index.time <- seq(from =as.Date(index(ymax)[1]),                length.out = length(ymax),by = "year")
+ymax<-ts(as.numeric(ymax),start =as.numeric(format(index(ymax),"%Y")[1]))
+```
+
+Plot of the resulting time series
+
+```{r}
+lwd <- 1.5
+plot(ymax,ylab="mm",main=paste(namestation,", daily annual maxima",sep=""), col=4,lwd=lwd)
+grid()
+```
+
+Missing data is not allowed in the estimation function.
+
+```{r}
+X<-as.numeric(na.omit(ymax))
+X<-X[is.finite(X)]
+```
+
+
+# Comparison of different estimation methods
+
+Fe fit a GEV distribution
+
+
+```{r}
+FF <- nonexceeds(); 
+gevfitlmom<-lmr2par(X, type="gev")
+gevfitmle<-mle2par(X, type="gev")
+```
+
+
+Plot of the intensity frequency curve
+
+
+```{r}
+FF <- nonexceeds(); 
+gevfitmle<-mle2par(X, type="gev")
+gevfitlmo<-lmr2par(X, type="gev")
+plot(pp(X), sort(X), xlab="Probability",ylab="Quantile",pch="+",cex=0.6)
+lines(FF, qlmomco(FF, gevfitmle), col="coral", lwd =lwd ) 
+lines(FF, qlmomco(FF, gevfitlmo), col="lightblue",lwd=lwd)
+legend("topleft",legend = c("MLE","L-Moments"), lwd= lwd, col=c("lightblue","coral"))
+grid()
+```
+
+
+Plot of the intensity frequency curve
+
+```{r}
+plot(prob2T(pp(X)), sort(X), xlab="T-year return Periods",ylab="Quantile",pch="+",cex=0.6)
+TT <- prob2T(FF)
+lines(TT, qlmomco(FF, gevfitmle), col="lightblue", lwd =lwd)
+lines(TT, qlmomco(FF, gevfitlmo), col="coral", lwd = lwd  ) 
+legend("bottomright",legend = c("MLE","L-Moments"), lwd= lwd, col=c("lightblue","coral"))
+grid()
+```
+
+
+# Parametric bootstrap 
+
+```{r}
+set.seed(18)
+B <- 500
+n <- length(X)
+bootdata<-matrix(lmomco::rlmomco(n=B*n, gevfitmle),nrow = B)
+
+thetahat<-function(x,est,type)
+{
+  est(x,type)$para 
+}
+
+quant<-function(vec,f, type) 
+  {
+  para<-vec2par(vec, type = type)
+  as.numeric(qlmomco(f,para))
+}
+
+
+bootestmle<-apply(bootdata,MARGIN = 1,FUN =thetahat,est=mle2par, type="gev")
+
+bootestlmo<-apply(bootdata,MARGIN = 1,FUN =thetahat,est=lmr2par, type="gev")
+```
+
+
+
+```{r}
+alpha<-0.05
+qbootmle<-apply(bootestmle,2,FUN = quant,f=FF,type ="gev")
+qlimmle<-apply(qbootmle,1,FUN = quantile,prob=c(0.025,0.5,0.975))
+plot(prob2T(pp(X)), sort(X), xlab="T-year return periods",ylab="Quantile",type="n",ylim=range(qlimmle))
+xx <- c(TT, rev(TT))
+yy <- c(qlimmle[1,],rev(qlimmle[3,]))
+polygon(xx, yy,density = 30,col="lightblue",border = "transparent")
+lines(TT,qlimmle[2,], col="lightblue",lwd=lwd,lty=1)
+qbootlmo<-apply(bootestlmo,2,FUN = quant,f=FF,type ="gev")
+qlimlmo<-apply(qbootlmo,1,FUN = quantile,prob=c(alpha/2,0.5,1-alpha/2))
+yy <- c(qlimlmo[1,],rev(qlimlmo[3,]))
+polygon(xx, yy,density = 30,col="coral",border = "transparent",angle=135)
+lines(TT,qlimlmo[2,],col="coral",lwd=lwd,lty=2)
+points(prob2T(pp(X)), sort(X),pch='+', cex=0.6)
+legend("topleft", legend = c("MLE","L-Moments"), 
+       fill = c( "lightblue","coral"),
+       density = c(40,40), angle = c(45,135),lty=c(1,2),
+       col=c( "lightblue","coral"),lwd=lwd)
+title(main=paste(1-alpha,"%", "bootstrap pointwise confidence band"))
+```
+
+
+# Comparison of different fitted distributions
+
+We fit the Generalized Logistic (`glo`), Generalized Normal (`gno`), and Pearson type III (`pe3`) distributions.
+
+
+```{r}
+glofitmle<-mle2par(X, type="glo")
+gnofitmle<-mle2par(X, type="gno")
+pe3fitmle<-mle2par(X, type="pe3")
+```
+
+
+```{r}
+curve(pdfgev(x,para = gevfitmle),from = 0,to = max(X),xlab="y",ylab="f(y)",col=2,lwd=lwd,lty=1)
+curve(pdfglo(x,para = glofitmle),from = 0,to = max(X),col=3,add=TRUE,lwd=lwd,lty=2)
+curve(pdfgno(x,para = gnofitmle),from = 0,to = max(X),col=4,add=TRUE,lwd= lwd,lty=3)
+curve(pdfpe3(x,para = pe3fitmle),from = 0,to = max(X),col=5,add=TRUE,lwd=lwd,lty=4)
+grid()
+legend("topright",legend = c("GEV","GLO","GNO", "PIII"), lwd= lwd, col=2:5,lty=1:4)
+```
+
+
+```{r}
+plot(prob2T(pp(X)), sort(X), xlab="T-year return periods",ylab="Quantile",pch="+",cex=0.6)
+lines(TT, qlmomco(FF, gevfitmle), col=2, lwd =lwd,lty=1)
+lines(TT, qlmomco(FF, glofitmle), col=3, lwd =lwd,lty =2)
+lines(TT, qlmomco(FF, gnofitmle), col=4, lwd =lwd,lty=3)
+lines(TT, qlmomco(FF, pe3fitmle), col=5, lwd =lwd,lty=4)
+grid()
+legend("bottomright",legend = c("GEV","GLO","GNO", "PIII"), lwd= lwd, col=2:5, lty =1:4)
+```
+
+# Goodness-of-fit
+
+Anderson–Darling tests
+
+```{r}
+set.seed(1)
+gevad<-goftest::ad.test(X,null = "cdfgev",para=gevfitmle,estimated = TRUE)
+gload<-goftest::ad.test(X,null = "cdfglo",para=glofitmle,estimated = TRUE)
+gnoad<-goftest::ad.test(X,null = "cdfgno",para=gnofitmle,estimated = TRUE)
+pe3ad<-goftest::ad.test(X,null = "cdfpe3",para=pe3fitmle,estimated = TRUE)
+```
+
+
+```{r}
+results <- data.frame(dist =c("GEV","GLO","GNO","PE3"),
+                      p.value = c(gevad$p.value,gload$p.value,gnoad$p.value,pe3ad$p.value))
+```
+
+
+```{r}
+knitr::kable(results, digits = 3, caption = "Anderson-Darling test")
+```
+

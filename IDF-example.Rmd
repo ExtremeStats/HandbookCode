@@ -1,0 +1,102 @@
+---
+title: "An example of IDF analysis"
+output:
+  html_document:
+    toc: true
+    df_print: paged
+date: "`r Sys.Date()`"
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,warning = FALSE, message = FALSE) 
+```
+
+# Preamble
+
+We verify if the required packages have been installed.
+
+
+```{r}
+pkgTest <- function(x)
+  {
+    if (!require(x,character.only = TRUE))
+    {
+      install.packages(x,dep=TRUE)
+        if(!require(x,character.only = TRUE)) stop("Package not found")
+    }
+}
+pkgTest("IDF")
+```
+
+
+# Data description 
+
+These data were used in the study "Flexible and Consistent Quantile Estimation for Intensity-Duration-Frequency Curves" (Fauer et al., 2021) See https://zenodo.org/records/5012621 for more details.
+
+Rainfall data were collected from stations by the German Meteorological Service (DWD) and Wupperverband (corrected data). Raw time series data from the German Meteorological Service is publicly available under https://opendata.dwd.de/climate_environment/CDC/observations_germany/climate/.
+
+
+# Import the data
+We read the data
+
+```{r}
+yearmax<-read.csv("yearMax.csv")
+metadata<-read.csv("meta.csv")
+metadata<-metadata[unique(yearmax$station),]
+id<-names(table(yearmax$station))[order(table(yearmax$station),decreasing = TRUE)]
+id<-as.numeric(id)
+sel<-id[3]
+station.name<-metadata$station[metadata$num ==sel]
+yearmax<-subset(yearmax,yearmax$station == sel)
+```
+
+We select the station 
+`r station.name`
+
+```{r}
+d<-yearmax$ds
+y<-yearmax$xdat
+ymat<-matrix(yearmax$xdat,nrow = 44)
+d1<-unique(d)
+y1<-c(200.0, 100.0, 50.0, 20.0, 10.0, 5.0, 2.0, 1.0, 0.5)
+plot(log(d),log(y),pch=20,cex=0.5, axes=FALSE,
+     xlab = "Duration [h]", ylab = "Intensity [mm/h]")
+box()
+
+axis(side=1, at=log(d1),  labels=round(d1,2))
+axis(side=2, at=log(y1),  labels=round(y1,1))
+grid()
+```
+
+
+We fit model 25.10 (???) in the Chapter 25.
+
+```{r}
+library(IDF)
+fit<-gev.d.fit(xdat = y,ds = d, show = FALSE)
+par <- gev.d.params(fit = fit)
+```
+
+
+We plot the IDF curves
+
+```{r echo=TRUE}
+durations<-seq(min(d),max(d),length.out=30)
+fitparams <- par
+probs<-  c(0.5, 0.9, 0.99)
+qs <- lapply(durations, qgev.d, p = probs, mut = fitparams[1], sigma0 = fitparams[2], xi = fitparams[3], theta = fitparams[4], eta = fitparams[5], eta2 = fitparams[6], tau = fitparams[7])
+idf.array <- matrix(unlist(qs),length(probs),length(durations))
+plot(log(d),log(y),pch=20,cex=0.5, axes=FALSE, 
+     xlab = "Duration [h]", ylab = "Intensity [mm/h]")
+box()
+axis(side=1, at=log(d1),  labels=round(d1,2))
+axis(side=2, at=log(y1),  labels=round(y1,1))
+grid()
+lwd<-1.5
+lty<-1
+for (i in 1:length(probs))
+  lines(log(durations),log(idf.array[i,]),col=(i+1),lwd=lwd,lty=lty)
+legend(x = "topright", title = "p-quantile", legend = probs,   col = (1:length(probs))+1,  lwd = lwd,lty = lty)
+```
+

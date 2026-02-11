@@ -1,0 +1,128 @@
+"","station","lon","lat","alt","num","res","group","inwupper"
+"1","Bergisch Neukirchen",7.033,51.083,130,1,"d",1,TRUE
+"2","Breckerfeld (Ennepetalsperre)",7.409,51.244,279,2,"d",2,FALSE
+"3","Breckerfeld-Wengeberg",7.467,51.248,440,3,"d",3,FALSE
+"4","Breckerfeld-Zurstraße",7.462,51.3,410,4,"d",4,FALSE
+"5","Engelskirchen",7.425,50.99,144,5,"d",5,FALSE
+"6","Ennepetal-Milspe",7.315,51.305,280,6,"d",6,FALSE
+"7","Gummersbach",7.583,51.017,250,7,"d",7,FALSE
+"8","Gummersbach-Wegescheid",7.502,51.047,315,8,"d",8,FALSE
+"9","Hagen (Hasper Talsperre)",7.414,51.298,291,9,"d",9,FALSE
+"10","Hagen-Rummenohl",7.534,51.272,205,10,"d",10,FALSE
+"11","Halver-Schwenke",7.432,51.19,406,11,"d",11,TRUE
+"12","Halver-Schwenke (Bever)",7.435,51.185,355,12,"d",12,TRUE
+"13","Heiligenhaus",6.974,51.31,127,13,"d",13,FALSE
+"14","Hilden",6.962,51.169,66,14,"d",14,FALSE
+"15","Hückeswagen",7.336,51.149,258,15,"d",15,TRUE
+"16","Hückeswagen (Bevertalsperre)",7.367,51.143,298,16,"d",16,TRUE
+"17","Kierspe-Höckinghausen",7.57,51.119,443,17,"d",17,TRUE
+"18","Köln-Stammheim",6.978,50.989,43,18,"d",18,FALSE
+"19","Kürten",7.263,51.054,230,19,"d",19,FALSE
+"20","Leverkusen-Pattscheid",7.049,51.091,140,20,"d",20,TRUE
+"21","Lindlar",7.383,51.017,243,21,"d",21,FALSE
+"22","Lindlar-Oberlichtinghagen",7.443,51.065,337,22,"d",22,FALSE
+"23","Marienheide (Kläranlage Nord)",7.522,51.097,318,23,"d",23,TRUE
+"24","Marienheide-Müllenbach",7.582,51.068,385,24,"d",24,FALSE
+"25","Mettmann",6.967,51.25,153,25,"d",25,FALSE
+"26","Odenthal-Osenau",7.103,51.032,81,26,"d",26,TRUE
+"27","Radevormwald",7.389,51.216,397,27,"d",27,TRUE
+"28","Remscheid",7.2,51.206,235,28,"d",28,TRUE
+"29","Remscheid (Eschbachtal)",7.217,51.167,208,29,"d",29,TRUE
+"30","Remscheid-Lennep",7.251,51.18,345,30,"d",30,TRUE
+"31","Solingen-Glüder",7.124,51.137,89,31,"d",31,TRUE
+"32","Solingen-Hohenscheid",7.093,51.14,154,32,"d",32,TRUE
+"33","Wermelskirchen",7.187,51.15,255,33,"d",33,TRUE
+"34","Wipperfürth (Schevelinger Talsperre )",7.431,51.136,312,34,"d",34,TRUE
+"35","Wipperfürth-Gardeweg",7.423,51.164,360,35,"d",35,TRUE
+"36","Wuppertal-Barmen",7.202,51.28,197,36,"d",36,TRUE
+"37","Wuppertal-Buchenhofen",7.105,51.225,130,37,"d",37,TRUE
+"38","Wuppertal-Herbringhausen",7.283,51.233,275,38,"d",38,TRUE
+"39","Wuppertal-Vohwinkel",7.067,51.233,176,39,"d",39,TRUE
+"1863","Hattingen-Winz",7.1717,51.4123,100,40,"d",40,FALSE
+"3712","Ratingen",6.85,51.3,48,41,"d",41,FALSE
+"4375","Sprockhövel-Haßlinghausen",7.2833,51.3333,270,42,"d",42,FALSE
+"2934","Meinerzhagen",7.6423,51.1043,431,43,"d",43,FALSE
+"5065","Wiehl",7.5459,50.9534,215,44,"d",44,FALSE
+"4755","Velbert-Langenberg",7.1136,51.3668,220,45,"d",45,FALSE
+"977","Düsseldorf-Gerresheim",6.8662,51.2312,54,46,"d",46,FALSE
+"3939","Ruppichteroth-Scheid",7.4478,50.8444,205,47,"d",47,FALSE
+"2700","Leverkusen-Hitdorf",6.9218,51.0654,43,48,"d",48,FALSE
+"335","Bergisch Gladbach -Refrath",7.1018,50.9552,67,49,"d",49,FALSE
+"500","Bochum",7.2697,51.4789,101,50,"d",50,FALSE
+"925","Dormagen-Zons",6.851,51.1157,37,51,"d",51,FALSE
+"1897","Heiligenhaus-Abtsküche",6.9941,51.3393,131,52,"d",52,FALSE
+"2428","Köln-Bonn",7.1575,50.8646,92,53,"d",53,FALSE
+"1181","Essen-Bredeney",6.9677,51.4041,150,54,"d",54,FALSE
+"2817","Lüdenscheid (Zeppelin-Gymnasium)",7.6359,51.2131,444,55,"d",55,FALSE
+"5055","Wetter/Ruhr",7.3781,51.3843,107,56,"d",56,FALSE
+"1739","Hagen-Wehringhausen",7.4489,51.3529,113,57,"d",57,FALSE
+"3859","Rösrath-Forsbach",7.1709,50.9279,162,58,"d",58,FALSE
+"3504","Overath-Immekeppel",7.2367,50.9601,110,59,"d",59,FALSE
+"3352","Oberhausen (Kaisergarten )",6.8667,51.4833,33,60,"d",60,FALSE
+"1180","Essen (Ruhrhaus)",7.0211,51.4484,100,61,"d",61,FALSE
+"5151","Witten-Stockum",7.3592,51.4728,122,62,"d",62,FALSE
+"2933","Meinerzhagen (A)",7.667,51.0976,506,63,"d",63,FALSE
+"3752","Reichshof-Eckenhagen",7.6958,50.9906,350,64,"d",64,FALSE
+"3217","Neunkirchen-Seelscheid-Krawinkel",7.372,50.8446,195,65,"d",65,FALSE
+"2818","Lüdenscheid",7.6425,51.2452,387,66,"d",66,FALSE
+"5674","Meinerzhagen-Redlendorf",7.629,51.0899,380,67,"d",67,FALSE
+"5651","Overath-Böke",7.2753,50.9655,221,68,"d",68,FALSE
+"5669","Gevelsberg-Oberbröking",7.3411,51.3329,205,69,"d",69,FALSE
+"110","Bever",7.366,51.143,299.08,70,"h",16,TRUE
+"210","Buchenhofen",7.107,51.224,125.92,71,"h",37,TRUE
+"310","Leverkusen",6.973,51.047,42.73,72,"h",72,TRUE
+"41","Lindscheid",7.187,51.07,186.17,73,"h",73,TRUE
+"51","Neumühle",7.283,51.09,183.68,74,"h",74,TRUE
+"61","Schwelm",7.276,51.29,197.3,75,"h",75,TRUE
+"678","Remscheid-Lennep",7.2505,51.18,345,76,"m",30,TRUE
+"776","Solingen-Hohenscheid",7.093,51.1402,154,77,"m",32,TRUE
+"909","Wipperfürth-Gardeweg",7.4234,51.1636,360,78,"m",35,TRUE
+"923","Wuppertal-Buchenhofen",7.1052,51.2256,134,79,"m",37,TRUE
+"924","Remscheid",7.2,51.2051,235,80,"m",28,TRUE
+"1000","Breckerfeld-Wengeberg",7.4672,51.2488,440,81,"m",3,FALSE
+"98","Bochum",7.2697,51.4789,101,82,"m",50,FALSE
+"181","Dormagen-Zons",6.851,51.1157,37,83,"m",51,FALSE
+"231","Essen-Bredeney",6.9677,51.4041,150,84,"m",54,FALSE
+"424","Köln-Bonn",7.1575,50.8646,92,85,"m",53,FALSE
+"469","Köln-Stammheim",6.9777,50.9894,43,86,"m",18,FALSE
+"492","Lüdenscheid",7.6425,51.2452,387,87,"m",66,FALSE
+"578","Neunkirchen-Seelscheid-Krawinkel",7.372,50.8446,195,88,"m",65,FALSE
+"673","Reichshof-Eckenhagen",7.6958,50.9906,350,89,"m",64,FALSE
+"1080","Overath-Böke",7.2753,50.9655,221,90,"m",68,FALSE
+"1089","Gevelsberg-Oberbröking",7.3411,51.3329,205,91,"m",69,FALSE
+"1093","Meinerzhagen-Redlendorf",7.629,51.0899,380,92,"m",67,FALSE
+"111"," bever talsperre ",7.36565290704488,51.1433329598907,297,93,"m",16,TRUE
+"211"," beyenburg ",7.29946358600166,51.2491789626017,199,94,"m",76,TRUE
+"311"," buchenhofen wv ",7.10692159989008,51.2242285664213,126,95,"m",37,TRUE
+"42"," dabringhausen ",7.18457647508831,51.0812158080915,161,96,"m",77,TRUE
+"52"," dahlhausen ",7.30755392795513,51.2112359453425,218,97,"m",78,TRUE
+"62"," falkenberg ",7.2097571957718,51.161257709662,255,98,"m",79,TRUE
+"71"," friedrichsthal ",7.43405173863077,51.1047587524284,310,99,"m",80,TRUE
+"81"," gklw burg ",7.136825,51.13412,91,100,"m",81,TRUE
+"91","gklw hueckeswagen ",7.331686,51.15529,254,101,"m",82,TRUE
+"101"," gklw kohlfurth ",7.117897,51.18448,113,102,"m",83,TRUE
+"112"," gklw leverkusen ",6.972948,51.04697,43,103,"m",72,TRUE
+"121"," gklw marienheide ",7.521925,51.09789,316,104,"m",23,TRUE
+"131"," gklw radevormwald ",7.32036,51.22616,206,105,"m",84,TRUE
+"141"," hangbergermuehle ",7.30005654470011,51.1686213121644,254,106,"m",85,TRUE
+"151"," jacobsmuehle ",7.28798680622992,51.1885489162861,264,107,"m",86,TRUE
+"161"," kierspe stoecken ",7.609771,51.14117,341,108,"m",87,TRUE
+"171"," klw dhuenn ",7.249244,51.10311,187,109,"m",88,TRUE
+"182"," klw odenthal ",7.103811,51.02762,74,110,"m",89,TRUE
+"191"," klw schwelm ",7.275878,51.29021,193,111,"m",75,TRUE
+"201"," klw wermelskirchen ",7.226225,51.12888,226,112,"m",90,TRUE
+"212"," krebsoege ",7.29966503065921,51.2004471004055,226,113,"m",91,TRUE
+"221"," lindscheid ",7.18656251470826,51.0695996056148,184,114,"m",73,TRUE
+"232"," linklaeuerstr ",7.175349060562,51.1787508102574,295,115,"m",92,TRUE
+"241"," muellensieppen ",7.399379,51.1717,298,116,"m",93,TRUE
+"251"," neumuehle ",7.28301402996887,51.0903340952959,183,117,"m",74,TRUE
+"261"," radevormwald uelfe ",7.37701739035875,51.2034271570914,350,118,"m",94,TRUE
+"271"," ronsdorf ",7.20667245625022,51.2172103525345,248,119,"m",95,TRUE
+"281"," ronsdorfer talsperre ",7.183721,51.21913,248,120,"m",96,TRUE
+"291"," schevelinger talsperre ",7.43089,51.13644,297,121,"m",34,TRUE
+"301"," schmitzwipper-lingese talsperre ",7.530797,51.0985,321,122,"m",97,TRUE
+"312"," sengbach talsperre ",7.1333685645059,51.1289166017884,150,123,"m",98,TRUE
+"321"," suelzueberleitung ",7.30592948026928,51.0636877240387,188,124,"m",99,TRUE
+"331"," unterpilghausen ",7.24907399634941,51.09681451613,181,125,"m",100,TRUE
+"341"," vorsperre grosse dhuenn ",7.240957,51.07463,180,126,"m",101,TRUE
+"351"," wipperfliess brucher ",NA,NA,NA,127,"m",102,TRUE

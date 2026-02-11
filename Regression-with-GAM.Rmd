@@ -1,0 +1,242 @@
+---
+title: "Generalized additve modeling of precipitation extremes"
+output: 
+  html_document:
+  toc: yes
+date: "`r Sys.Date()`"
+---
+  
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+We first load R packages required for running the following code.
+
+```{r}
+pkgTest <- function(x)
+  {
+    if (!require(x,character.only = TRUE))
+    {
+      install.packages(x,dep=TRUE)
+        if(!require(x,character.only = TRUE)) stop("Package not found")
+    }
+}
+pkgTest("evgam")
+pkgTest("ggplot2")
+pkgTest("ggspatial")
+pkgTest("rnaturalearth")
+pkgTest("viridis")
+pkgTest("xts")
+```
+
+We start by loading and inspecting the data file including the following two R objects:
+* alldata, a dataframe with daily precipitation data for raingauges in Germany.
+* metadata, a dataframe with metadata for raingauges, including their spatial coordinates.
+
+```{r}
+load("daily_rainfall_germany.Rdata")
+dim(alldata)
+mean(is.na(alldata))
+names(alldata) = paste0("y", 1:191)
+```
+
+We select data for the period starting with year 1901 and extract topographic coordinates (latitude; longitude; altitude in meters) of raingauges. 
+
+```{r}
+idx = index(alldata)
+years = as.numeric(format(idx, "%Y"))
+unique(years)
+id_sel = which(years > 1900)
+alldata = alldata[years > 1900,]
+years = years[id_sel]
+lat = metadata$geoBreite
+lon = metadata$geoLaenge
+alt = metadata$Stationshoehe
+```
+
+Next, we compute empirical locationwise quantiles at level 0.98. If there are more than 25% of missing data at a location, we set its quantile to NA.
+
+```{r, warning=FALSE,message=FALSE}
+# get high quantiles
+myfun = function(vec, prob = 0.98){
+  if(mean(is.na(vec)) > 0.25){
+    NA
+  }else{
+    quantile(vec, 0.98, na.rm = TRUE)
+  }
+}
+u = as.vector(sapply(alldata, myfun))
+mean(is.na(u))
+u
+```
+
+We can now generate a nice map (using ggplot and rnaturalearth) of the available raingauges. We here opt for the viridis color scale.  
+
+```{r}
+world = ne_countries(scale = "medium", returnclass = "sf")
+df_gg = data.frame(lon = lon, lat = lat, alt = alt, Q98 = u)
+pl = ggplot(data = world) + theme_bw(base_size = 10) 
+pl = pl + geom_sf(fill= "antiquewhite", alpha = .3)
+#pl = pl + geom_text(data= country.names,aes(x=X, y=Y, label=name), color = 'darkblue', fontface = 'bold', size = 8)
+pl = pl + annotation_scale(location = 'bl', width_hint = 0.5)
+#pl = pl + annotation_north_arrow(location = 'bl', which_north = 'true', pad_x = unit(0.5, 'in'), pad_y = unit(0.5, 'in'), style = north_arrow_fancy_orienteering)
+pl = pl + coord_sf(xlim = c(5, 18.25), ylim = c(46.5,55), expand = FALSE)
+pl = pl + xlab('Longitude') + ylab('Latitude')
+pl = pl + geom_point(aes(x = lon, y = lat, colour = alt, size = Q98), data = df_gg)
+pl = pl + scale_color_gradientn(colours = viridis(16), trans = "log", labels = function(x) round(x,1))
+pl = pl + labs(colour = "Elev. (m)")
+pl = pl + theme(legend.position = c(0.875, 0.5)) 
+print(pl)
+```
+
+We cut away the Alpine region in the South (below 48 degrees latitude) since it could have a sensibly different hydroclimate. 
+
+```{r}
+lat_bnd = 48 
+
+ids_keep = which(lat >= lat_bnd)
+lat = lat[ids_keep]
+lon = lon[ids_keep]
+alt = alt[ids_keep]
+metadata = metadata[ids_keep,]
+alldata = alldata[, ids_keep]
+```
+
+Next, we extract a matrix with annual maxima for each location. The extraction function returns NA if there is no complete record for the year and also if there are more than 10 missing observations in a year. 
+We then generate a dataframe for fitting a generalized additive GEV model (see book chapter for the regression equations) with the evgam package. 
+
+```{r}
+mymax = function(vec){
+  if(length(vec) < 365 | sum(is.na(vec)) > 10){
+    return(NA)
+  }else{
+    return(max(vec, na.rm = TRUE))
+  }
+}
+maxima = aggregate(alldata ~ years, FUN = mymax, na.action = na.pass)
+max_mat = as.matrix(maxima[,-1])
+dim(max_mat)
+
+y_max = as.numeric(max_mat)
+df = data.frame(y = y_max, lat = rep(lat, each = nrow(max_mat)), lon = rep(lon, each = nrow(max_mat)))
+df$year =  rep(maxima$years, ncol(max_mat))
+```
+
+We fit a GAM with a GEV response including a bivariate thin-plate splines with 50 knots for the spatial coordinates in the parameters mu and sigma, a cubic regression spline for a nonlinear effect of year in mu and sigma, and a shape parameter that does not depend on covariates. 
+
+```{r}
+fit = evgam(list(y ~ s(lon, lat, k = 50) + s(year,  bs = "cr"), ~ s(lon, lat, k = 50)  + s(year,  bs = "cr"), ~ 1),
+            data = df, family ="gev")
+summary(fit)
+```
+We could also consider a model having a simpler linear effect of the year covariate.
+
+```{r}
+fit2 = evgam(list(y ~ s(lon, lat, k = 50) + year, ~ s(lon, lat, k = 50)  + year, ~ 1), 
+            data = df, family ="gev")
+summary(fit2)
+AIC(fit); AIC(fit2)
+```
+
+The linear year effect is significant for the mu-parameter but the AIC of the model with nonlinear year effect is clearly better, and we continue working with the more complex model.
+We generate the inbuilt plots of evgam to show the estimated spline functions for year.
+
+```{r}
+xlim = range(lon) + c(-0.25, 0.25)
+ylim = range(lat) + c(-0.25, 0.25)
+plot(fit, scheme = 1, which = 2, main = "", lwd = 2, xlab = "Year", ylab = "s(Year)", cex.axis = 1.5, cex = 1.5, cex.lab = 1.5)
+plot(fit, scheme = 1, which = 4, main = "", lwd = 2, xlab = "Year", ylab = "s(Year)", cex.axis = 1.5, cex = 1.5, cex.lab = 1.5)
+```
+
+We further generate maps of parameters mu and sigma and of predicted 0.9-quantiles, where we fix the year to 2023.
+
+```{r}
+xgrid = seq(from = xlim[1], to = xlim[2], length.out = 100)
+ygrid = seq(from = ylim[1]+0.25, to = ylim[2], length.out = 100)
+xygrid = expand.grid(xgrid, ygrid)
+df_pred = data.frame(lon = xygrid[,1], lat = xygrid[,2], year = 2023)
+pred = predict(fit, df_pred, type = "response")
+df_pred$Mu = pred$location
+df_pred$Sigma = pred$scale
+pred = predict(fit, df_pred, type = "quantile", prob = .9)
+df_pred$Q90 = pred$`q:0.9`
+# Generate pl0 that we will re-use later:
+pl0 = ggplot(data = world) + theme_bw(base_size = 12) 
+pl0 = pl0 + geom_sf(fill= "antiquewhite", alpha = .3)
+pl0 = pl0 + annotation_scale(location = 'bl', width_hint = 0.5)
+#pl0 = pl0 + annotation_north_arrow(location = 'bl', which_north = 'true', pad_x = unit(0.5, 'in'), pad_y = unit(0.35, 'in'), style = north_arrow_fancy_orienteering)
+pl0 = pl0 + coord_sf(xlim = c(5, 17.5), ylim = c(46.5,55), expand = FALSE)
+pl0 = pl0 + xlab('Longitude') + ylab('Latitude')
+pl0 = pl0 + theme(legend.position = c(0.91, 0.5))
+# Generate the specific plot for mu:
+pl = pl0
+pl = pl + geom_point(aes(x = lon, y = lat, colour = Mu), data = df_pred, shape = 15, size = .98, alpha = 1)
+pl = pl + geom_point(aes(x = lon, y = lat), data = df_gg, color = "red", size = .75, alpha = .5)
+pl = pl + scale_color_gradientn(colours = viridis(16), trans = "log", labels = function(x) round(x,1))
+pl = pl + labs(colour = expression(mu))
+print(pl)
+# same plot but for sigma:
+pl = pl0
+pl = pl + geom_point(aes(x = lon, y = lat, colour = Sigma), data = df_pred, shape = 15, size = .98, alpha = 1)
+pl = pl + geom_point(aes(x = lon, y = lat), data = df_gg, color = "red", size = .75, alpha = .5)
+pl = pl + scale_color_gradientn(colours = viridis(16), trans = "log", labels = function(x) round(x,1))
+pl = pl + labs(colour = expression(sigma))
+print(pl)
+# same plot but for 0.9-quantile:
+pl = pl0
+pl = pl + geom_point(aes(x = lon, y = lat, colour = Q90), data = df_pred, shape = 15, size = .98, alpha = 1)
+pl = pl + geom_point(aes(x = lon, y = lat), data = df_gg, color = "red", size = .75, alpha = .5)
+pl = pl + scale_color_gradientn(colours = viridis(16), trans = "log", labels = function(x) round(x,1))
+pl = pl + labs(colour = expression(Q[90]))
+print(pl)
+```
+
+We now perform a similar analyses but using the GP distribution for threshold exceedances.
+We first extract the thresholds from the considered gauges using the above-defined function myfun, and then we extract positive excesses above the locationwise threshold u. The final line reports the number of observations of excesses that we will use in the GAM with GP response distribution.
+
+```{r}
+u = as.vector(sapply(alldata, myfun))
+mean(is.na(u))
+df = data.frame(y = as.numeric(alldata))
+df$year = rep(years, ncol(alldata))
+df$u = rep(u, each = nrow(alldata))
+df$lat = rep(lat, each = nrow(alldata))
+df$lon = rep(lon, each = nrow(alldata))
+df$excess = df$y - df$u
+df$excess[df$excess <= 0] = NA
+sum(!is.na(df$excess))
+```
+
+We can now fit the GPD model. Note that it does not have a location parameter, only a scale parameter tilde.sigma (into which we include covariates) and the same shape parameter as the GEV distribution. 
+
+```{r}
+form_gpd = list(excess ~ s(lon, lat, k = 50) + s(year, bs = "cr"), ~ 1)
+fit_gpd = evgam(form_gpd, df, family = "gpd")
+summary(fit_gpd)
+```
+
+We now generate the same plots as for the GEV. For the quantile map, we choose a level that corresponds to a 10-year return level for 2023 (in stationary conditions). The factor 50=1/(1-0.98) in prob is due to the fact that we have fitted the GP distribution for excesses above the 0.98-quantile. 
+
+```{r}
+plot(fit_gpd, scheme = 1, which = 2, main = "", lwd = 2, xlab = "Year", ylab = "s(Year)", cex.axis = 1.5, cex = 1.5, cex.lab = 1.5)
+
+df_pred_gpd = data.frame(lon = xygrid[,1], lat = xygrid[,2], year = 2023)
+pred = predict(fit_gpd, df_pred, type = "response")
+df_pred_gpd$Sigma_tilde = pred$scale
+prob = 1-50/(10*365.25); prob
+pred = predict(fit_gpd, df_pred_gpd, type = "quantile", prob = prob)
+df_pred_gpd$Q = pred$`q:0.986`
+pl = pl0
+pl = pl + geom_point(aes(x = lon, y = lat, colour = Sigma_tilde), data = df_pred_gpd, shape = 15, size = .98, alpha = 1)
+pl = pl + geom_point(aes(x = lon, y = lat), data = df_gg, color = "red", size = .75, alpha = .5)
+pl = pl + scale_color_gradientn(colours = viridis(16), trans = "log", labels = function(x) round(x,1))
+pl = pl + labs(colour = expression(tilde(sigma)))
+print(pl)
+
+pl = pl0
+pl = pl + geom_point(aes(x = lon, y = lat, colour = Q), data = df_pred_gpd, shape = 15, size = .98, alpha = 1)
+pl = pl + geom_point(aes(x = lon, y = lat), data = df_gg, color = "red", size = .75, alpha = .5)
+pl = pl + scale_color_gradientn(colours = viridis(16), trans = "log", labels = function(x) round(x,1))
+pl = pl + labs(colour = expression(Q[10-year]))
+print(pl)
+```

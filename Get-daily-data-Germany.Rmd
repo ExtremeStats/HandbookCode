@@ -1,0 +1,90 @@
+---
+title: "Daily precipitation in Germany"
+output: 
+  html_document:
+    toc: yes
+date: "31 January 2024"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,warning = FALSE, message = FALSE) 
+```
+
+
+The `rdwd` package is utilized in this script to obtain daily precipitation data for Germany.
+
+We verify if the required packages have been installed.
+
+
+```{r}
+pkgTest <- function(x)
+  {
+    if (!require(x,character.only = TRUE))
+    {
+      install.packages(x,dep=TRUE)
+        if(!require(x,character.only = TRUE)) stop("Package not found")
+    }
+}
+pkgTest("xts")
+pkgTest("rdwd")
+pkgTest("berryFunctions")
+```
+
+
+We fix a period
+
+```{r}
+startday<-"1923-01-01"
+endday<-"2023-12-31"
+```
+
+We select the historical daily rainfall database
+
+```{r}
+data("metaIndex")
+metaIndex.more_prcp<-subset(metaIndex,(var=="more_precip" & per=="historical"))
+metaIndex.daily<-subset(metaIndex.more_prcp,res=="daily")
+metaIndex.daily<-subset(metaIndex.daily,as.Date(metaIndex.daily$bis_datum) >= as.Date(endday))
+metadata<-subset(metaIndex.daily,as.Date(metaIndex.daily$von_datum) < as.Date(startday))
+metadata <- sortDF(metadata, "Stations_id", decreasing = FALSE)
+metadata <- metadata[!duplicated(paste0(metadata$Stations_id, metadata$res)),]
+select.daily<-selectDWD(id=metadata$Stations_id, res="daily", var="more_precip", per="historical")
+```
+
+We remove the duplicated stations.
+
+```{r}
+sel<-!(duplicated(substr(select.daily,119,123)))
+select.daily<-select.daily[sel]
+```
+
+
+We get the data
+
+```{r}
+ex.prcp.daily <- dataDWD(select.daily, force=NA, varnames=TRUE)
+```
+
+We collect the data the data in one xts matrix. The columns contain the stations 
+
+```{r}
+library(xts)
+nseries<-length(ex.prcp.daily)
+i<-1
+index.time <- seq(from = as.Date(ex.prcp.daily[[i]]$MESS_DATUM[i]),                length.out = nrow(ex.prcp.daily[[i]]),by = "day")
+alldata <- xts(ex.prcp.daily[[i]]$RS.Niederschlagshoehe, order.by = index.time)
+for (i in 2:nseries) {
+index.time <- seq(from = as.Date(ex.prcp.daily[[i]]$MESS_DATUM[i]),                length.out = nrow(ex.prcp.daily[[i]]),by = "day")
+y <- xts(ex.prcp.daily[[i]]$RS.Niederschlagshoehe, order.by = index.time)
+alldata<-merge(alldata,y)
+}
+
+```
+
+Finally we save the required dataset and the extra information in a .Rdata format
+
+```{r}
+colnames(alldata)<-paste("s",metadata$Stations_id,sep="")
+save(alldata,metadata,file = "daily_rainfall_germany.Rdata")
+```
+

@@ -1,0 +1,78 @@
+---
+title: "Daily precipitation in Germany: selection of a station"
+output: 
+  html_document:
+    toc: yes
+date: "31 October 2024"
+---
+
+
+# Preliminary checks 
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,warning = FALSE, message = FALSE) 
+```
+
+
+The `rdwd` package is utilized in this script to obtain daily precipitation data for Germany.
+
+We verify if the required packages have been installed.
+
+
+```{r}
+pkgTest <- function(x)
+  {
+    if (!require(x,character.only = TRUE))
+    {
+      install.packages(x,dep=TRUE)
+        if(!require(x,character.only = TRUE)) stop("Package not found")
+    }
+}
+pkgTest("xts")
+pkgTest("rdwd")
+```
+
+
+# Selection of the station
+
+Jena station has id 2444. Change `id` if you want to get data from a different station.
+
+
+
+```{r}
+id <- 2444
+```
+
+
+```{r}
+data("metaIndex")
+metaIndex.daily <- subset(metaIndex,(var=="more_precip" & per=="historical"))
+metaIndex.daily <- subset(metaIndex.daily,res=="daily")
+select.daily<-selectDWD(id=id, res="daily", var="more_precip", per="historical")
+```
+
+
+We get the data
+
+```{r}
+fname<- dataDWD(select.daily, read=FALSE)
+ex.prcp.daily <-   readDWD(fname,varnames=TRUE)
+```
+
+We collect the data  in one xts object.
+
+```{r}
+index.time <- seq(from =as.Date(ex.prcp.daily$MESS_DATUM[1]),                length.out = nrow(ex.prcp.daily),by = "day")
+y <- xts(ex.prcp.daily$RS.Niederschlagshoehe, order.by = index.time)
+namestation <- metaIndex.daily[metaIndex.daily$Stations_id == id, "Stationsname"] 
+plot(y, main=paste(namestation,", daily rainfalls"),col=4)
+```
+
+We save the data 
+
+```{r}
+save(y,namestation,file = "single-daily.Rdata")
+```
+
+
+
