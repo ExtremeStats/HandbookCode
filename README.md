@@ -8,7 +8,7 @@
 
 https://extremestats.github.io/Handbook/
 
-The main code is based on the \pkg{ReIns} \proglang{R} package. A vignette for the package is available at \url{https://cran.r-project.org/web/packages/ReIns/vignettes/ReIns.html}.
+The main code is based on the R package **ReIns**. A vignette for the package is available [here](https://cran.r-project.org/web/packages/ReIns/vignettes/ReIns.html).
 
 #### References
 
