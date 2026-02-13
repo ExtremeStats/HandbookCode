@@ -23,7 +23,7 @@ A vignette for the package is available [here](https://cran.r-project.org/web/pa
   </li>
   <li>
     Albrecher, H. and Beirlant, J. and Teugels, J. (2017). 
-    <em>Reinsurance: Actuarial and Statistical Aspects.<\em> 
+    <em>Reinsurance: Actuarial and Statistical Aspects.</em>em> 
     Wiley, Chichester.
   </li>
   <li>
