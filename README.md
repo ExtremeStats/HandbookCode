@@ -8,7 +8,7 @@
 
 https://extremestats.github.io/Handbook/
 
-The main code is based on the R package **ReIns**, which linked to the book by Albrecher, Beirlant and Teugels (2017). 
+The main code is based on the R package **ReIns**, which linked to the book by Albrecher, Beirlant and Teugels (2017). The [site](https://cran.r-project.org/web/packages/ReIns/index.html) gives ample explanation on how to use but in case of doubt please contact the authors.
 
 A vignette for the package is available [here](https://cran.r-project.org/web/packages/ReIns/vignettes/ReIns.html).
 
