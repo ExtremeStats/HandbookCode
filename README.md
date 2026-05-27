@@ -8,6 +8,10 @@
 
 https://extremestats.github.io/Handbook/
 
+Further details on the code are available from 
+
+[michael-allouche/extreme-value-GAN](https://github.com/michael-allouche/extreme-value-GAN)
+
 #### References
 
 <ul style="font-size: 35%; margin-top: 0;">
